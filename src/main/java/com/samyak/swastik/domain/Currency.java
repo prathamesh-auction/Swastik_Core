@@ -5,10 +5,14 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name="MASTER_CURRENCY")
 public class Currency implements Serializable {
 
 	private static final long serialVersionUID = 8926170250368659235L;
