@@ -49,4 +49,15 @@ public class CompanyPartyService implements ICompanyParty {
 		return null;
 	}
 
+	@Override
+	public void update(UUID companyPartyId, CompanyPartyInfo companyPartyInfo) {
+		Optional<CompanyParty> company = companyPartyRepository.getByActiveAndCompanyPartyId(true, companyPartyId);
+		if (company.isPresent()) {
+			CompanyParty company2 = company.get();
+			modelMapper.map(companyPartyInfo, company2);
+			companyPartyRepository.save(company2);
+		}
+
+	}
+
 }

@@ -12,4 +12,6 @@ public interface ICompanyParty {
 	public void save(CompanyPartyInfo companyPartyInfo);
 
 	public CompanyPartyInfo get(UUID companyPartyId);
+
+	public void update(UUID companyPartyId, CompanyPartyInfo companyPartyInfo);
 }
