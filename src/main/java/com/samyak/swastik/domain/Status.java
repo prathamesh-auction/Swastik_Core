@@ -32,7 +32,7 @@ public class Status implements Serializable {
 	private String statusDescription;
 
 	@Column(name = "SR_NO")
-	private Integer srNo;
+	private Double srNo;
 
 	@Column(name = "MODIFIED_BY")
 	private String modifiedBy;
@@ -47,7 +47,7 @@ public class Status implements Serializable {
 	private Boolean active;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	@Column(name = "STATUS_NAME_NATIVE")
 	private String statusNameNative;
@@ -84,11 +84,11 @@ public class Status implements Serializable {
 		this.statusDescription = statusDescription;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
@@ -124,11 +124,11 @@ public class Status implements Serializable {
 		this.active = active;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

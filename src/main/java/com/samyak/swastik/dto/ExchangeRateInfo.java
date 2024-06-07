@@ -8,10 +8,21 @@ public class ExchangeRateInfo {
 	private UUID exchangeRateId;
 	private UUID currencyId;
 	private Timestamp exchangeDate;
+	private Double exhchangeRate;
+
+	public Double getExhchangeRate() {
+		return exhchangeRate;
+	}
+
+	public void setExhchangeRate(Double exhchangeRate) {
+		this.exhchangeRate = exhchangeRate;
+	}
+
 	private String modifiedBy;
 	private String modifiedOn;
 	private String modifiedMachineName;
 	private Boolean active;
+
 	public Boolean getActive() {
 		return active;
 	}
@@ -20,7 +31,7 @@ public class ExchangeRateInfo {
 		this.active = active;
 	}
 
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	public UUID getExchangeRateId() {
 		return exchangeRateId;
@@ -70,11 +81,11 @@ public class ExchangeRateInfo {
 		this.modifiedMachineName = modifiedMachineName;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

@@ -32,10 +32,10 @@ public class FinancialTransaction implements Serializable {
 	private UUID voucherId;
 
 	@Column(name = "SR_NO")
-	private Integer srNo;
+	private Double srNo;
 
 	@Column(name = "FOR_HEAD")
-	private Integer forHead;
+	private Double forHead;
 
 	@Column(name = "FOR_HEAD_ID")
 	private UUID forHeadID;
@@ -47,13 +47,13 @@ public class FinancialTransaction implements Serializable {
 	private Boolean transactionType;
 
 	@Column(name = "AMOUNT")
-	private Integer amount;
+	private Double amount;
 
 	@Column(name = "LOCAL_AMOUNT")
-	private Integer localAmount;
+	private Double localAmount;
 
 	@Column(name = "DOLLAR_AMOUNT")
-	private Integer dollarAmount;
+	private Double dollarAmount;
 
 	@Column(name = "MODIFIED_BY")
 	private String modifiedBy;
@@ -86,7 +86,7 @@ public class FinancialTransaction implements Serializable {
 	private UUID accountId;
 
 	@Column(name = "EXCHANGE_RATE")
-	private Integer excahngeRate;
+	private Double excahngeRate;
 
 	@Column(name = "EXCHANGE_DATE")
 	private Timestamp exchangeDate;
@@ -110,7 +110,7 @@ public class FinancialTransaction implements Serializable {
 	private UUID costHeadSubGroupId;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	public Long getId() {
 		return id;
@@ -144,19 +144,19 @@ public class FinancialTransaction implements Serializable {
 		this.voucherId = voucherId;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
-	public Integer getForHead() {
+	public Double getForHead() {
 		return forHead;
 	}
 
-	public void setForHead(Integer forHead) {
+	public void setForHead(Double forHead) {
 		this.forHead = forHead;
 	}
 
@@ -184,27 +184,27 @@ public class FinancialTransaction implements Serializable {
 		this.transactionType = transactionType;
 	}
 
-	public Integer getAmount() {
+	public Double getAmount() {
 		return amount;
 	}
 
-	public void setAmount(Integer amount) {
+	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 
-	public Integer getLocalAmount() {
+	public Double getLocalAmount() {
 		return localAmount;
 	}
 
-	public void setLocalAmount(Integer localAmount) {
+	public void setLocalAmount(Double localAmount) {
 		this.localAmount = localAmount;
 	}
 
-	public Integer getDollarAmount() {
+	public Double getDollarAmount() {
 		return dollarAmount;
 	}
 
-	public void setDollarAmount(Integer dollarAmount) {
+	public void setDollarAmount(Double dollarAmount) {
 		this.dollarAmount = dollarAmount;
 	}
 
@@ -288,11 +288,11 @@ public class FinancialTransaction implements Serializable {
 		this.accountId = accountId;
 	}
 
-	public Integer getExcahngeRate() {
+	public Double getExcahngeRate() {
 		return excahngeRate;
 	}
 
-	public void setExcahngeRate(Integer excahngeRate) {
+	public void setExcahngeRate(Double excahngeRate) {
 		this.excahngeRate = excahngeRate;
 	}
 
@@ -352,11 +352,11 @@ public class FinancialTransaction implements Serializable {
 		this.costHeadSubGroupId = costHeadSubGroupId;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

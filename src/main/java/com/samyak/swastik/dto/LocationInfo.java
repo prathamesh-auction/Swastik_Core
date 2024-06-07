@@ -8,8 +8,8 @@ public class LocationInfo {
 	private String locationCode;
 	private String locationName;
 	private String locationDescription;
-	private Integer srNo;
-	private Integer yearEndId;
+	private Double srNo;
+	private Double yearEndId;
 	private String locationNameNative;
 
 	public UUID getLocationId() {
@@ -44,19 +44,19 @@ public class LocationInfo {
 		this.locationDescription = locationDescription;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

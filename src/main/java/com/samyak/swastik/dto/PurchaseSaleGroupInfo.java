@@ -9,12 +9,12 @@ public class PurchaseSaleGroupInfo implements Serializable {
 	private static final long serialVersionUID = -8872031239160162723L;
 
 	private UUID purchaseSaleGroupId;
-	private Integer purchaseSaleGroupType;
-	private Integer yearEndId;
+	private Double purchaseSaleGroupType;
+	private Double yearEndId;
 	private UUID companyId;
 	private String purchaseSaleGroupName;
 	private String purchaseSaleGroupCode;
-	private Integer srNo;
+	private Double srNo;
 	private Boolean active;
 	private String modifiedBy;
 	private Timestamp modifiedOn;
@@ -29,19 +29,19 @@ public class PurchaseSaleGroupInfo implements Serializable {
 		this.purchaseSaleGroupId = purchaseSaleGroupId;
 	}
 
-	public Integer getPurchaseSaleGroupType() {
+	public Double getPurchaseSaleGroupType() {
 		return purchaseSaleGroupType;
 	}
 
-	public void setPurchaseSaleGroupType(Integer purchaseSaleGroupType) {
+	public void setPurchaseSaleGroupType(Double purchaseSaleGroupType) {
 		this.purchaseSaleGroupType = purchaseSaleGroupType;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 
@@ -69,11 +69,11 @@ public class PurchaseSaleGroupInfo implements Serializable {
 		this.purchaseSaleGroupCode = purchaseSaleGroupCode;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 

@@ -47,13 +47,13 @@ public class Location implements Serializable {
 	private String modifiedMachineName;
 
 	@Column(name = "SR_NO")
-	private Integer srNo;
+	private Double srNo;
 
 	@Column(name = "ACTIVE")
 	private Boolean active;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	@Column(name = "LOCATION_NAME_NATIVE")
 	private String locationNameNative;
@@ -130,11 +130,11 @@ public class Location implements Serializable {
 		this.modifiedMachineName = modifiedMachineName;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
@@ -146,11 +146,11 @@ public class Location implements Serializable {
 		this.active = active;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

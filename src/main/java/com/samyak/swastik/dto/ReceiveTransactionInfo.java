@@ -7,17 +7,17 @@ public class ReceiveTransactionInfo {
 
 	private UUID receiveTransactionId;
 	private UUID receiveId;
-	private Integer lotSrNo;
+	private Double lotSrNo;
 	private UUID lotId;
-	private Integer quantity;
-	private Integer availableQuantity;
-	private Integer receivePrice;
-	private Integer localPrice;
-	private Integer dollarPrice;
-	private Integer pieces;
+	private Double quantity;
+	private Double availableQuantity;
+	private Double receivePrice;
+	private Double localPrice;
+	private Double dollarPrice;
+	private Double pieces;
 	private String remrak;
-	private Integer status;
-	private Integer returnQuantity;
+	private Double status;
+	private Double returnQuantity;
 	private Timestamp returnOn;
 	private String returnBy;
 	private Boolean modifiedBy;
@@ -28,14 +28,14 @@ public class ReceiveTransactionInfo {
 	private Boolean active;
 	private UUID consignementReceiveId;
 	private Boolean movWtdAvg;
-	private Integer yearEndId;
+	private Double yearEndId;
 	private UUID RefWhrtId;
-	private Integer refStatus;
+	private Double refStatus;
 	private UUID orderTransactionId;
 	private UUID mfgId;
 	private UUID mfgPurchaseRtId;
 	private UUID rateId;
-	private Integer mfIdvalue;
+	private Double mfIdvalue;
 
 	public UUID getReceiveTransactionId() {
 		return receiveTransactionId;
@@ -53,11 +53,11 @@ public class ReceiveTransactionInfo {
 		this.receiveId = receiveId;
 	}
 
-	public Integer getLotSrNo() {
+	public Double getLotSrNo() {
 		return lotSrNo;
 	}
 
-	public void setLotSrNo(Integer lotSrNo) {
+	public void setLotSrNo(Double lotSrNo) {
 		this.lotSrNo = lotSrNo;
 	}
 
@@ -69,51 +69,51 @@ public class ReceiveTransactionInfo {
 		this.lotId = lotId;
 	}
 
-	public Integer getQuantity() {
+	public Double getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(Integer quantity) {
+	public void setQuantity(Double quantity) {
 		this.quantity = quantity;
 	}
 
-	public Integer getAvailableQuantity() {
+	public Double getAvailableQuantity() {
 		return availableQuantity;
 	}
 
-	public void setAvailableQuantity(Integer availableQuantity) {
+	public void setAvailableQuantity(Double availableQuantity) {
 		this.availableQuantity = availableQuantity;
 	}
 
-	public Integer getReceivePrice() {
+	public Double getReceivePrice() {
 		return receivePrice;
 	}
 
-	public void setReceivePrice(Integer receivePrice) {
+	public void setReceivePrice(Double receivePrice) {
 		this.receivePrice = receivePrice;
 	}
 
-	public Integer getLocalPrice() {
+	public Double getLocalPrice() {
 		return localPrice;
 	}
 
-	public void setLocalPrice(Integer localPrice) {
+	public void setLocalPrice(Double localPrice) {
 		this.localPrice = localPrice;
 	}
 
-	public Integer getDollarPrice() {
+	public Double getDollarPrice() {
 		return dollarPrice;
 	}
 
-	public void setDollarPrice(Integer dollarPrice) {
+	public void setDollarPrice(Double dollarPrice) {
 		this.dollarPrice = dollarPrice;
 	}
 
-	public Integer getPieces() {
+	public Double getPieces() {
 		return pieces;
 	}
 
-	public void setPieces(Integer pieces) {
+	public void setPieces(Double pieces) {
 		this.pieces = pieces;
 	}
 
@@ -125,19 +125,19 @@ public class ReceiveTransactionInfo {
 		this.remrak = remrak;
 	}
 
-	public Integer getStatus() {
+	public Double getStatus() {
 		return status;
 	}
 
-	public void setStatus(Integer status) {
+	public void setStatus(Double status) {
 		this.status = status;
 	}
 
-	public Integer getReturnQuantity() {
+	public Double getReturnQuantity() {
 		return returnQuantity;
 	}
 
-	public void setReturnQuantity(Integer returnQuantity) {
+	public void setReturnQuantity(Double returnQuantity) {
 		this.returnQuantity = returnQuantity;
 	}
 
@@ -221,11 +221,11 @@ public class ReceiveTransactionInfo {
 		this.movWtdAvg = movWtdAvg;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 
@@ -237,11 +237,11 @@ public class ReceiveTransactionInfo {
 		RefWhrtId = refWhrtId;
 	}
 
-	public Integer getRefStatus() {
+	public Double getRefStatus() {
 		return refStatus;
 	}
 
-	public void setRefStatus(Integer refStatus) {
+	public void setRefStatus(Double refStatus) {
 		this.refStatus = refStatus;
 	}
 
@@ -277,11 +277,11 @@ public class ReceiveTransactionInfo {
 		this.rateId = rateId;
 	}
 
-	public Integer getMfIdvalue() {
+	public Double getMfIdvalue() {
 		return mfIdvalue;
 	}
 
-	public void setMfIdvalue(Integer mfIdvalue) {
+	public void setMfIdvalue(Double mfIdvalue) {
 		this.mfIdvalue = mfIdvalue;
 	}
 

@@ -32,7 +32,7 @@ public class VoucherType implements Serializable {
 	private String typeCode;
 
 	@Column(name = "SR_NO")
-	private Integer srNo;
+	private Double srNo;
 
 	@Column(name = "MODIFIED_BY")
 	private String modifiedBy;
@@ -47,7 +47,7 @@ public class VoucherType implements Serializable {
 	private Boolean active;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	@Column(name = "TYPE_NAME_NATIVE")
 	private String typeNameNative;
@@ -84,11 +84,11 @@ public class VoucherType implements Serializable {
 		this.typeCode = typeCode;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
@@ -124,11 +124,11 @@ public class VoucherType implements Serializable {
 		this.active = active;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

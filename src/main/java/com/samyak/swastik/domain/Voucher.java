@@ -29,7 +29,7 @@ public class Voucher implements Serializable {
 	private UUID companyId;
 
 	@Column(name = "VOUCHER_TYPE")
-	private Integer voucherType;
+	private Double voucherType;
 
 	@Column(name = "VOUCHER_NO")
 	private String voucherNo;
@@ -38,22 +38,22 @@ public class Voucher implements Serializable {
 	private Timestamp voucherDate;
 
 	@Column(name = "TOBY_NOS")
-	private Integer toByNos;
+	private Double toByNos;
 
 	@Column(name = "VOUCHER_CURRENCY")
-	private Integer voucherCurrency;
+	private Double voucherCurrency;
 
 	@Column(name = "EXCHANGE_RATE")
-	private Integer exchangeRate;
+	private Double exchangeRate;
 
 	@Column(name = "VOUCHER_TOTAL")
-	private Integer voucherTotal;
+	private Double voucherTotal;
 
 	@Column(name = "LOCAL_TOTAL")
-	private Integer localTotal;
+	private Double localTotal;
 
 	@Column(name = "DOLLAR_TOTAL")
-	private Integer dollarTotal;
+	private Double dollarTotal;
 
 	@Column(name = "DESCRIPTION")
 	private String description;
@@ -83,7 +83,7 @@ public class Voucher implements Serializable {
 	private Timestamp reconcilationDate;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndID;
+	private Double yearEndID;
 
 	@Column(name = "REF_NO")
 	private String refNo;
@@ -112,11 +112,11 @@ public class Voucher implements Serializable {
 		this.companyId = companyId;
 	}
 
-	public Integer getVoucherType() {
+	public Double getVoucherType() {
 		return voucherType;
 	}
 
-	public void setVoucherType(Integer voucherType) {
+	public void setVoucherType(Double voucherType) {
 		this.voucherType = voucherType;
 	}
 
@@ -136,51 +136,51 @@ public class Voucher implements Serializable {
 		this.voucherDate = voucherDate;
 	}
 
-	public Integer getToByNos() {
+	public Double getToByNos() {
 		return toByNos;
 	}
 
-	public void setToByNos(Integer toByNos) {
+	public void setToByNos(Double toByNos) {
 		this.toByNos = toByNos;
 	}
 
-	public Integer getVoucherCurrency() {
+	public Double getVoucherCurrency() {
 		return voucherCurrency;
 	}
 
-	public void setVoucherCurrency(Integer voucherCurrency) {
+	public void setVoucherCurrency(Double voucherCurrency) {
 		this.voucherCurrency = voucherCurrency;
 	}
 
-	public Integer getExchangeRate() {
+	public Double getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(Integer exchangeRate) {
+	public void setExchangeRate(Double exchangeRate) {
 		this.exchangeRate = exchangeRate;
 	}
 
-	public Integer getVoucherTotal() {
+	public Double getVoucherTotal() {
 		return voucherTotal;
 	}
 
-	public void setVoucherTotal(Integer voucherTotal) {
+	public void setVoucherTotal(Double voucherTotal) {
 		this.voucherTotal = voucherTotal;
 	}
 
-	public Integer getLocalTotal() {
+	public Double getLocalTotal() {
 		return localTotal;
 	}
 
-	public void setLocalTotal(Integer localTotal) {
+	public void setLocalTotal(Double localTotal) {
 		this.localTotal = localTotal;
 	}
 
-	public Integer getDollarTotal() {
+	public Double getDollarTotal() {
 		return dollarTotal;
 	}
 
-	public void setDollarTotal(Integer dollarTotal) {
+	public void setDollarTotal(Double dollarTotal) {
 		this.dollarTotal = dollarTotal;
 	}
 
@@ -256,11 +256,11 @@ public class Voucher implements Serializable {
 		this.reconcilationDate = reconcilationDate;
 	}
 
-	public Integer getYearEndID() {
+	public Double getYearEndID() {
 		return yearEndID;
 	}
 
-	public void setYearEndID(Integer yearEndID) {
+	public void setYearEndID(Double yearEndID) {
 		this.yearEndID = yearEndID;
 	}
 

@@ -31,6 +31,9 @@ public class ExchangeRate implements Serializable {
 	@Column(name = "EXCHANGE_DATE")
 	private Timestamp exchangeDate;
 
+	@Column(name = "EXCHANGE_RATE")
+	private Double exchangeRate;
+
 	@Column(name = "MODIFIED_BY")
 	private String modifiedBy;
 
@@ -44,7 +47,7 @@ public class ExchangeRate implements Serializable {
 	private Boolean active;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	public Long getId() {
 		return id;
@@ -110,11 +113,11 @@ public class ExchangeRate implements Serializable {
 		this.active = active;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

@@ -7,7 +7,7 @@ public class InvoiceTypeInfo {
 	private UUID typeId;
 	private String typeName;
 	private String typeCode;
-	private Integer srNo;
+	private Double srNo;
 	private Boolean active;
 	private String typeNameNative;
 
@@ -35,11 +35,11 @@ public class InvoiceTypeInfo {
 		this.typeCode = typeCode;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 

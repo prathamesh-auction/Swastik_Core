@@ -9,22 +9,22 @@ public class ReceiveInfo {
 	private Boolean receiveSell;
 	private String receiveNo;
 	private Timestamp receiveDate;
-	private Integer receiveLots;
-	private Integer receiveQuantity;
+	private Double receiveLots;
+	private Double receiveQuantity;
 	private UUID receiveCurrencyId;
-	private Integer exchangeRate;
-	private Integer receiveExchangeRate;
-	private Integer tax;
-	private Integer discount;
-	private Integer receiveTool;
-	private Integer dollarTool;
-	private Integer receiveFromId;
+	private Double exchangeRate;
+	private Double receiveExchangeRate;
+	private Double tax;
+	private Double discount;
+	private Double receiveTool;
+	private Double dollarTool;
+	private Double receiveFromId;
 	private String receiveName;
 	private UUID companyId;
 	private String receiveByName;
 	private Boolean receiveInternal;
 	private Boolean purchase;
-	private Integer dueDays;
+	private Double dueDays;
 	private Timestamp dueDate;
 	private String challanNo;
 	private Timestamp challanDate;
@@ -39,16 +39,16 @@ public class ReceiveInfo {
 	private String modifiedMachineName;
 	private Boolean active;
 	private Timestamp stockDate;
-	private Integer differenceAmount;
-	private Integer differenceLocalAmount;
-	private Integer differenceDollarAmount;
-	private Integer invAmount;
-	private Integer invLocalTotal;
-	private Integer invDollarTotal;
-	private Integer receiveCategory;
-	private Integer stockTransferType;
-	private Integer cgtReturnConfirm;
-	private Integer yearEndId;
+	private Double differenceAmount;
+	private Double differenceLocalAmount;
+	private Double differenceDollarAmount;
+	private Double invAmount;
+	private Double invLocalTotal;
+	private Double invDollarTotal;
+	private Double receiveCategory;
+	private Double stockTransferType;
+	private Double cgtReturnConfirm;
+	private Double yearEndId;
 	private UUID purchaseGroupId;
 	private String cgtRefNo;
 	private String cgtRefDescription;
@@ -89,19 +89,19 @@ public class ReceiveInfo {
 		this.receiveDate = receiveDate;
 	}
 
-	public Integer getReceiveLots() {
+	public Double getReceiveLots() {
 		return receiveLots;
 	}
 
-	public void setReceiveLots(Integer receiveLots) {
+	public void setReceiveLots(Double receiveLots) {
 		this.receiveLots = receiveLots;
 	}
 
-	public Integer getReceiveQuantity() {
+	public Double getReceiveQuantity() {
 		return receiveQuantity;
 	}
 
-	public void setReceiveQuantity(Integer receiveQuantity) {
+	public void setReceiveQuantity(Double receiveQuantity) {
 		this.receiveQuantity = receiveQuantity;
 	}
 
@@ -113,59 +113,59 @@ public class ReceiveInfo {
 		this.receiveCurrencyId = receiveCurrencyId;
 	}
 
-	public Integer getExchangeRate() {
+	public Double getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(Integer exchangeRate) {
+	public void setExchangeRate(Double exchangeRate) {
 		this.exchangeRate = exchangeRate;
 	}
 
-	public Integer getReceiveExchangeRate() {
+	public Double getReceiveExchangeRate() {
 		return receiveExchangeRate;
 	}
 
-	public void setReceiveExchangeRate(Integer receiveExchangeRate) {
+	public void setReceiveExchangeRate(Double receiveExchangeRate) {
 		this.receiveExchangeRate = receiveExchangeRate;
 	}
 
-	public Integer getTax() {
+	public Double getTax() {
 		return tax;
 	}
 
-	public void setTax(Integer tax) {
+	public void setTax(Double tax) {
 		this.tax = tax;
 	}
 
-	public Integer getDiscount() {
+	public Double getDiscount() {
 		return discount;
 	}
 
-	public void setDiscount(Integer discount) {
+	public void setDiscount(Double discount) {
 		this.discount = discount;
 	}
 
-	public Integer getReceiveTool() {
+	public Double getReceiveTool() {
 		return receiveTool;
 	}
 
-	public void setReceiveTool(Integer receiveTool) {
+	public void setReceiveTool(Double receiveTool) {
 		this.receiveTool = receiveTool;
 	}
 
-	public Integer getDollarTool() {
+	public Double getDollarTool() {
 		return dollarTool;
 	}
 
-	public void setDollarTool(Integer dollarTool) {
+	public void setDollarTool(Double dollarTool) {
 		this.dollarTool = dollarTool;
 	}
 
-	public Integer getReceiveFromId() {
+	public Double getReceiveFromId() {
 		return receiveFromId;
 	}
 
-	public void setReceiveFromId(Integer receiveFromId) {
+	public void setReceiveFromId(Double receiveFromId) {
 		this.receiveFromId = receiveFromId;
 	}
 
@@ -209,11 +209,11 @@ public class ReceiveInfo {
 		this.purchase = purchase;
 	}
 
-	public Integer getDueDays() {
+	public Double getDueDays() {
 		return dueDays;
 	}
 
-	public void setDueDays(Integer dueDays) {
+	public void setDueDays(Double dueDays) {
 		this.dueDays = dueDays;
 	}
 
@@ -329,83 +329,83 @@ public class ReceiveInfo {
 		this.stockDate = stockDate;
 	}
 
-	public Integer getDifferenceAmount() {
+	public Double getDifferenceAmount() {
 		return differenceAmount;
 	}
 
-	public void setDifferenceAmount(Integer differenceAmount) {
+	public void setDifferenceAmount(Double differenceAmount) {
 		this.differenceAmount = differenceAmount;
 	}
 
-	public Integer getDifferenceLocalAmount() {
+	public Double getDifferenceLocalAmount() {
 		return differenceLocalAmount;
 	}
 
-	public void setDifferenceLocalAmount(Integer differenceLocalAmount) {
+	public void setDifferenceLocalAmount(Double differenceLocalAmount) {
 		this.differenceLocalAmount = differenceLocalAmount;
 	}
 
-	public Integer getDifferenceDollarAmount() {
+	public Double getDifferenceDollarAmount() {
 		return differenceDollarAmount;
 	}
 
-	public void setDifferenceDollarAmount(Integer differenceDollarAmount) {
+	public void setDifferenceDollarAmount(Double differenceDollarAmount) {
 		this.differenceDollarAmount = differenceDollarAmount;
 	}
 
-	public Integer getInvAmount() {
+	public Double getInvAmount() {
 		return invAmount;
 	}
 
-	public void setInvAmount(Integer invAmount) {
+	public void setInvAmount(Double invAmount) {
 		this.invAmount = invAmount;
 	}
 
-	public Integer getInvLocalTotal() {
+	public Double getInvLocalTotal() {
 		return invLocalTotal;
 	}
 
-	public void setInvLocalTotal(Integer invLocalTotal) {
+	public void setInvLocalTotal(Double invLocalTotal) {
 		this.invLocalTotal = invLocalTotal;
 	}
 
-	public Integer getInvDollarTotal() {
+	public Double getInvDollarTotal() {
 		return invDollarTotal;
 	}
 
-	public void setInvDollarTotal(Integer invDollarTotal) {
+	public void setInvDollarTotal(Double invDollarTotal) {
 		this.invDollarTotal = invDollarTotal;
 	}
 
-	public Integer getReceiveCategory() {
+	public Double getReceiveCategory() {
 		return receiveCategory;
 	}
 
-	public void setReceiveCategory(Integer receiveCategory) {
+	public void setReceiveCategory(Double receiveCategory) {
 		this.receiveCategory = receiveCategory;
 	}
 
-	public Integer getStockTransferType() {
+	public Double getStockTransferType() {
 		return stockTransferType;
 	}
 
-	public void setStockTransferType(Integer stockTransferType) {
+	public void setStockTransferType(Double stockTransferType) {
 		this.stockTransferType = stockTransferType;
 	}
 
-	public Integer getCgtReturnConfirm() {
+	public Double getCgtReturnConfirm() {
 		return cgtReturnConfirm;
 	}
 
-	public void setCgtReturnConfirm(Integer cgtReturnConfirm) {
+	public void setCgtReturnConfirm(Double cgtReturnConfirm) {
 		this.cgtReturnConfirm = cgtReturnConfirm;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

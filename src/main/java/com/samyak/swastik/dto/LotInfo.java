@@ -12,28 +12,28 @@ public class LotInfo {
 	private UUID lotCategoryId;
 	private UUID lotSubCategoryId;
 	private UUID unitId;
-	private Integer carats;
-	private Integer availableCarats;
-	private Integer reorderQuantity;
+	private Double carats;
+	private Double availableCarats;
+	private Double reorderQuantity;
 	private Boolean purchase;
 	private String drwgFileName;
 	private Timestamp createdOn;
-	private Integer createdBy;
+	private Double createdBy;
 	private String modifiedBy;
 	private Timestamp modifiedOn;
 	private String modifiedMachineName;
 	private Boolean active;
-	private Integer yearENdId;
-	private Integer rapaportLocalRate;
-	private Integer rapaportLocalDollar;
+	private Double yearENdId;
+	private Double rapaportLocalRate;
+	private Double rapaportLocalDollar;
 	private String giaFileName;
 	private UUID refDesignGroupId;
 	private UUID mfgId;
-	private Integer x1BaseRate;
-	private Integer x2mf;
-	private Integer x3mf;
-	private Integer x4mf;
-	private Integer x5mf;
+	private Double x1BaseRate;
+	private Double x2mf;
+	private Double x3mf;
+	private Double x4mf;
+	private Double x5mf;
 	private UUID supplierId;
 
 	public UUID getLotId() {
@@ -92,27 +92,27 @@ public class LotInfo {
 		this.unitId = unitId;
 	}
 
-	public Integer getCarats() {
+	public Double getCarats() {
 		return carats;
 	}
 
-	public void setCarats(Integer carats) {
+	public void setCarats(Double carats) {
 		this.carats = carats;
 	}
 
-	public Integer getAvailableCarats() {
+	public Double getAvailableCarats() {
 		return availableCarats;
 	}
 
-	public void setAvailableCarats(Integer availableCarats) {
+	public void setAvailableCarats(Double availableCarats) {
 		this.availableCarats = availableCarats;
 	}
 
-	public Integer getReorderQuantity() {
+	public Double getReorderQuantity() {
 		return reorderQuantity;
 	}
 
-	public void setReorderQuantity(Integer reorderQuantity) {
+	public void setReorderQuantity(Double reorderQuantity) {
 		this.reorderQuantity = reorderQuantity;
 	}
 
@@ -140,11 +140,11 @@ public class LotInfo {
 		this.createdOn = createdOn;
 	}
 
-	public Integer getCreatedBy() {
+	public Double getCreatedBy() {
 		return createdBy;
 	}
 
-	public void setCreatedBy(Integer createdBy) {
+	public void setCreatedBy(Double createdBy) {
 		this.createdBy = createdBy;
 	}
 
@@ -180,27 +180,27 @@ public class LotInfo {
 		this.active = active;
 	}
 
-	public Integer getYearENdId() {
+	public Double getYearENdId() {
 		return yearENdId;
 	}
 
-	public void setYearENdId(Integer yearENdId) {
+	public void setYearENdId(Double yearENdId) {
 		this.yearENdId = yearENdId;
 	}
 
-	public Integer getRapaportLocalRate() {
+	public Double getRapaportLocalRate() {
 		return rapaportLocalRate;
 	}
 
-	public void setRapaportLocalRate(Integer rapaportLocalRate) {
+	public void setRapaportLocalRate(Double rapaportLocalRate) {
 		this.rapaportLocalRate = rapaportLocalRate;
 	}
 
-	public Integer getRapaportLocalDollar() {
+	public Double getRapaportLocalDollar() {
 		return rapaportLocalDollar;
 	}
 
-	public void setRapaportLocalDollar(Integer rapaportLocalDollar) {
+	public void setRapaportLocalDollar(Double rapaportLocalDollar) {
 		this.rapaportLocalDollar = rapaportLocalDollar;
 	}
 
@@ -228,43 +228,43 @@ public class LotInfo {
 		this.mfgId = mfgId;
 	}
 
-	public Integer getX1BaseRate() {
+	public Double getX1BaseRate() {
 		return x1BaseRate;
 	}
 
-	public void setX1BaseRate(Integer x1BaseRate) {
+	public void setX1BaseRate(Double x1BaseRate) {
 		this.x1BaseRate = x1BaseRate;
 	}
 
-	public Integer getX2mf() {
+	public Double getX2mf() {
 		return x2mf;
 	}
 
-	public void setX2mf(Integer x2mf) {
+	public void setX2mf(Double x2mf) {
 		this.x2mf = x2mf;
 	}
 
-	public Integer getX3mf() {
+	public Double getX3mf() {
 		return x3mf;
 	}
 
-	public void setX3mf(Integer x3mf) {
+	public void setX3mf(Double x3mf) {
 		this.x3mf = x3mf;
 	}
 
-	public Integer getX4mf() {
+	public Double getX4mf() {
 		return x4mf;
 	}
 
-	public void setX4mf(Integer x4mf) {
+	public void setX4mf(Double x4mf) {
 		this.x4mf = x4mf;
 	}
 
-	public Integer getX5mf() {
+	public Double getX5mf() {
 		return x5mf;
 	}
 
-	public void setX5mf(Integer x5mf) {
+	public void setX5mf(Double x5mf) {
 		this.x5mf = x5mf;
 	}
 

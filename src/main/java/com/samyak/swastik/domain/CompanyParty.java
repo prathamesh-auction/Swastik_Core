@@ -101,58 +101,58 @@ public class CompanyParty implements Serializable {
 	private Boolean active;
 
 	@Column(name = "SR_NO")
-	private Integer srNo;
+	private Double srNo;
 
 	@Column(name = "TRANSACTION_CURRENECY")
-	private Integer transactionCurrency;
+	private Double transactionCurrency;
 
 	@Column(name = "OPENING_DATE")
 	private Timestamp openingDate;
 
 	@Column(name = "OPENING_RLOCAL_BALANCE")
-	private Integer openingRlocalBalace;
+	private Double openingRlocalBalace;
 
 	@Column(name = "OPENING_RDOLLAR_BALANCE")
-	private Integer openingRdollarBalace;
+	private Double openingRdollarBalace;
 
 	@Column(name = "OPENING_REXCHANGE_RATE")
-	private Integer openingRexchangeRate;
+	private Double openingRexchangeRate;
 
 	@Column(name = "NET_RLOCAL_BALANCE")
-	private Integer netRlocalBalance;
+	private Double netRlocalBalance;
 
 	@Column(name = "NET_RDOLLAR_BALANCE")
-	private Integer netRdollarBalance;
+	private Double netRdollarBalance;
 
 	@Column(name = "R_EXCHANGE_RATE")
-	private Integer rExchangeRate;
+	private Double rExchangeRate;
 
 	@Column(name = "OPENING_PLOCAL_BALANCE")
-	private Integer openingPlocalBalace;
+	private Double openingPlocalBalace;
 
 	@Column(name = "OPENING_PDOLLAR_BALANCE")
-	private Integer openingPdollarBalace;
+	private Double openingPdollarBalace;
 
 	@Column(name = "OPENING_PEXCHANGE_RATE")
-	private Integer openingPexchangeRate;
+	private Double openingPexchangeRate;
 
 	@Column(name = "NET_PLOCAL_BALANCE")
-	private Integer netPlocalBalance;
+	private Double netPlocalBalance;
 
 	@Column(name = "NET_PDOLLAR_BALANCE")
-	private Integer netPdollarBalance;
+	private Double netPdollarBalance;
 
 	@Column(name = "P_EXCHANGE_RATE")
-	private Integer pExchangeRate;
+	private Double pExchangeRate;
 
 	@Column(name = "OPENING_PNLOCAL_BALANCE")
-	private Integer openingPnlocalBalace;
+	private Double openingPnlocalBalace;
 
 	@Column(name = "OPENING_PNDOLLAR_BALANCE")
-	private Integer openingPndollarBalace;
+	private Double openingPndollarBalace;
 
 	@Column(name = "OPENING_PNEXCHANGE_RATE")
-	private Integer openingPnexchangeRate;
+	private Double openingPnexchangeRate;
 
 	@Column(name = "SALE")
 	private Boolean sale;
@@ -164,43 +164,43 @@ public class CompanyParty implements Serializable {
 	private Boolean pn;
 
 	@Column(name = "PURCHASE_ADVANCE_LOCAL")
-	private Integer purchaseAdvanceLocal;
+	private Double purchaseAdvanceLocal;
 
 	@Column(name = "SALE_ADVANCE_LOCAL")
-	private Integer saleAdvanceLocal;
+	private Double saleAdvanceLocal;
 
 	@Column(name = "PN_ADVANCE_LOCAL")
-	private Integer pnAdvanceLocal;
+	private Double pnAdvanceLocal;
 
 	@Column(name = "PURCHASE_ADVANCE_DOLLAR")
-	private Integer purchaseAdvanceDollar;
+	private Double purchaseAdvanceDollar;
 
 	@Column(name = "SALE_ADVANCE_DOLLAR")
-	private Integer saleAdvanceDollar;
+	private Double saleAdvanceDollar;
 
 	@Column(name = "PN_ADVANCE_DOLLAR")
-	private Integer pnAdvanceDollar;
+	private Double pnAdvanceDollar;
 
 	@Column(name = "PAYMENT_DATE")
-	private Integer paymentDate;
+	private Double paymentDate;
 
 	@Column(name = "CLOSING_DATE")
-	private Integer closingDate;
+	private Double closingDate;
 
 	@Column(name = "CREDIT_LIMIT")
-	private Integer creditLimit;
+	private Double creditLimit;
 
 	@Column(name = "SHIKESHO")
 	private Boolean shikesho;
 
 	@Column(name = "DUE_DAYS")
-	private Integer dueDays;
+	private Double dueDays;
 
 	@Column(name = "SALES_PERSON_ID")
 	private UUID salesPersonId;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	@Column(name = "COMPANY_PARTY_NAME_NATIVE")
 	private String companyPartyNameNative;
@@ -227,7 +227,7 @@ public class CompanyParty implements Serializable {
 	private UUID pnRealisationId;
 
 	@Column(name = "BANK_CHARGES")
-	private Integer bankCharges;
+	private Double bankCharges;
 
 	@Column(name = "PN_NARRTION")
 	private String pnNarration;
@@ -451,19 +451,19 @@ public class CompanyParty implements Serializable {
 		this.active = active;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
-	public Integer getTransactionCurrency() {
+	public Double getTransactionCurrency() {
 		return transactionCurrency;
 	}
 
-	public void setTransactionCurrency(Integer transactionCurrency) {
+	public void setTransactionCurrency(Double transactionCurrency) {
 		this.transactionCurrency = transactionCurrency;
 	}
 
@@ -475,123 +475,123 @@ public class CompanyParty implements Serializable {
 		this.openingDate = openingDate;
 	}
 
-	public Integer getOpeningRlocalBalace() {
+	public Double getOpeningRlocalBalace() {
 		return openingRlocalBalace;
 	}
 
-	public void setOpeningRlocalBalace(Integer openingRlocalBalace) {
+	public void setOpeningRlocalBalace(Double openingRlocalBalace) {
 		this.openingRlocalBalace = openingRlocalBalace;
 	}
 
-	public Integer getOpeningRdollarBalace() {
+	public Double getOpeningRdollarBalace() {
 		return openingRdollarBalace;
 	}
 
-	public void setOpeningRdollarBalace(Integer openingRdollarBalace) {
+	public void setOpeningRdollarBalace(Double openingRdollarBalace) {
 		this.openingRdollarBalace = openingRdollarBalace;
 	}
 
-	public Integer getOpeningRexchangeRate() {
+	public Double getOpeningRexchangeRate() {
 		return openingRexchangeRate;
 	}
 
-	public void setOpeningRexchangeRate(Integer openingRexchangeRate) {
+	public void setOpeningRexchangeRate(Double openingRexchangeRate) {
 		this.openingRexchangeRate = openingRexchangeRate;
 	}
 
-	public Integer getNetRlocalBalance() {
+	public Double getNetRlocalBalance() {
 		return netRlocalBalance;
 	}
 
-	public void setNetRlocalBalance(Integer netRlocalBalance) {
+	public void setNetRlocalBalance(Double netRlocalBalance) {
 		this.netRlocalBalance = netRlocalBalance;
 	}
 
-	public Integer getNetRdollarBalance() {
+	public Double getNetRdollarBalance() {
 		return netRdollarBalance;
 	}
 
-	public void setNetRdollarBalance(Integer netRdollarBalance) {
+	public void setNetRdollarBalance(Double netRdollarBalance) {
 		this.netRdollarBalance = netRdollarBalance;
 	}
 
-	public Integer getrExchangeRate() {
+	public Double getrExchangeRate() {
 		return rExchangeRate;
 	}
 
-	public void setrExchangeRate(Integer rExchangeRate) {
+	public void setrExchangeRate(Double rExchangeRate) {
 		this.rExchangeRate = rExchangeRate;
 	}
 
-	public Integer getOpeningPlocalBalace() {
+	public Double getOpeningPlocalBalace() {
 		return openingPlocalBalace;
 	}
 
-	public void setOpeningPlocalBalace(Integer openingPlocalBalace) {
+	public void setOpeningPlocalBalace(Double openingPlocalBalace) {
 		this.openingPlocalBalace = openingPlocalBalace;
 	}
 
-	public Integer getOpeningPdollarBalace() {
+	public Double getOpeningPdollarBalace() {
 		return openingPdollarBalace;
 	}
 
-	public void setOpeningPdollarBalace(Integer openingPdollarBalace) {
+	public void setOpeningPdollarBalace(Double openingPdollarBalace) {
 		this.openingPdollarBalace = openingPdollarBalace;
 	}
 
-	public Integer getOpeningPexchangeRate() {
+	public Double getOpeningPexchangeRate() {
 		return openingPexchangeRate;
 	}
 
-	public void setOpeningPexchangeRate(Integer openingPexchangeRate) {
+	public void setOpeningPexchangeRate(Double openingPexchangeRate) {
 		this.openingPexchangeRate = openingPexchangeRate;
 	}
 
-	public Integer getNetPlocalBalance() {
+	public Double getNetPlocalBalance() {
 		return netPlocalBalance;
 	}
 
-	public void setNetPlocalBalance(Integer netPlocalBalance) {
+	public void setNetPlocalBalance(Double netPlocalBalance) {
 		this.netPlocalBalance = netPlocalBalance;
 	}
 
-	public Integer getNetPdollarBalance() {
+	public Double getNetPdollarBalance() {
 		return netPdollarBalance;
 	}
 
-	public void setNetPdollarBalance(Integer netPdollarBalance) {
+	public void setNetPdollarBalance(Double netPdollarBalance) {
 		this.netPdollarBalance = netPdollarBalance;
 	}
 
-	public Integer getpExchangeRate() {
+	public Double getpExchangeRate() {
 		return pExchangeRate;
 	}
 
-	public void setpExchangeRate(Integer pExchangeRate) {
+	public void setpExchangeRate(Double pExchangeRate) {
 		this.pExchangeRate = pExchangeRate;
 	}
 
-	public Integer getOpeningPnlocalBalace() {
+	public Double getOpeningPnlocalBalace() {
 		return openingPnlocalBalace;
 	}
 
-	public void setOpeningPnlocalBalace(Integer openingPnlocalBalace) {
+	public void setOpeningPnlocalBalace(Double openingPnlocalBalace) {
 		this.openingPnlocalBalace = openingPnlocalBalace;
 	}
 
-	public Integer getOpeningPndollarBalace() {
+	public Double getOpeningPndollarBalace() {
 		return openingPndollarBalace;
 	}
 
-	public void setOpeningPndollarBalace(Integer openingPndollarBalace) {
+	public void setOpeningPndollarBalace(Double openingPndollarBalace) {
 		this.openingPndollarBalace = openingPndollarBalace;
 	}
 
-	public Integer getOpeningPnexchangeRate() {
+	public Double getOpeningPnexchangeRate() {
 		return openingPnexchangeRate;
 	}
 
-	public void setOpeningPnexchangeRate(Integer openingPnexchangeRate) {
+	public void setOpeningPnexchangeRate(Double openingPnexchangeRate) {
 		this.openingPnexchangeRate = openingPnexchangeRate;
 	}
 
@@ -619,75 +619,75 @@ public class CompanyParty implements Serializable {
 		this.pn = pn;
 	}
 
-	public Integer getPurchaseAdvanceLocal() {
+	public Double getPurchaseAdvanceLocal() {
 		return purchaseAdvanceLocal;
 	}
 
-	public void setPurchaseAdvanceLocal(Integer purchaseAdvanceLocal) {
+	public void setPurchaseAdvanceLocal(Double purchaseAdvanceLocal) {
 		this.purchaseAdvanceLocal = purchaseAdvanceLocal;
 	}
 
-	public Integer getSaleAdvanceLocal() {
+	public Double getSaleAdvanceLocal() {
 		return saleAdvanceLocal;
 	}
 
-	public void setSaleAdvanceLocal(Integer saleAdvanceLocal) {
+	public void setSaleAdvanceLocal(Double saleAdvanceLocal) {
 		this.saleAdvanceLocal = saleAdvanceLocal;
 	}
 
-	public Integer getPnAdvanceLocal() {
+	public Double getPnAdvanceLocal() {
 		return pnAdvanceLocal;
 	}
 
-	public void setPnAdvanceLocal(Integer pnAdvanceLocal) {
+	public void setPnAdvanceLocal(Double pnAdvanceLocal) {
 		this.pnAdvanceLocal = pnAdvanceLocal;
 	}
 
-	public Integer getPurchaseAdvanceDollar() {
+	public Double getPurchaseAdvanceDollar() {
 		return purchaseAdvanceDollar;
 	}
 
-	public void setPurchaseAdvanceDollar(Integer purchaseAdvanceDollar) {
+	public void setPurchaseAdvanceDollar(Double purchaseAdvanceDollar) {
 		this.purchaseAdvanceDollar = purchaseAdvanceDollar;
 	}
 
-	public Integer getSaleAdvanceDollar() {
+	public Double getSaleAdvanceDollar() {
 		return saleAdvanceDollar;
 	}
 
-	public void setSaleAdvanceDollar(Integer saleAdvanceDollar) {
+	public void setSaleAdvanceDollar(Double saleAdvanceDollar) {
 		this.saleAdvanceDollar = saleAdvanceDollar;
 	}
 
-	public Integer getPnAdvanceDollar() {
+	public Double getPnAdvanceDollar() {
 		return pnAdvanceDollar;
 	}
 
-	public void setPnAdvanceDollar(Integer pnAdvanceDollar) {
+	public void setPnAdvanceDollar(Double pnAdvanceDollar) {
 		this.pnAdvanceDollar = pnAdvanceDollar;
 	}
 
-	public Integer getPaymentDate() {
+	public Double getPaymentDate() {
 		return paymentDate;
 	}
 
-	public void setPaymentDate(Integer paymentDate) {
+	public void setPaymentDate(Double paymentDate) {
 		this.paymentDate = paymentDate;
 	}
 
-	public Integer getClosingDate() {
+	public Double getClosingDate() {
 		return closingDate;
 	}
 
-	public void setClosingDate(Integer closingDate) {
+	public void setClosingDate(Double closingDate) {
 		this.closingDate = closingDate;
 	}
 
-	public Integer getCreditLimit() {
+	public Double getCreditLimit() {
 		return creditLimit;
 	}
 
-	public void setCreditLimit(Integer creditLimit) {
+	public void setCreditLimit(Double creditLimit) {
 		this.creditLimit = creditLimit;
 	}
 
@@ -699,11 +699,11 @@ public class CompanyParty implements Serializable {
 		this.shikesho = shikesho;
 	}
 
-	public Integer getDueDays() {
+	public Double getDueDays() {
 		return dueDays;
 	}
 
-	public void setDueDays(Integer dueDays) {
+	public void setDueDays(Double dueDays) {
 		this.dueDays = dueDays;
 	}
 
@@ -715,11 +715,11 @@ public class CompanyParty implements Serializable {
 		this.salesPersonId = salesPersonId;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 
@@ -787,11 +787,11 @@ public class CompanyParty implements Serializable {
 		this.pnRealisationId = pnRealisationId;
 	}
 
-	public Integer getBankCharges() {
+	public Double getBankCharges() {
 		return bankCharges;
 	}
 
-	public void setBankCharges(Integer bankCharges) {
+	public void setBankCharges(Double bankCharges) {
 		this.bankCharges = bankCharges;
 	}
 

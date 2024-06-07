@@ -12,14 +12,14 @@ public class CurrencyInfo implements Serializable {
 	private String currencyName;
 	private String currencySymbol;
 	private UUID companyId;
-	private Integer baseExchangeRate;
+	private Double baseExchangeRate;
 	private Boolean localCurrency;
-	private Integer decimalPlaces;
+	private Double decimalPlaces;
 	private String modifiedBy;
 	private Timestamp ModifiedOn;
 	private String modifiedMachineName;
 	private Boolean active;
-	private Integer yearEndId;
+	private Double yearEndId;
 	private String currencyNameNative;
 	private String currencySymbolNative;
 
@@ -55,11 +55,11 @@ public class CurrencyInfo implements Serializable {
 		this.companyId = companyId;
 	}
 
-	public Integer getBaseExchangeRate() {
+	public Double getBaseExchangeRate() {
 		return baseExchangeRate;
 	}
 
-	public void setBaseExchangeRate(Integer baseExchangeRate) {
+	public void setBaseExchangeRate(Double baseExchangeRate) {
 		this.baseExchangeRate = baseExchangeRate;
 	}
 
@@ -71,11 +71,11 @@ public class CurrencyInfo implements Serializable {
 		this.localCurrency = localCurrency;
 	}
 
-	public Integer getDecimalPlaces() {
+	public Double getDecimalPlaces() {
 		return decimalPlaces;
 	}
 
-	public void setDecimalPlaces(Integer decimalPlaces) {
+	public void setDecimalPlaces(Double decimalPlaces) {
 		this.decimalPlaces = decimalPlaces;
 	}
 
@@ -111,11 +111,11 @@ public class CurrencyInfo implements Serializable {
 		this.active = active;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

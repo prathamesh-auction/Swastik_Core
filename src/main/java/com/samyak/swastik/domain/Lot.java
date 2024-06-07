@@ -50,13 +50,13 @@ public class Lot implements Serializable {
 	private UUID unitId;
 
 	@Column(name = "CARATS")
-	private Integer carats;
+	private Double carats;
 
 	@Column(name = "AVAILABLE_CARATS")
-	private Integer availableCarats;
+	private Double availableCarats;
 
 	@Column(name = "REORDER_QUANTITY")
-	private Integer reorderQuantity;
+	private Double reorderQuantity;
 
 	@Column(name = "PURCHASE")
 	private Boolean purchase;
@@ -68,7 +68,7 @@ public class Lot implements Serializable {
 	private Timestamp createdOn;
 
 	@Column(name = "CREATED_BY")
-	private Integer createdBy;
+	private Double createdBy;
 
 	@Column(name = "MODIFIED_BY")
 	private String modifiedBy;
@@ -83,13 +83,13 @@ public class Lot implements Serializable {
 	private Boolean active;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearENdId;
+	private Double yearENdId;
 
 	@Column(name = "RAPAPORT_LOCAL_RATE")
-	private Integer rapaportLocalRate;
+	private Double rapaportLocalRate;
 
 	@Column(name = "RAPAPORT_DOLLAR_RATE")
-	private Integer rapaportLocalDollar;
+	private Double rapaportLocalDollar;
 
 	@Column(name = "GIA_FILE_NAME")
 	private String giaFileName;
@@ -101,19 +101,19 @@ public class Lot implements Serializable {
 	private UUID mfgId;
 
 	@Column(name = "X1_BASE_RATE")
-	private Integer x1BaseRate;
+	private Double x1BaseRate;
 
 	@Column(name = "X2MF")
-	private Integer x2mf;
+	private Double x2mf;
 
 	@Column(name = "X3MF")
-	private Integer x3mf;
+	private Double x3mf;
 
 	@Column(name = "X4MF")
-	private Integer x4mf;
+	private Double x4mf;
 
 	@Column(name = "X5MF")
-	private Integer x5mf;
+	private Double x5mf;
 
 	@Column(name = "SUPPLIER_ID")
 	private UUID supplierId;
@@ -198,27 +198,27 @@ public class Lot implements Serializable {
 		this.unitId = unitId;
 	}
 
-	public Integer getCarats() {
+	public Double getCarats() {
 		return carats;
 	}
 
-	public void setCarats(Integer carats) {
+	public void setCarats(Double carats) {
 		this.carats = carats;
 	}
 
-	public Integer getAvailableCarats() {
+	public Double getAvailableCarats() {
 		return availableCarats;
 	}
 
-	public void setAvailableCarats(Integer availableCarats) {
+	public void setAvailableCarats(Double availableCarats) {
 		this.availableCarats = availableCarats;
 	}
 
-	public Integer getReorderQuantity() {
+	public Double getReorderQuantity() {
 		return reorderQuantity;
 	}
 
-	public void setReorderQuantity(Integer reorderQuantity) {
+	public void setReorderQuantity(Double reorderQuantity) {
 		this.reorderQuantity = reorderQuantity;
 	}
 
@@ -246,11 +246,11 @@ public class Lot implements Serializable {
 		this.createdOn = createdOn;
 	}
 
-	public Integer getCreatedBy() {
+	public Double getCreatedBy() {
 		return createdBy;
 	}
 
-	public void setCreatedBy(Integer createdBy) {
+	public void setCreatedBy(Double createdBy) {
 		this.createdBy = createdBy;
 	}
 
@@ -286,27 +286,27 @@ public class Lot implements Serializable {
 		this.active = active;
 	}
 
-	public Integer getYearENdId() {
+	public Double getYearENdId() {
 		return yearENdId;
 	}
 
-	public void setYearENdId(Integer yearENdId) {
+	public void setYearENdId(Double yearENdId) {
 		this.yearENdId = yearENdId;
 	}
 
-	public Integer getRapaportLocalRate() {
+	public Double getRapaportLocalRate() {
 		return rapaportLocalRate;
 	}
 
-	public void setRapaportLocalRate(Integer rapaportLocalRate) {
+	public void setRapaportLocalRate(Double rapaportLocalRate) {
 		this.rapaportLocalRate = rapaportLocalRate;
 	}
 
-	public Integer getRapaportLocalDollar() {
+	public Double getRapaportLocalDollar() {
 		return rapaportLocalDollar;
 	}
 
-	public void setRapaportLocalDollar(Integer rapaportLocalDollar) {
+	public void setRapaportLocalDollar(Double rapaportLocalDollar) {
 		this.rapaportLocalDollar = rapaportLocalDollar;
 	}
 
@@ -334,43 +334,43 @@ public class Lot implements Serializable {
 		this.mfgId = mfgId;
 	}
 
-	public Integer getX1BaseRate() {
+	public Double getX1BaseRate() {
 		return x1BaseRate;
 	}
 
-	public void setX1BaseRate(Integer x1BaseRate) {
+	public void setX1BaseRate(Double x1BaseRate) {
 		this.x1BaseRate = x1BaseRate;
 	}
 
-	public Integer getX2mf() {
+	public Double getX2mf() {
 		return x2mf;
 	}
 
-	public void setX2mf(Integer x2mf) {
+	public void setX2mf(Double x2mf) {
 		this.x2mf = x2mf;
 	}
 
-	public Integer getX3mf() {
+	public Double getX3mf() {
 		return x3mf;
 	}
 
-	public void setX3mf(Integer x3mf) {
+	public void setX3mf(Double x3mf) {
 		this.x3mf = x3mf;
 	}
 
-	public Integer getX4mf() {
+	public Double getX4mf() {
 		return x4mf;
 	}
 
-	public void setX4mf(Integer x4mf) {
+	public void setX4mf(Double x4mf) {
 		this.x4mf = x4mf;
 	}
 
-	public Integer getX5mf() {
+	public Double getX5mf() {
 		return x5mf;
 	}
 
-	public void setX5mf(Integer x5mf) {
+	public void setX5mf(Double x5mf) {
 		this.x5mf = x5mf;
 	}
 

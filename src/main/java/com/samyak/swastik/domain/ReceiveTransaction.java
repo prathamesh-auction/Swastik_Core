@@ -29,37 +29,37 @@ public class ReceiveTransaction implements Serializable {
 	private UUID receiveId;
 
 	@Column(name = "LOT_SR_NO")
-	private Integer lotSrNo;
+	private Double lotSrNo;
 
 	@Column(name = "LOT_ID")
 	private UUID lotId;
 
 	@Column(name = "QUANTITY")
-	private Integer quantity;
+	private Double quantity;
 
 	@Column(name = "AVAILABLE_QUANTITY")
-	private Integer availableQuantity;
+	private Double availableQuantity;
 
 	@Column(name = "RECEIVE_PRICE")
-	private Integer receivePrice;
+	private Double receivePrice;
 
 	@Column(name = "LOCAL_PRICE")
-	private Integer localPrice;
+	private Double localPrice;
 
 	@Column(name = "DOLLAR_PRICE")
-	private Integer dollarPrice;
+	private Double dollarPrice;
 
 	@Column(name = "PIECES")
-	private Integer pieces;
+	private Double pieces;
 
 	@Column(name = "REMARK")
 	private String remrak;
 
 	@Column(name = "STATUS")
-	private Integer status;
+	private Double status;
 
 	@Column(name = "RETURN_QUANTITY")
-	private Integer returnQuantity;
+	private Double returnQuantity;
 
 	@Column(name = "RETURN_ON")
 	private Timestamp returnOn;
@@ -92,13 +92,13 @@ public class ReceiveTransaction implements Serializable {
 	private Boolean movWtdAvg;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	@Column(name = "REF_WHRT_ID")
 	private UUID RefWhrtId;
 
 	@Column(name = "REF_STATUS")
-	private Integer refStatus;
+	private Double refStatus;
 
 	@Column(name = "ORDER_TRANSACTION_ID")
 	private UUID orderTransactionId;
@@ -113,7 +113,7 @@ public class ReceiveTransaction implements Serializable {
 	private UUID rateId;
 
 	@Column(name = "MF_VALUE")
-	private Integer mfIdvalue;
+	private Double mfIdvalue;
 
 	public Long getId() {
 		return id;
@@ -139,11 +139,11 @@ public class ReceiveTransaction implements Serializable {
 		this.receiveId = receiveId;
 	}
 
-	public Integer getLotSrNo() {
+	public Double getLotSrNo() {
 		return lotSrNo;
 	}
 
-	public void setLotSrNo(Integer lotSrNo) {
+	public void setLotSrNo(Double lotSrNo) {
 		this.lotSrNo = lotSrNo;
 	}
 
@@ -155,51 +155,51 @@ public class ReceiveTransaction implements Serializable {
 		this.lotId = lotId;
 	}
 
-	public Integer getQuantity() {
+	public Double getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(Integer quantity) {
+	public void setQuantity(Double quantity) {
 		this.quantity = quantity;
 	}
 
-	public Integer getAvailableQuantity() {
+	public Double getAvailableQuantity() {
 		return availableQuantity;
 	}
 
-	public void setAvailableQuantity(Integer availableQuantity) {
+	public void setAvailableQuantity(Double availableQuantity) {
 		this.availableQuantity = availableQuantity;
 	}
 
-	public Integer getReceivePrice() {
+	public Double getReceivePrice() {
 		return receivePrice;
 	}
 
-	public void setReceivePrice(Integer receivePrice) {
+	public void setReceivePrice(Double receivePrice) {
 		this.receivePrice = receivePrice;
 	}
 
-	public Integer getLocalPrice() {
+	public Double getLocalPrice() {
 		return localPrice;
 	}
 
-	public void setLocalPrice(Integer localPrice) {
+	public void setLocalPrice(Double localPrice) {
 		this.localPrice = localPrice;
 	}
 
-	public Integer getDollarPrice() {
+	public Double getDollarPrice() {
 		return dollarPrice;
 	}
 
-	public void setDollarPrice(Integer dollarPrice) {
+	public void setDollarPrice(Double dollarPrice) {
 		this.dollarPrice = dollarPrice;
 	}
 
-	public Integer getPieces() {
+	public Double getPieces() {
 		return pieces;
 	}
 
-	public void setPieces(Integer pieces) {
+	public void setPieces(Double pieces) {
 		this.pieces = pieces;
 	}
 
@@ -211,19 +211,19 @@ public class ReceiveTransaction implements Serializable {
 		this.remrak = remrak;
 	}
 
-	public Integer getStatus() {
+	public Double getStatus() {
 		return status;
 	}
 
-	public void setStatus(Integer status) {
+	public void setStatus(Double status) {
 		this.status = status;
 	}
 
-	public Integer getReturnQuantity() {
+	public Double getReturnQuantity() {
 		return returnQuantity;
 	}
 
-	public void setReturnQuantity(Integer returnQuantity) {
+	public void setReturnQuantity(Double returnQuantity) {
 		this.returnQuantity = returnQuantity;
 	}
 
@@ -307,11 +307,11 @@ public class ReceiveTransaction implements Serializable {
 		this.movWtdAvg = movWtdAvg;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 
@@ -323,11 +323,11 @@ public class ReceiveTransaction implements Serializable {
 		RefWhrtId = refWhrtId;
 	}
 
-	public Integer getRefStatus() {
+	public Double getRefStatus() {
 		return refStatus;
 	}
 
-	public void setRefStatus(Integer refStatus) {
+	public void setRefStatus(Double refStatus) {
 		this.refStatus = refStatus;
 	}
 
@@ -363,11 +363,11 @@ public class ReceiveTransaction implements Serializable {
 		this.rateId = rateId;
 	}
 
-	public Integer getMfIdvalue() {
+	public Double getMfIdvalue() {
 		return mfIdvalue;
 	}
 
-	public void setMfIdvalue(Integer mfIdvalue) {
+	public void setMfIdvalue(Double mfIdvalue) {
 		this.mfIdvalue = mfIdvalue;
 	}
 

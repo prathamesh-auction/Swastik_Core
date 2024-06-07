@@ -8,14 +8,14 @@ public class FInancialTransactionInfo {
 	private UUID transactionId;
 	private UUID companyId;
 	private UUID voucherId;
-	private Integer srNo;
-	private Integer forHead;
+	private Double srNo;
+	private Double forHead;
 	private UUID forHeadID;
 	private String description;
 	private Boolean transactionType;
-	private Integer amount;
-	private Integer localAmount;
-	private Integer dollarAmount;
+	private Double amount;
+	private Double localAmount;
+	private Double dollarAmount;
 	private String modifiedBy;
 	private Timestamp ModifiedOn;
 	private String modifiedMachineName;
@@ -26,7 +26,7 @@ public class FInancialTransactionInfo {
 	private Timestamp checkDate;
 	private String bankName;
 	private UUID accountId;
-	private Integer excahngeRate;
+	private Double excahngeRate;
 	private Timestamp exchangeDate;
 	private Timestamp transactionDate;
 	private String transcationNo;
@@ -34,7 +34,7 @@ public class FInancialTransactionInfo {
 	private UUID receiveFromLedgerId;
 	private UUID costHeadGroupId;
 	private UUID costHeadSubGroupId;
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	public UUID getTransactionId() {
 		return transactionId;
@@ -60,19 +60,19 @@ public class FInancialTransactionInfo {
 		this.voucherId = voucherId;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
-	public Integer getForHead() {
+	public Double getForHead() {
 		return forHead;
 	}
 
-	public void setForHead(Integer forHead) {
+	public void setForHead(Double forHead) {
 		this.forHead = forHead;
 	}
 
@@ -100,27 +100,27 @@ public class FInancialTransactionInfo {
 		this.transactionType = transactionType;
 	}
 
-	public Integer getAmount() {
+	public Double getAmount() {
 		return amount;
 	}
 
-	public void setAmount(Integer amount) {
+	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 
-	public Integer getLocalAmount() {
+	public Double getLocalAmount() {
 		return localAmount;
 	}
 
-	public void setLocalAmount(Integer localAmount) {
+	public void setLocalAmount(Double localAmount) {
 		this.localAmount = localAmount;
 	}
 
-	public Integer getDollarAmount() {
+	public Double getDollarAmount() {
 		return dollarAmount;
 	}
 
-	public void setDollarAmount(Integer dollarAmount) {
+	public void setDollarAmount(Double dollarAmount) {
 		this.dollarAmount = dollarAmount;
 	}
 
@@ -204,11 +204,11 @@ public class FInancialTransactionInfo {
 		this.accountId = accountId;
 	}
 
-	public Integer getExcahngeRate() {
+	public Double getExcahngeRate() {
 		return excahngeRate;
 	}
 
-	public void setExcahngeRate(Integer excahngeRate) {
+	public void setExcahngeRate(Double excahngeRate) {
 		this.excahngeRate = excahngeRate;
 	}
 
@@ -268,11 +268,11 @@ public class FInancialTransactionInfo {
 		this.costHeadSubGroupId = costHeadSubGroupId;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

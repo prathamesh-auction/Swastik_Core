@@ -8,12 +8,12 @@ public class StatusInfo {
 	private UUID statusId;
 	private String statusName;
 	private String statusDescription;
-	private Integer srNo;
+	private Double srNo;
 	private String modifiedBy;
 	private Timestamp ModifiedOn;
 	private String modifiedMachineName;
 	private Boolean active;
-	private Integer yearEndId;
+	private Double yearEndId;
 	private String statusNameNative;
 
 	public UUID getStatusId() {
@@ -40,11 +40,11 @@ public class StatusInfo {
 		this.statusDescription = statusDescription;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
@@ -80,11 +80,11 @@ public class StatusInfo {
 		this.active = active;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

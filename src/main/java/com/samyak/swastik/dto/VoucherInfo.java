@@ -7,15 +7,15 @@ public class VoucherInfo {
 
 	private UUID voucherId;
 	private UUID companyId;
-	private Integer voucherType;
+	private Double voucherType;
 	private String voucherNo;
 	private Timestamp voucherDate;
-	private Integer toByNos;
-	private Integer voucherCurrency;
-	private Integer exchangeRate;
-	private Integer voucherTotal;
-	private Integer localTotal;
-	private Integer dollarTotal;
+	private Double toByNos;
+	private Double voucherCurrency;
+	private Double exchangeRate;
+	private Double voucherTotal;
+	private Double localTotal;
+	private Double dollarTotal;
 	private String description;
 	private String modifiedBy;
 	private Timestamp ModifiedOn;
@@ -25,7 +25,7 @@ public class VoucherInfo {
 	private UUID costHeadGroupId;
 	private UUID costHeadSubGroupID;
 	private UUID reconcilationDate;
-	private Integer yearEndID;
+	private Double yearEndID;
 	private String refNo;
 
 	public UUID getVoucherId() {
@@ -44,11 +44,11 @@ public class VoucherInfo {
 		this.companyId = companyId;
 	}
 
-	public Integer getVoucherType() {
+	public Double getVoucherType() {
 		return voucherType;
 	}
 
-	public void setVoucherType(Integer voucherType) {
+	public void setVoucherType(Double voucherType) {
 		this.voucherType = voucherType;
 	}
 
@@ -68,51 +68,51 @@ public class VoucherInfo {
 		this.voucherDate = voucherDate;
 	}
 
-	public Integer getToByNos() {
+	public Double getToByNos() {
 		return toByNos;
 	}
 
-	public void setToByNos(Integer toByNos) {
+	public void setToByNos(Double toByNos) {
 		this.toByNos = toByNos;
 	}
 
-	public Integer getVoucherCurrency() {
+	public Double getVoucherCurrency() {
 		return voucherCurrency;
 	}
 
-	public void setVoucherCurrency(Integer voucherCurrency) {
+	public void setVoucherCurrency(Double voucherCurrency) {
 		this.voucherCurrency = voucherCurrency;
 	}
 
-	public Integer getExchangeRate() {
+	public Double getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(Integer exchangeRate) {
+	public void setExchangeRate(Double exchangeRate) {
 		this.exchangeRate = exchangeRate;
 	}
 
-	public Integer getVoucherTotal() {
+	public Double getVoucherTotal() {
 		return voucherTotal;
 	}
 
-	public void setVoucherTotal(Integer voucherTotal) {
+	public void setVoucherTotal(Double voucherTotal) {
 		this.voucherTotal = voucherTotal;
 	}
 
-	public Integer getLocalTotal() {
+	public Double getLocalTotal() {
 		return localTotal;
 	}
 
-	public void setLocalTotal(Integer localTotal) {
+	public void setLocalTotal(Double localTotal) {
 		this.localTotal = localTotal;
 	}
 
-	public Integer getDollarTotal() {
+	public Double getDollarTotal() {
 		return dollarTotal;
 	}
 
-	public void setDollarTotal(Integer dollarTotal) {
+	public void setDollarTotal(Double dollarTotal) {
 		this.dollarTotal = dollarTotal;
 	}
 
@@ -188,11 +188,11 @@ public class VoucherInfo {
 		this.reconcilationDate = reconcilationDate;
 	}
 
-	public Integer getYearEndID() {
+	public Double getYearEndID() {
 		return yearEndID;
 	}
 
-	public void setYearEndID(Integer yearEndID) {
+	public void setYearEndID(Double yearEndID) {
 		this.yearEndID = yearEndID;
 	}
 

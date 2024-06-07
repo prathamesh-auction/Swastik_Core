@@ -23,9 +23,9 @@ public class SalePersonInfo {
 	private Timestamp ModifiedOn;
 	private String modifiedMachineName;
 	private Boolean active;
-	private Integer srNo;
-	private Integer yearEndId;
-	private Integer commission;
+	private Double srNo;
+	private Double yearEndId;
+	private Double commission;
 	private String salesPersonNameNative;
 
 	public UUID getSalePersonId() {
@@ -172,27 +172,27 @@ public class SalePersonInfo {
 		this.active = active;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 
-	public Integer getCommission() {
+	public Double getCommission() {
 		return commission;
 	}
 
-	public void setCommission(Integer commission) {
+	public void setCommission(Double commission) {
 		this.commission = commission;
 	}
 

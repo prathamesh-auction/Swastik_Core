@@ -35,34 +35,34 @@ public class Receive implements Serializable {
 	private Timestamp receiveDate;
 
 	@Column(name = "RECEIVE_LOTS")
-	private Integer receiveLots;
+	private Double receiveLots;
 
 	@Column(name = "RECEIVE_QUANTITY")
-	private Integer receiveQuantity;
+	private Double receiveQuantity;
 
 	@Column(name = "RECEIVE_CURRENCY_ID")
 	private UUID receiveCurrencyId;
 
 	@Column(name = "EXCHANGE_RATE")
-	private Integer exchangeRate;
+	private Double exchangeRate;
 
 	@Column(name = "RECEIVE_EXCHANGE_RATE")
-	private Integer receiveExchangeRate;
+	private Double receiveExchangeRate;
 
 	@Column(name = "TAX")
-	private Integer tax;
+	private Double tax;
 
 	@Column(name = "DISCOUNT")
-	private Integer discount;
+	private Double discount;
 
 	@Column(name = "RECEIVE_TOTAL")
-	private Integer receiveTool;
+	private Double receiveTool;
 
 	@Column(name = "DOLLAR_TOTAL")
-	private Integer dollarTool;
+	private Double dollarTool;
 
 	@Column(name = "RECEIVE_FROM_ID")
-	private Integer receiveFromId;
+	private Double receiveFromId;
 
 	@Column(name = "RECEIVE_NAME")
 	private String receiveName;
@@ -80,7 +80,7 @@ public class Receive implements Serializable {
 	private Boolean purchase;
 
 	@Column(name = "DUE_DAYS")
-	private Integer dueDays;
+	private Double dueDays;
 
 	@Column(name = "DUE_DATE")
 	private Timestamp dueDate;
@@ -125,34 +125,34 @@ public class Receive implements Serializable {
 	private Timestamp stockDate;
 
 	@Column(name = "DIFFERENCE_AMOUNT")
-	private Integer differenceAmount;
+	private Double differenceAmount;
 
 	@Column(name = "DIFFERENCE_LOCAL_AMOUNT")
-	private Integer differenceLocalAmount;
+	private Double differenceLocalAmount;
 
 	@Column(name = "DIFFERENCE_DOLLAR_AMOUNT")
-	private Integer differenceDollarAmount;
+	private Double differenceDollarAmount;
 
 	@Column(name = "INV_TOTAL")
-	private Integer invAmount;
+	private Double invAmount;
 
 	@Column(name = "INV_LOCAL_TOTAL")
-	private Integer invLocalTotal;
+	private Double invLocalTotal;
 
 	@Column(name = "INV_DOLLAR_TOTAL")
-	private Integer invDollarTotal;
+	private Double invDollarTotal;
 
 	@Column(name = "RECEIVE_CATEGORY")
-	private Integer receiveCategory;
+	private Double receiveCategory;
 
 	@Column(name = "STOCK_TRANSFER_TYPE")
-	private Integer stockTransferType;
+	private Double stockTransferType;
 
 	@Column(name = "CGT_RETURN_CONFIRM")
-	private Integer cgtReturnConfirm;
+	private Double cgtReturnConfirm;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	@Column(name = "PURCHASE_GROUP_ID")
 	private UUID purchaseGroupId;
@@ -215,19 +215,19 @@ public class Receive implements Serializable {
 		this.receiveDate = receiveDate;
 	}
 
-	public Integer getReceiveLots() {
+	public Double getReceiveLots() {
 		return receiveLots;
 	}
 
-	public void setReceiveLots(Integer receiveLots) {
+	public void setReceiveLots(Double receiveLots) {
 		this.receiveLots = receiveLots;
 	}
 
-	public Integer getReceiveQuantity() {
+	public Double getReceiveQuantity() {
 		return receiveQuantity;
 	}
 
-	public void setReceiveQuantity(Integer receiveQuantity) {
+	public void setReceiveQuantity(Double receiveQuantity) {
 		this.receiveQuantity = receiveQuantity;
 	}
 
@@ -239,59 +239,59 @@ public class Receive implements Serializable {
 		this.receiveCurrencyId = receiveCurrencyId;
 	}
 
-	public Integer getExchangeRate() {
+	public Double getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(Integer exchangeRate) {
+	public void setExchangeRate(Double exchangeRate) {
 		this.exchangeRate = exchangeRate;
 	}
 
-	public Integer getReceiveExchangeRate() {
+	public Double getReceiveExchangeRate() {
 		return receiveExchangeRate;
 	}
 
-	public void setReceiveExchangeRate(Integer receiveExchangeRate) {
+	public void setReceiveExchangeRate(Double receiveExchangeRate) {
 		this.receiveExchangeRate = receiveExchangeRate;
 	}
 
-	public Integer getTax() {
+	public Double getTax() {
 		return tax;
 	}
 
-	public void setTax(Integer tax) {
+	public void setTax(Double tax) {
 		this.tax = tax;
 	}
 
-	public Integer getDiscount() {
+	public Double getDiscount() {
 		return discount;
 	}
 
-	public void setDiscount(Integer discount) {
+	public void setDiscount(Double discount) {
 		this.discount = discount;
 	}
 
-	public Integer getReceiveTool() {
+	public Double getReceiveTool() {
 		return receiveTool;
 	}
 
-	public void setReceiveTool(Integer receiveTool) {
+	public void setReceiveTool(Double receiveTool) {
 		this.receiveTool = receiveTool;
 	}
 
-	public Integer getDollarTool() {
+	public Double getDollarTool() {
 		return dollarTool;
 	}
 
-	public void setDollarTool(Integer dollarTool) {
+	public void setDollarTool(Double dollarTool) {
 		this.dollarTool = dollarTool;
 	}
 
-	public Integer getReceiveFromId() {
+	public Double getReceiveFromId() {
 		return receiveFromId;
 	}
 
-	public void setReceiveFromId(Integer receiveFromId) {
+	public void setReceiveFromId(Double receiveFromId) {
 		this.receiveFromId = receiveFromId;
 	}
 
@@ -335,11 +335,11 @@ public class Receive implements Serializable {
 		this.purchase = purchase;
 	}
 
-	public Integer getDueDays() {
+	public Double getDueDays() {
 		return dueDays;
 	}
 
-	public void setDueDays(Integer dueDays) {
+	public void setDueDays(Double dueDays) {
 		this.dueDays = dueDays;
 	}
 
@@ -455,83 +455,83 @@ public class Receive implements Serializable {
 		this.stockDate = stockDate;
 	}
 
-	public Integer getDifferenceAmount() {
+	public Double getDifferenceAmount() {
 		return differenceAmount;
 	}
 
-	public void setDifferenceAmount(Integer differenceAmount) {
+	public void setDifferenceAmount(Double differenceAmount) {
 		this.differenceAmount = differenceAmount;
 	}
 
-	public Integer getDifferenceLocalAmount() {
+	public Double getDifferenceLocalAmount() {
 		return differenceLocalAmount;
 	}
 
-	public void setDifferenceLocalAmount(Integer differenceLocalAmount) {
+	public void setDifferenceLocalAmount(Double differenceLocalAmount) {
 		this.differenceLocalAmount = differenceLocalAmount;
 	}
 
-	public Integer getDifferenceDollarAmount() {
+	public Double getDifferenceDollarAmount() {
 		return differenceDollarAmount;
 	}
 
-	public void setDifferenceDollarAmount(Integer differenceDollarAmount) {
+	public void setDifferenceDollarAmount(Double differenceDollarAmount) {
 		this.differenceDollarAmount = differenceDollarAmount;
 	}
 
-	public Integer getInvAmount() {
+	public Double getInvAmount() {
 		return invAmount;
 	}
 
-	public void setInvAmount(Integer invAmount) {
+	public void setInvAmount(Double invAmount) {
 		this.invAmount = invAmount;
 	}
 
-	public Integer getInvLocalTotal() {
+	public Double getInvLocalTotal() {
 		return invLocalTotal;
 	}
 
-	public void setInvLocalTotal(Integer invLocalTotal) {
+	public void setInvLocalTotal(Double invLocalTotal) {
 		this.invLocalTotal = invLocalTotal;
 	}
 
-	public Integer getInvDollarTotal() {
+	public Double getInvDollarTotal() {
 		return invDollarTotal;
 	}
 
-	public void setInvDollarTotal(Integer invDollarTotal) {
+	public void setInvDollarTotal(Double invDollarTotal) {
 		this.invDollarTotal = invDollarTotal;
 	}
 
-	public Integer getReceiveCategory() {
+	public Double getReceiveCategory() {
 		return receiveCategory;
 	}
 
-	public void setReceiveCategory(Integer receiveCategory) {
+	public void setReceiveCategory(Double receiveCategory) {
 		this.receiveCategory = receiveCategory;
 	}
 
-	public Integer getStockTransferType() {
+	public Double getStockTransferType() {
 		return stockTransferType;
 	}
 
-	public void setStockTransferType(Integer stockTransferType) {
+	public void setStockTransferType(Double stockTransferType) {
 		this.stockTransferType = stockTransferType;
 	}
 
-	public Integer getCgtReturnConfirm() {
+	public Double getCgtReturnConfirm() {
 		return cgtReturnConfirm;
 	}
 
-	public void setCgtReturnConfirm(Integer cgtReturnConfirm) {
+	public void setCgtReturnConfirm(Double cgtReturnConfirm) {
 		this.cgtReturnConfirm = cgtReturnConfirm;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

@@ -33,11 +33,11 @@
 			<column name="MODIFIED_MACHINE_NAME" type="VARCHAR(100)">
 				<constraints nullable="false" />
 			</column>
-			<column name="SR_NO" type="INTEGER" />
+			<column name="SR_NO" type="DOUBLE" />
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 			<column name="LOCATION_NAME_NATIVE" type="VARCHAR(100)" />
@@ -56,15 +56,15 @@
 			<column name="PURCHASE_SALE_GROUP_ID" type="UUID">
 				<constraints nullable="false" unique="true" />
 			</column>
-			<column name="PURCHASE_SALE_GROUP_TYPE" type="INTEGER" />
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="PURCHASE_SALE_GROUP_TYPE" type="DOUBLE" />
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 			<column name="COMPANY_ID" type="UUID">
 			</column>
 			<column name="PURCHASE_SALE_GROUP__NAME" type="VARCHAR(100)" />
 			<column name="PURCHASE_SALE_GROUP__CODE" type="VARCHAR(100)" />
-			<column name="SR_NO" type="INTEGER" />
+			<column name="SR_NO" type="DOUBLE" />
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
@@ -105,11 +105,11 @@
 			<column name="MODIFIED_MACHINE_NAME" type="VARCHAR(100)">
 				<constraints nullable="false" />
 			</column>
-			<column name="SR_NO" type="INTEGER" />
+			<column name="SR_NO" type="DOUBLE" />
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 			<column name="LOT_CATEGORY_NAME_NATIVE" type="VARCHAR(100)" />
@@ -130,12 +130,12 @@
 			<column name="CURRENCY_NAME" type="VARCHAR(100)" />
 			<column name="CURRENCY_SYMBOL" type="VARCHAR(100)" />
 			<column name="COMPANY_ID" type="UUID" />
-			<column name="BASE_EXCHANGE_RATE" type="INTEGER" />
+			<column name="BASE_EXCHANGE_RATE" type="DOUBLE" />
 			<column name="LOCAL_CURRENCY" type="BOOLEAN"
 				defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="DECIMAL_PLACES" type="INTEGER" />
+			<column name="DECIMAL_PLACES" type="DOUBLE" />
 			<column name="MODIFIED_BY" type="VARCHAR(100)">
 				<constraints nullable="false" />
 			</column>
@@ -148,7 +148,7 @@
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 			<column name="CURRENCY_NAME_NATIVE" type="VARCHAR(100)" />
@@ -168,6 +168,7 @@
 			</column>
 			<column name="CURRENCY_ID" type="UUID" />
 			<column name="EXCHANGE_DATE" type="DATETIME" />
+			<column name="EXCHANGE_RATE" type="DOUBLE" />
 			<column name="MODIFIED_BY" type="VARCHAR(100)">
 				<constraints nullable="false" />
 			</column>
@@ -180,7 +181,7 @@
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 
@@ -205,16 +206,16 @@
 			</column>
 			<column name="RECEIVE_NO" type="VARCHAR(100)" />
 			<column name="RECEIVE_DATE" type="DATETIME" />
-			<column name="RECEIVE_LOTS" type="INTEGER" />
-			<column name="RECEIVE_QUANTITY" type="INTEGER" />
+			<column name="RECEIVE_LOTS" type="DOUBLE" />
+			<column name="RECEIVE_QUANTITY" type="DOUBLE" />
 			<column name="RECEIVE_CURRENCY_ID" type="UUID" />
-			<column name="EXCHANGE_RATE" type="INTEGER" />
-			<column name="RECEIVE_EXCHANGE_RATE" type="INTEGER" />
-			<column name="TAX" type="INTEGER" />
-			<column name="DISCOUNT" type="INTEGER" />
-			<column name="RECEIVE_TOTAL" type="INTEGER" />
-			<column name="DOLLAR_TOTAL" type="INTEGER" />
-			<column name="RECEIVE_FROM_ID" type="INTEGER" />
+			<column name="EXCHANGE_RATE" type="DOUBLE" />
+			<column name="RECEIVE_EXCHANGE_RATE" type="DOUBLE" />
+			<column name="TAX" type="DOUBLE" />
+			<column name="DISCOUNT" type="DOUBLE" />
+			<column name="RECEIVE_TOTAL" type="DOUBLE" />
+			<column name="DOLLAR_TOTAL" type="DOUBLE" />
+			<column name="RECEIVE_FROM_ID" type="DOUBLE" />
 			<column name="RECEIVE_NAME" type="VARCHAR(100)" />
 			<column name="COMPANY_ID" type="UUID" />
 			<column name="RECEIVE_BY_NAME" type="VARCHAR(100)" />
@@ -225,7 +226,7 @@
 			<column name="PURCHASE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="DUE_DAYS" type="INTEGER" />
+			<column name="DUE_DAYS" type="DOUBLE" />
 			<column name="DUE_DATE" type="DATETIME" />
 			<column name="CHALLAN_NO" type="VARCHAR(100)" />
 			<column name="CHALLAN_DATE" type="DATETIME" />
@@ -251,16 +252,16 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="STOCK_DATE" type="DATETIME" />
-			<column name="DIFFERENCE_AMOUNT" type="INTEGER" />
-			<column name="DIFFERENCE_LOCAL_AMOUNT" type="INTEGER" />
-			<column name="DIFFERENCE_DOLLAR_AMOUNT" type="INTEGER" />
-			<column name="INV_TOTAL" type="INTEGER" />
-			<column name="INV_LOCAL_TOTAL" type="INTEGER" />
-			<column name="INV_DOLLAR_TOTAL" type="INTEGER" />
-			<column name="RECEIVE_CATEGORY" type="INTEGER" />
-			<column name="STOCK_TRANSFER_TYPE" type="INTEGER" />
-			<column name="CGT_RETURN_CONFIRM" type="INTEGER" />
-			<column name="YEAR_END_ID" type="INTEGER" />
+			<column name="DIFFERENCE_AMOUNT" type="DOUBLE" />
+			<column name="DIFFERENCE_LOCAL_AMOUNT" type="DOUBLE" />
+			<column name="DIFFERENCE_DOLLAR_AMOUNT" type="DOUBLE" />
+			<column name="INV_TOTAL" type="DOUBLE" />
+			<column name="INV_LOCAL_TOTAL" type="DOUBLE" />
+			<column name="INV_DOLLAR_TOTAL" type="DOUBLE" />
+			<column name="RECEIVE_CATEGORY" type="DOUBLE" />
+			<column name="STOCK_TRANSFER_TYPE" type="DOUBLE" />
+			<column name="CGT_RETURN_CONFIRM" type="DOUBLE" />
+			<column name="YEAR_END_ID" type="DOUBLE" />
 			<column name="PURCHASE_GROUP_ID" type="UUID" />
 			<column name="CGT_REF_NO" type="VARCHAR(300)" />
 			<column name="CGT_REF_DESCRIPTION" type="VARCHAR(300)" />
@@ -283,17 +284,17 @@
 				<constraints nullable="false" unique="true" />
 			</column>
 			<column name="RECEIVE_ID" type="UUID" />
-			<column name="LOT_SR_NO" type="INTEGER" />
+			<column name="LOT_SR_NO" type="DOUBLE" />
 			<column name="LOT_ID" type="UUID" />
-			<column name="QUANTITY" type="INTEGER" />
-			<column name="AVAILABLE_QUANTITY" type="INTEGER" />
-			<column name="RECEIVE_PRICE" type="INTEGER" />
-			<column name="LOCAL_PRICE" type="INTEGER" />
-			<column name="DOLLAR_PRICE" type="INTEGER" />
-			<column name="PIECES" type="INTEGER" />
+			<column name="QUANTITY" type="DOUBLE" />
+			<column name="AVAILABLE_QUANTITY" type="DOUBLE" />
+			<column name="RECEIVE_PRICE" type="DOUBLE" />
+			<column name="LOCAL_PRICE" type="DOUBLE" />
+			<column name="DOLLAR_PRICE" type="DOUBLE" />
+			<column name="PIECES" type="DOUBLE" />
 			<column name="REMARK" type="VARCHAR(100)" />
-			<column name="STATUS" type="INTEGER" />
-			<column name="RETURN_QUANTITY" type="INTEGER" />
+			<column name="STATUS" type="DOUBLE" />
+			<column name="RETURN_QUANTITY" type="DOUBLE" />
 			<column name="RETURN_ON" type="DATETIME" />
 			<column name="RETURN_BY" type="VARCHAR(100)" />
 			<column name="MODIFIED_BY" type="VARCHAR(100)">
@@ -316,16 +317,16 @@
 			<column name="MOV_WTD_AVG" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 			<column name="REF_WHRT_ID" type="UUID" />
-			<column name="REF_STATUS" type="INTEGER" />
+			<column name="REF_STATUS" type="DOUBLE" />
 			<column name="ORDER_TRANSACTION_ID" type="UUID" />
 			<column name="MFG_ID" type="UUID" />
 			<column name="MFG_PURCHASE_RT_ID" type="UUID" />
 			<column name="RATE_ID" type="UUID" />
-			<column name="MF_VALUE" type="INTEGER" />
+			<column name="MF_VALUE" type="DOUBLE" />
 
 		</createTable>
 	</changeSet>
@@ -373,24 +374,24 @@
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="SR_NO" type="INTEGER" />
-			<column name="TRANSACTION_CURRENECY" type="INTEGER" />
+			<column name="SR_NO" type="DOUBLE" />
+			<column name="TRANSACTION_CURRENECY" type="DOUBLE" />
 			<column name="OPENING_DATE" type="DATETIME" />
-			<column name="OPENING_RLOCAL_BALANCE" type="INTEGER" />
-			<column name="OPENING_RDOLLAR_BALANCE" type="INTEGER" />
-			<column name="OPENING_REXCHANGE_RATE" type="INTEGER" />
-			<column name="NET_RLOCAL_BALANCE" type="INTEGER" />
-			<column name="NET_RDOLLAR_BALANCE" type="INTEGER" />
-			<column name="R_EXCHANGE_RATE" type="INTEGER" />
-			<column name="OPENING_PLOCAL_BALANCE" type="INTEGER" />
-			<column name="OPENING_PDOLLAR_BALANCE" type="INTEGER" />
-			<column name="OPENING_PEXCHANGE_RATE" type="INTEGER" />
-			<column name="NET_PLOCAL_BALANCE" type="INTEGER" />
-			<column name="NET_PDOLLAR_BALANCE" type="INTEGER" />
-			<column name="P_EXCHANGE_RATE" type="INTEGER" />
-			<column name="OPENING_PNLOCAL_BALANCE" type="INTEGER" />
-			<column name="OPENING_PNDOLLAR_BALANCE" type="INTEGER" />
-			<column name="OPENING_PNEXCHANGE_RATE" type="INTEGER" />
+			<column name="OPENING_RLOCAL_BALANCE" type="DOUBLE" />
+			<column name="OPENING_RDOLLAR_BALANCE" type="DOUBLE" />
+			<column name="OPENING_REXCHANGE_RATE" type="DOUBLE" />
+			<column name="NET_RLOCAL_BALANCE" type="DOUBLE" />
+			<column name="NET_RDOLLAR_BALANCE" type="DOUBLE" />
+			<column name="R_EXCHANGE_RATE" type="DOUBLE" />
+			<column name="OPENING_PLOCAL_BALANCE" type="DOUBLE" />
+			<column name="OPENING_PDOLLAR_BALANCE" type="DOUBLE" />
+			<column name="OPENING_PEXCHANGE_RATE" type="DOUBLE" />
+			<column name="NET_PLOCAL_BALANCE" type="DOUBLE" />
+			<column name="NET_PDOLLAR_BALANCE" type="DOUBLE" />
+			<column name="P_EXCHANGE_RATE" type="DOUBLE" />
+			<column name="OPENING_PNLOCAL_BALANCE" type="DOUBLE" />
+			<column name="OPENING_PNDOLLAR_BALANCE" type="DOUBLE" />
+			<column name="OPENING_PNEXCHANGE_RATE" type="DOUBLE" />
 			<column name="SALE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
@@ -400,21 +401,21 @@
 			<column name="PN" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="PURCHASE_ADVANCE_LOCAL" type="INTEGER" />
-			<column name="SALE_ADVANCE_LOCAL" type="INTEGER" />
-			<column name="PN_ADVANCE_LOCAL" type="INTEGER" />
-			<column name="PURCHASE_ADVANCE_DOLLAR" type="INTEGER" />
-			<column name="SALE_ADVANCE_DOLLAR" type="INTEGER" />
-			<column name="PN_ADVANCE_DOLLAR" type="INTEGER" />
-			<column name="PAYMENT_DATE" type="INTEGER" />
-			<column name="CLOSING_DATE" type="INTEGER" />
-			<column name="CREDIT_LIMIT" type="INTEGER" />
+			<column name="PURCHASE_ADVANCE_LOCAL" type="DOUBLE" />
+			<column name="SALE_ADVANCE_LOCAL" type="DOUBLE" />
+			<column name="PN_ADVANCE_LOCAL" type="DOUBLE" />
+			<column name="PURCHASE_ADVANCE_DOLLAR" type="DOUBLE" />
+			<column name="SALE_ADVANCE_DOLLAR" type="DOUBLE" />
+			<column name="PN_ADVANCE_DOLLAR" type="DOUBLE" />
+			<column name="PAYMENT_DATE" type="DOUBLE" />
+			<column name="CLOSING_DATE" type="DOUBLE" />
+			<column name="CREDIT_LIMIT" type="DOUBLE" />
 			<column name="SHIKESHO" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="DUE_DAYS" type="INTEGER" />
+			<column name="DUE_DAYS" type="DOUBLE" />
 			<column name="SALES_PERSON_ID" type="UUID" />
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 			<column name="COMPANY_PARTY_NAME_NATIVE" type="VARCHAR(100)" />
@@ -425,7 +426,7 @@
 			<column name="COUNTRY_NATIVE" type="VARCHAR(100)" />
 			<column name="PAYMENT_TERMS_ID" type="UUID" />
 			<column name="PN_REALISATION_ID" type="UUID" />
-			<column name="BANK_CHARGES" type="INTEGER" />
+			<column name="BANK_CHARGES" type="DOUBLE" />
 			<column name="PN_NARRTION" type="VARCHAR(100)" />
 			<column name="CUSTOMER_CODE" type="VARCHAR(100)" />
 
@@ -465,11 +466,11 @@
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="SR_NO" type="INTEGER" />
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="SR_NO" type="DOUBLE" />
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
-			<column name="COMMISSION" type="INTEGER" />
+			<column name="COMMISSION" type="DOUBLE" />
 			<column name="SALES_PERSON_NAME_NATIVE" type="VARCHAR(100)" />
 
 		</createTable>
@@ -493,15 +494,15 @@
 			<column name="LOT_CATEGORY_ID" type="UUID" />
 			<column name="LOTSUB_CATEGORY_ID" type="UUID" />
 			<column name="UNIT_ID" type="UUID" />
-			<column name="CARATS" type="INTEGER" />
-			<column name="AVAILABLE_CARATS" type="INTEGER" />
-			<column name="REORDER_QUANTITY" type="INTEGER" />
+			<column name="CARATS" type="DOUBLE" />
+			<column name="AVAILABLE_CARATS" type="DOUBLE" />
+			<column name="REORDER_QUANTITY" type="DOUBLE" />
 			<column name="PURCHASE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
 			<column name="DRWG_FILE_NAME" type="VARCHAR(100)" />
 			<column name="CREATED_ON" type="DATETIME" />
-			<column name="CREATED_BY" type="INTEGER" />
+			<column name="CREATED_BY" type="DOUBLE" />
 			<column name="MODIFIED_BY" type="VARCHAR(100)" />
 			<column name="MODIFIED_ON" type="DATETIME">
 				<constraints nullable="false" />
@@ -510,21 +511,21 @@
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
-			<column name="RAPAPORT_LOCAL_RATE" type="INTEGER" />
-			<column name="RAPAPORT_DOLLAR_RATE" type="INTEGER" />
+			<column name="RAPAPORT_LOCAL_RATE" type="DOUBLE" />
+			<column name="RAPAPORT_DOLLAR_RATE" type="DOUBLE" />
 			<column name="GIA_FILE_NAME" type="VARCHAR(100)" />
 			<column name="REF_DESIGN_GROUP_ID" type="UUID" />
 			<column name="MFG_ID" type="UUID" />
-			<column name="X1_BASE_RATE" type="INTEGER">
+			<column name="X1_BASE_RATE" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
-			<column name="X2MF" type="INTEGER" />
-			<column name="X3MF" type="INTEGER" />
-			<column name="X4MF" type="INTEGER" />
-			<column name="X5MF" type="INTEGER" />
+			<column name="X2MF" type="DOUBLE" />
+			<column name="X3MF" type="DOUBLE" />
+			<column name="X4MF" type="DOUBLE" />
+			<column name="X5MF" type="DOUBLE" />
 			<column name="SUPPLIER_ID" type="UUID" />
 
 		</createTable>
@@ -547,7 +548,7 @@
 				<constraints nullable="false" unique="true" />
 			</column>
 			<column name="GROUP_DESCRIPTION" type="VARCHAR(100)" />
-			<column name="SR_NO" type="INTEGER" />
+			<column name="SR_NO" type="DOUBLE" />
 			<column name="MODIFIED_BY" type="VARCHAR(100)" />
 			<column name="MODIFIED_ON" type="DATETIME">
 				<constraints nullable="false" />
@@ -556,7 +557,7 @@
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 
@@ -575,7 +576,7 @@
 			</column>
 			<column name="STATUS_NAME" type="VARCHAR(100)" />
 			<column name="STASTUS_DESCRIPTION" type="VARCHAR(100)" />
-			<column name="SR_NO" type="INTEGER" />
+			<column name="SR_NO" type="DOUBLE" />
 			<column name="MODIFIED_BY" type="VARCHAR(100)" />
 			<column name="MODIFIED_ON" type="DATETIME">
 				<constraints nullable="false" />
@@ -584,7 +585,7 @@
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 			<column name="STATUS_NAME_NATIVE" type="VARCHAR(100)" />
@@ -603,15 +604,15 @@
 				<constraints nullable="false" unique="true" />
 			</column>
 			<column name="COMPANY_ID" type="UUID" />
-			<column name="VOUCHER_TYPE" type="INTEGER" />
+			<column name="VOUCHER_TYPE" type="DOUBLE" />
 			<column name="VOUCHER_NO" type="VARCHAR(100)" />
 			<column name="VOUCHER_DATE" type="DATETIME" />
-			<column name="TOBY_NOS" type="INTEGER" />
-			<column name="VOUCHER_CURRENCY" type="INTEGER" />
-			<column name="EXCHANGE_RATE" type="INTEGER" />
-			<column name="VOUCHER_TOTAL" type="INTEGER" />
-			<column name="LOCAL_TOTAL" type="INTEGER" />
-			<column name="DOLLAR_TOTAL" type="INTEGER" />
+			<column name="TOBY_NOS" type="DOUBLE" />
+			<column name="VOUCHER_CURRENCY" type="DOUBLE" />
+			<column name="EXCHANGE_RATE" type="DOUBLE" />
+			<column name="VOUCHER_TOTAL" type="DOUBLE" />
+			<column name="LOCAL_TOTAL" type="DOUBLE" />
+			<column name="DOLLAR_TOTAL" type="DOUBLE" />
 			<column name="DESCRIPTION" type="VARCHAR(100)" />
 			<column name="MODIFIED_BY" type="VARCHAR(100)" />
 			<column name="MODIFIED_ON" type="DATETIME">
@@ -625,7 +626,7 @@
 			<column name="COST_HEADGROUP_ID" type="UUID" />
 			<column name="COST_HEADSUBGROUP_ID" type="UUID" />
 			<column name="RECONCILIATION_DATE" type="DATETIME" />
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 			<column name="REF_NO" type="VARCHAR(100)" />
@@ -645,7 +646,7 @@
 			</column>
 			<column name="TYPE_NAME" type="VARCHAR(100)" />
 			<column name="TYPE_CODE" type="VARCHAR(100)" />
-			<column name="SR_NO" type="INTEGER" />
+			<column name="SR_NO" type="DOUBLE" />
 			<column name="MODIFIED_BY" type="VARCHAR(100)" />
 			<column name="MODIFIED_ON" type="DATETIME">
 				<constraints nullable="false" />
@@ -654,7 +655,7 @@
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 			<column name="TYPE_NAME_NATIVE" type="VARCHAR(100)" />
@@ -674,17 +675,17 @@
 			</column>
 			<column name="COMPANY_ID" type="UUID" />
 			<column name="VOUCHER_ID" type="UUID" />
-			<column name="SR_NO" type="INTEGER" />
-			<column name="FOR_HEAD" type="INTEGER" />
+			<column name="SR_NO" type="DOUBLE" />
+			<column name="FOR_HEAD" type="DOUBLE" />
 			<column name="FOR_HEAD_ID" type="UUID" />
 			<column name="DESCRIPTION" type="VARCHAR(100)" />
 			<column name="TRANSACTION_TYPE" type="BOOLEAN"
 				defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="AMOUNT" type="INTEGER" />
-			<column name="LOCAL_AMOUNT" type="INTEGER" />
-			<column name="DOLLAR_AMOUNT" type="INTEGER" />
+			<column name="AMOUNT" type="DOUBLE" />
+			<column name="LOCAL_AMOUNT" type="DOUBLE" />
+			<column name="DOLLAR_AMOUNT" type="DOUBLE" />
 			<column name="MODIFIED_BY" type="VARCHAR(100)" />
 			<column name="MODIFIED_ON" type="DATETIME">
 				<constraints nullable="false" />
@@ -702,7 +703,7 @@
 			<column name="CHECK_DATE" type="DATETIME" />
 			<column name="BANK_NAME" type="VARCHAR(100)" />
 			<column name="ACCOUNT_ID" type="UUID" />
-			<column name="EXCHANGE_RATE" type="INTEGER" />
+			<column name="EXCHANGE_RATE" type="DOUBLE" />
 			<column name="EXCHANGE_DATE" type="DATETIME" />
 			<column name="TRANSACTION_DATE" type="DATETIME" />
 			<column name="TRANSACTION_NO" type="VARCHAR(100)" />
@@ -710,7 +711,7 @@
 			<column name="RECEIVE_FROM_LEDGER_ID" type="UUID" />
 			<column name="COST_HEADGROUP_ID" type="UUID" />
 			<column name="COST_HEADSUBGROUP_ID" type="UUID" />
-			<column name="YEAR_END_ID" type="INTEGER">
+			<column name="YEAR_END_ID" type="DOUBLE">
 				<constraints nullable="false" />
 			</column>
 
@@ -729,7 +730,7 @@
 			</column>
 			<column name="TYPE_NAME" type="VARCHAR(100)" />
 			<column name="TYPE_CODE" type="VARCHAR(100)" />
-			<column name="SR_NO" type="INTEGER" />
+			<column name="SR_NO" type="DOUBLE" />
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>

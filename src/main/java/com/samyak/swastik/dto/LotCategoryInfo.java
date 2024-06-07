@@ -16,9 +16,9 @@ public class LotCategoryInfo implements Serializable {
 	private String modifiedBy;
 	private Timestamp modifiedOn;
 	private String modifeidMachineName;
-	private Integer srNo;
+	private Double srNo;
 	private Boolean active;
-	private Integer yearEndId;
+	private Double yearEndId;
 	private String lotCategoryNameNative;
 
 	public UUID getLotCategoryId() {
@@ -85,11 +85,11 @@ public class LotCategoryInfo implements Serializable {
 		this.modifeidMachineName = modifeidMachineName;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
@@ -101,11 +101,11 @@ public class LotCategoryInfo implements Serializable {
 		this.active = active;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

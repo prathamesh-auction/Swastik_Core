@@ -31,7 +31,7 @@ public class InvoiceType implements Serializable {
 	private String typeCode;
 
 	@Column(name = "SR_NO")
-	private Integer srNo;
+	private Double srNo;
 
 	@Column(name = "ACTIVE")
 	private Boolean active;
@@ -71,11 +71,11 @@ public class InvoiceType implements Serializable {
 		this.typeCode = typeCode;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 

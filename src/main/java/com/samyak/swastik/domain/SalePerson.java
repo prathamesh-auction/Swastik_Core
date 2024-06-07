@@ -77,13 +77,13 @@ public class SalePerson implements Serializable {
 	private Boolean active;
 
 	@Column(name = "SR_NO")
-	private Integer srNo;
+	private Double srNo;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	@Column(name = "COMMISSION")
-	private Integer commission;
+	private Double commission;
 
 	@Column(name = "SALES_PERSON_NAME_NATIVE")
 	private String salesPersonNameNative;
@@ -240,27 +240,27 @@ public class SalePerson implements Serializable {
 		this.active = active;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 
-	public Integer getCommission() {
+	public Double getCommission() {
 		return commission;
 	}
 
-	public void setCommission(Integer commission) {
+	public void setCommission(Double commission) {
 		this.commission = commission;
 	}
 

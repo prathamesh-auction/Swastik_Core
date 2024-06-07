@@ -35,13 +35,13 @@ public class Currency implements Serializable {
 	private UUID companyId;
 
 	@Column(name = "BASE_EXCHANGE_RATE")
-	private Integer baseExchangeRate;
+	private Double baseExchangeRate;
 
 	@Column(name = "LOCAL_CURRENCY")
 	private Boolean localCurrency;
 
 	@Column(name = "DECIMAL_PLACES")
-	private Integer decimalPlaces;
+	private Double decimalPlaces;
 
 	@Column(name = "MODIFIED_BY")
 	private String modifiedBy;
@@ -56,7 +56,7 @@ public class Currency implements Serializable {
 	private Boolean active;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	@Column(name = "CURRENCY_NAME_NATIVE")
 	private String currencyNameNative;
@@ -104,11 +104,11 @@ public class Currency implements Serializable {
 		this.companyId = companyId;
 	}
 
-	public Integer getBaseExchangeRate() {
+	public Double getBaseExchangeRate() {
 		return baseExchangeRate;
 	}
 
-	public void setBaseExchangeRate(Integer baseExchangeRate) {
+	public void setBaseExchangeRate(Double baseExchangeRate) {
 		this.baseExchangeRate = baseExchangeRate;
 	}
 
@@ -120,11 +120,11 @@ public class Currency implements Serializable {
 		this.localCurrency = localCurrency;
 	}
 
-	public Integer getDecimalPlaces() {
+	public Double getDecimalPlaces() {
 		return decimalPlaces;
 	}
 
-	public void setDecimalPlaces(Integer decimalPlaces) {
+	public void setDecimalPlaces(Double decimalPlaces) {
 		this.decimalPlaces = decimalPlaces;
 	}
 
@@ -160,11 +160,11 @@ public class Currency implements Serializable {
 		this.active = active;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 

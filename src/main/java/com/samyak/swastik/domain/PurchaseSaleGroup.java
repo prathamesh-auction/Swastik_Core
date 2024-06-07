@@ -26,10 +26,10 @@ public class PurchaseSaleGroup implements Serializable {
 	private UUID purchaseSaleGroupId;
 
 	@Column(name = "PURCHASE_SALE_GROUP_TYPE")
-	private Integer purchaseSaleGroupType;
+	private Double purchaseSaleGroupType;
 
 	@Column(name = "YEAR_END_ID")
-	private Integer yearEndId;
+	private Double yearEndId;
 
 	@Column(name = "COMPANY_ID")
 	private UUID companyId;
@@ -41,7 +41,7 @@ public class PurchaseSaleGroup implements Serializable {
 	private String purchaseSaleGroupCode;
 
 	@Column(name = "SR_NO")
-	private Integer srNo;
+	private Double srNo;
 
 	@Column(name = "ACTIVE")
 	private Boolean active;
@@ -74,19 +74,19 @@ public class PurchaseSaleGroup implements Serializable {
 		this.purchaseSaleGroupId = purchaseSaleGroupId;
 	}
 
-	public Integer getPurchaseSaleGroupType() {
+	public Double getPurchaseSaleGroupType() {
 		return purchaseSaleGroupType;
 	}
 
-	public void setPurchaseSaleGroupType(Integer purchaseSaleGroupType) {
+	public void setPurchaseSaleGroupType(Double purchaseSaleGroupType) {
 		this.purchaseSaleGroupType = purchaseSaleGroupType;
 	}
 
-	public Integer getYearEndId() {
+	public Double getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Integer yearEndId) {
+	public void setYearEndId(Double yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 
@@ -114,11 +114,11 @@ public class PurchaseSaleGroup implements Serializable {
 		this.purchaseSaleGroupCode = purchaseSaleGroupCode;
 	}
 
-	public Integer getSrNo() {
+	public Double getSrNo() {
 		return srNo;
 	}
 
-	public void setSrNo(Integer srNo) {
+	public void setSrNo(Double srNo) {
 		this.srNo = srNo;
 	}
 
