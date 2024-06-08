@@ -214,9 +214,10 @@
 			<column name="TAX" type="DOUBLE" />
 			<column name="DISCOUNT" type="DOUBLE" />
 			<column name="RECEIVE_TOTAL" type="DOUBLE" />
+			<column name="LOCAL_TOTAL" type="DOUBLE" />
 			<column name="DOLLAR_TOTAL" type="DOUBLE" />
 			<column name="RECEIVE_FROM_ID" type="DOUBLE" />
-			<column name="RECEIVE_NAME" type="VARCHAR(100)" />
+			<column name="RECEIVE_FROM_NAME" type="VARCHAR(100)" />
 			<column name="COMPANY_ID" type="UUID" />
 			<column name="RECEIVE_BY_NAME" type="VARCHAR(100)" />
 			<column name="RECEIVE_INTERNAL" type="BOOLEAN"
@@ -251,6 +252,12 @@
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
+			<column name="PRO_ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
+				<constraints nullable="false" />
+			</column>
+			<column name="R_RETURN" type="BOOLEAN" defaultValueBoolean="true">
+				<constraints nullable="false" />
+			</column>
 			<column name="STOCK_DATE" type="DATETIME" />
 			<column name="DIFFERENCE_AMOUNT" type="DOUBLE" />
 			<column name="DIFFERENCE_LOCAL_AMOUNT" type="DOUBLE" />
@@ -268,7 +275,7 @@
 			<column name="WORK_ORDER_ID" type="UUID" />
 			<column name="REF_DESIGN_GROUP_ID" type="UUID" />
 			<column name="MFG_PURCHASE_RID" type="UUID" />
-			<column name="OTHER_DAYS" type="VARCHAR(100)" />
+			<column name="OVER_DAYS" type="VARCHAR(100)" />
 
 		</createTable>
 	</changeSet>
@@ -362,6 +369,7 @@
 			<column name="PHONE_OFF" type="VARCHAR(300)" />
 			<column name="PHONE_RESI" type="VARCHAR(100)" />
 			<column name="MOBILE" type="VARCHAR(100)" />
+			<column name="EMAIL" type="VARCHAR(100)" />
 			<column name="WEBSITE" type="VARCHAR(100)" />
 			<column name="PERSON1" type="VARCHAR(100)" />
 			<column name="PERSON2" type="VARCHAR(100)" />
@@ -491,6 +499,7 @@
 			<column name="LOT_NAME" type="VARCHAR(100)" />
 			<column name="LOT_DESCRIPTION" type="VARCHAR(100)" />
 			<column name="LOT_REFERENCE" type="VARCHAR(100)" />
+			<column name="LOT_LOCATION" type="VARCHAR(100)" />
 			<column name="LOT_CATEGORY_ID" type="UUID" />
 			<column name="LOTSUB_CATEGORY_ID" type="UUID" />
 			<column name="UNIT_ID" type="UUID" />
@@ -525,7 +534,7 @@
 			<column name="X2MF" type="DOUBLE" />
 			<column name="X3MF" type="DOUBLE" />
 			<column name="X4MF" type="DOUBLE" />
-			<column name="X5MF" type="DOUBLE" />
+			<column name="X5MF" type="VARCHAR(100)" />
 			<column name="SUPPLIER_ID" type="UUID" />
 
 		</createTable>
@@ -565,7 +574,7 @@
 	</changeSet>
 
 	<changeSet id="ddl_012" author="Prashant Wagh">
-		<createTable tableName="MASTER_STASTUS">
+		<createTable tableName="MASTER_STATUS">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
 					primaryKeyName="PK_MASTER_STASTUS"

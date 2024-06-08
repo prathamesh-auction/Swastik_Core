@@ -35,6 +35,7 @@ public class CompanyPartyService implements ICompanyParty {
 	@Override
 	public void save(CompanyPartyInfo companyPartyInfo) {
 		CompanyParty companyParty = modelMapper.map(companyPartyInfo, CompanyParty.class);
+		companyParty.setCompanyId(UUID.randomUUID());
 		companyPartyRepository.save(companyParty);
 	}
 

@@ -64,8 +64,8 @@ public class Receive implements Serializable {
 	@Column(name = "RECEIVE_FROM_ID")
 	private Double receiveFromId;
 
-	@Column(name = "RECEIVE_NAME")
-	private String receiveName;
+	@Column(name = "RECEIVE_FROM_NAME")
+	private String receiveFromName;
 
 	@Column(name = "COMPANY_ID")
 	private UUID companyId;
@@ -121,6 +121,9 @@ public class Receive implements Serializable {
 	@Column(name = "ACTIVE")
 	private Boolean active;
 
+	@Column(name = "R_RETURN")
+	private Boolean rReturn;
+
 	@Column(name = "STOCK_DATE")
 	private Timestamp stockDate;
 
@@ -172,8 +175,8 @@ public class Receive implements Serializable {
 	@Column(name = "MFG_PURCHASE_RID")
 	private UUID mfgPurchaseRId;
 
-	@Column(name = "OTHER_DAYS")
-	private String otherDays;
+	@Column(name = "OVER_DAYS")
+	private String overDays;
 
 	public Long getId() {
 		return id;
@@ -293,14 +296,6 @@ public class Receive implements Serializable {
 
 	public void setReceiveFromId(Double receiveFromId) {
 		this.receiveFromId = receiveFromId;
-	}
-
-	public String getReceiveName() {
-		return receiveName;
-	}
-
-	public void setReceiveName(String receiveName) {
-		this.receiveName = receiveName;
 	}
 
 	public UUID getCompanyId() {
@@ -583,12 +578,28 @@ public class Receive implements Serializable {
 		this.mfgPurchaseRId = mfgPurchaseRId;
 	}
 
-	public String getOtherDays() {
-		return otherDays;
+	public String getReceiveFromName() {
+		return receiveFromName;
 	}
 
-	public void setOtherDays(String otherDays) {
-		this.otherDays = otherDays;
+	public void setReceiveFromName(String receiveFromName) {
+		this.receiveFromName = receiveFromName;
+	}
+
+	public Boolean getrReturn() {
+		return rReturn;
+	}
+
+	public void setrReturn(Boolean rReturn) {
+		this.rReturn = rReturn;
+	}
+
+	public String getOverDays() {
+		return overDays;
+	}
+
+	public void setOverDays(String overDays) {
+		this.overDays = overDays;
 	}
 
 }

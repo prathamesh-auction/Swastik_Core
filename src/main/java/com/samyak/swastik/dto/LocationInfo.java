@@ -7,6 +7,7 @@ public class LocationInfo {
 	private UUID locationId;
 	private String locationCode;
 	private String locationName;
+	private String lotLocation;
 	private String locationDescription;
 	private Double srNo;
 	private Double yearEndId;
@@ -66,6 +67,14 @@ public class LocationInfo {
 
 	public void setLocationNameNative(String locationNameNative) {
 		this.locationNameNative = locationNameNative;
+	}
+
+	public String getLotLocation() {
+		return lotLocation;
+	}
+
+	public void setLotLocation(String lotLocation) {
+		this.lotLocation = lotLocation;
 	}
 
 }

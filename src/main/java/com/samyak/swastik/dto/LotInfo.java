@@ -33,7 +33,7 @@ public class LotInfo {
 	private Double x2mf;
 	private Double x3mf;
 	private Double x4mf;
-	private Double x5mf;
+	private String x5mf;
 	private UUID supplierId;
 
 	public UUID getLotId() {
@@ -260,11 +260,11 @@ public class LotInfo {
 		this.x4mf = x4mf;
 	}
 
-	public Double getX5mf() {
+	public String getX5mf() {
 		return x5mf;
 	}
 
-	public void setX5mf(Double x5mf) {
+	public void setX5mf(String x5mf) {
 		this.x5mf = x5mf;
 	}
 

@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "MASTER_STASTUS")
+@Table(name = "MASTER_STATUS")
 public class Status implements Serializable {
 
 	private static final long serialVersionUID = 3661788249957035340L;

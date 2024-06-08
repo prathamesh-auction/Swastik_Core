@@ -26,6 +26,7 @@ public class CompanyPartyInfo implements Serializable {
 	private String PhoneOff;
 	private String phoneResi;
 	private String mobile;
+	private String email;
 	private String website;
 	private String person1;
 	private String person2;
@@ -258,6 +259,14 @@ public class CompanyPartyInfo implements Serializable {
 
 	public String getModifiedBy() {
 		return modifiedBy;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public void setModifiedBy(String modifiedBy) {

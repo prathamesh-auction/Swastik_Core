@@ -3,6 +3,8 @@ package com.samyak.swastik.dto;
 import java.sql.Timestamp;
 import java.util.UUID;
 
+import jakarta.persistence.Column;
+
 public class ReceiveInfo {
 
 	private UUID receiveId;
@@ -19,7 +21,7 @@ public class ReceiveInfo {
 	private Double receiveTool;
 	private Double dollarTool;
 	private Double receiveFromId;
-	private String receiveName;
+	private String receiveFromName;
 	private UUID companyId;
 	private String receiveByName;
 	private Boolean receiveInternal;
@@ -38,6 +40,7 @@ public class ReceiveInfo {
 	private String modifiedOn;
 	private String modifiedMachineName;
 	private Boolean active;
+	private Boolean rReturn;
 	private Timestamp stockDate;
 	private Double differenceAmount;
 	private Double differenceLocalAmount;
@@ -55,7 +58,7 @@ public class ReceiveInfo {
 	private UUID workOrderId;
 	private UUID refDesignGroupId;
 	private UUID mfgPurchaseRId;
-	private String otherDays;
+	private String overDays;
 
 	public UUID getReceiveId() {
 		return receiveId;
@@ -169,12 +172,12 @@ public class ReceiveInfo {
 		this.receiveFromId = receiveFromId;
 	}
 
-	public String getReceiveName() {
-		return receiveName;
+	public String getReceiveFromName() {
+		return receiveFromName;
 	}
 
-	public void setReceiveName(String receiveName) {
-		this.receiveName = receiveName;
+	public void setReceiveFromName(String receiveFromName) {
+		this.receiveFromName = receiveFromName;
 	}
 
 	public UUID getCompanyId() {
@@ -321,6 +324,14 @@ public class ReceiveInfo {
 		this.active = active;
 	}
 
+	public Boolean getrReturn() {
+		return rReturn;
+	}
+
+	public void setrReturn(Boolean rReturn) {
+		this.rReturn = rReturn;
+	}
+
 	public Timestamp getStockDate() {
 		return stockDate;
 	}
@@ -457,12 +468,12 @@ public class ReceiveInfo {
 		this.mfgPurchaseRId = mfgPurchaseRId;
 	}
 
-	public String getOtherDays() {
-		return otherDays;
+	public String getOverDays() {
+		return overDays;
 	}
 
-	public void setOtherDays(String otherDays) {
-		this.otherDays = otherDays;
+	public void setOverDays(String overDays) {
+		this.overDays = overDays;
 	}
 
 }

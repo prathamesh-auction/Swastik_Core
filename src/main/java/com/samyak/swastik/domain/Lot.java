@@ -40,6 +40,9 @@ public class Lot implements Serializable {
 	@Column(name = "LOT_REFERENCE")
 	private String lotRefrence;
 
+	@Column(name = "LOT_LOCATION")
+	private String lotLocation;
+
 	@Column(name = "LOT_CATEGORY_ID")
 	private UUID lotCategoryId;
 
@@ -113,7 +116,7 @@ public class Lot implements Serializable {
 	private Double x4mf;
 
 	@Column(name = "X5MF")
-	private Double x5mf;
+	private String x5mf;
 
 	@Column(name = "SUPPLIER_ID")
 	private UUID supplierId;
@@ -236,6 +239,14 @@ public class Lot implements Serializable {
 
 	public void setDrwgFileName(String drwgFileName) {
 		this.drwgFileName = drwgFileName;
+	}
+
+	public String getLotLocation() {
+		return lotLocation;
+	}
+
+	public void setLotLocation(String lotLocation) {
+		this.lotLocation = lotLocation;
 	}
 
 	public Timestamp getCreatedOn() {
@@ -366,11 +377,11 @@ public class Lot implements Serializable {
 		this.x4mf = x4mf;
 	}
 
-	public Double getX5mf() {
+	public String getX5mf() {
 		return x5mf;
 	}
 
-	public void setX5mf(Double x5mf) {
+	public void setX5mf(String x5mf) {
 		this.x5mf = x5mf;
 	}
 

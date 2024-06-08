@@ -76,6 +76,9 @@ public class CompanyParty implements Serializable {
 	@Column(name = "MOBILE")
 	private String mobile;
 
+	@Column(name = "EMAIL")
+	private String email;
+
 	@Column(name = "WEBSITE")
 	private String website;
 
@@ -385,6 +388,14 @@ public class CompanyParty implements Serializable {
 
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getWebsite() {
