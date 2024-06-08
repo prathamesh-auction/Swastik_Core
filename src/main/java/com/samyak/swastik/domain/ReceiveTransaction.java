@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "RECEIVE")
+@Table(name = "RECEIVE_TRANSACTION")
 public class ReceiveTransaction implements Serializable {
 
 	private static final long serialVersionUID = -3251222424196314076L;

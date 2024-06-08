@@ -190,97 +190,6 @@
 
 
 	<changeSet id="ddl_006" author="Prashant Wagh">
-		<createTable tableName="RECEIVE">
-			<column name="ID" autoIncrement="true" type="BIGINT">
-				<constraints primaryKey="true"
-					primaryKeyName="PK_RECEIVE"
-					nullable="false" />
-			</column>
-
-			<column name="RECEIVE_ID" type="UUID">
-				<constraints nullable="false" unique="true" />
-			</column>
-			<column name="RECEIVE_SELL" type="BOOLEAN"
-				defaultValueBoolean="true">
-				<constraints nullable="false" />
-			</column>
-			<column name="RECEIVE_NO" type="VARCHAR(100)" />
-			<column name="RECEIVE_DATE" type="DATETIME" />
-			<column name="RECEIVE_LOTS" type="DOUBLE" />
-			<column name="RECEIVE_QUANTITY" type="DOUBLE" />
-			<column name="RECEIVE_CURRENCY_ID" type="UUID" />
-			<column name="EXCHANGE_RATE" type="DOUBLE" />
-			<column name="RECEIVE_EXCHANGE_RATE" type="DOUBLE" />
-			<column name="TAX" type="DOUBLE" />
-			<column name="DISCOUNT" type="DOUBLE" />
-			<column name="RECEIVE_TOTAL" type="DOUBLE" />
-			<column name="LOCAL_TOTAL" type="DOUBLE" />
-			<column name="DOLLAR_TOTAL" type="DOUBLE" />
-			<column name="RECEIVE_FROM_ID" type="DOUBLE" />
-			<column name="RECEIVE_FROM_NAME" type="VARCHAR(100)" />
-			<column name="COMPANY_ID" type="UUID" />
-			<column name="RECEIVE_BY_NAME" type="VARCHAR(100)" />
-			<column name="RECEIVE_INTERNAL" type="BOOLEAN"
-				defaultValueBoolean="true">
-				<constraints nullable="false" />
-			</column>
-			<column name="PURCHASE" type="BOOLEAN" defaultValueBoolean="true">
-				<constraints nullable="false" />
-			</column>
-			<column name="DUE_DAYS" type="DOUBLE" />
-			<column name="DUE_DATE" type="DATETIME" />
-			<column name="CHALLAN_NO" type="VARCHAR(100)" />
-			<column name="CHALLAN_DATE" type="DATETIME" />
-			<column name="INVOICE_NO" type="VARCHAR(100)" />
-			<column name="INVOICE_DATE" type="DATETIME" />
-			<column name="REMARK" type="VARCHAR(100)" />
-			<column name="OPENING_STOCK" type="BOOLEAN"
-				defaultValueBoolean="true">
-				<constraints nullable="false" />
-			</column>
-			<column name="SALE_PERSON_ID" type="UUID" />
-			<column name="CONSIGNMENT_RECEIVED_ID" type="UUID" />
-			<column name="MODIFIED_BY" type="VARCHAR(100)">
-				<constraints nullable="false" />
-			</column>
-			<column name="MODIFIED_ON" type="DATETIME">
-				<constraints nullable="false" />
-			</column>
-			<column name="MODIFIED_MACHINE_NAME" type="VARCHAR(100)">
-				<constraints nullable="false" />
-			</column>
-			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
-				<constraints nullable="false" />
-			</column>
-			<column name="PRO_ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
-				<constraints nullable="false" />
-			</column>
-			<column name="R_RETURN" type="BOOLEAN" defaultValueBoolean="true">
-				<constraints nullable="false" />
-			</column>
-			<column name="STOCK_DATE" type="DATETIME" />
-			<column name="DIFFERENCE_AMOUNT" type="DOUBLE" />
-			<column name="DIFFERENCE_LOCAL_AMOUNT" type="DOUBLE" />
-			<column name="DIFFERENCE_DOLLAR_AMOUNT" type="DOUBLE" />
-			<column name="INV_TOTAL" type="DOUBLE" />
-			<column name="INV_LOCAL_TOTAL" type="DOUBLE" />
-			<column name="INV_DOLLAR_TOTAL" type="DOUBLE" />
-			<column name="RECEIVE_CATEGORY" type="DOUBLE" />
-			<column name="STOCK_TRANSFER_TYPE" type="DOUBLE" />
-			<column name="CGT_RETURN_CONFIRM" type="DOUBLE" />
-			<column name="YEAR_END_ID" type="DOUBLE" />
-			<column name="PURCHASE_GROUP_ID" type="UUID" />
-			<column name="CGT_REF_NO" type="VARCHAR(300)" />
-			<column name="CGT_REF_DESCRIPTION" type="VARCHAR(300)" />
-			<column name="WORK_ORDER_ID" type="UUID" />
-			<column name="REF_DESIGN_GROUP_ID" type="UUID" />
-			<column name="MFG_PURCHASE_RID" type="UUID" />
-			<column name="OVER_DAYS" type="VARCHAR(100)" />
-
-		</createTable>
-	</changeSet>
-
-	<changeSet id="ddl_007" author="Prashant Wagh">
 		<createTable tableName="RECEIVE_TRANSACTION">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
@@ -338,7 +247,7 @@
 		</createTable>
 	</changeSet>
 
-	<changeSet id="ddl_008" author="Prashant Wagh">
+	<changeSet id="ddl_007" author="Prashant Wagh">
 		<createTable tableName="MASTER_COMPANY_PARTY">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
@@ -441,7 +350,7 @@
 		</createTable>
 	</changeSet>
 
-	<changeSet id="ddl_009" author="Prashant Wagh">
+	<changeSet id="ddl_008" author="Prashant Wagh">
 		<createTable tableName="MASTER_SALE_PERSON">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
@@ -484,7 +393,7 @@
 		</createTable>
 	</changeSet>
 
-	<changeSet id="ddl_010" author="Prashant Wagh">
+	<changeSet id="ddl_09" author="Prashant Wagh">
 		<createTable tableName="LOT">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
@@ -540,7 +449,7 @@
 		</createTable>
 	</changeSet>
 
-	<changeSet id="ddl_011" author="Prashant Wagh">
+	<changeSet id="ddl_010" author="Prashant Wagh">
 		<createTable tableName="MASTER_GROUP">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
@@ -573,7 +482,7 @@
 		</createTable>
 	</changeSet>
 
-	<changeSet id="ddl_012" author="Prashant Wagh">
+	<changeSet id="ddl_011" author="Prashant Wagh">
 		<createTable tableName="MASTER_STATUS">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
@@ -602,7 +511,7 @@
 		</createTable>
 	</changeSet>
 
-	<changeSet id="ddl_013" author="Prashant Wagh">
+	<changeSet id="ddl_012" author="Prashant Wagh">
 		<createTable tableName="VOUCHER">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
@@ -643,7 +552,7 @@
 		</createTable>
 	</changeSet>
 
-	<changeSet id="ddl_014" author="Prashant Wagh">
+	<changeSet id="ddl_013" author="Prashant Wagh">
 		<createTable tableName="MASTER_VOUCHER_TYPE">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
@@ -672,7 +581,7 @@
 		</createTable>
 	</changeSet>
 
-	<changeSet id="ddl_015" author="Prashant Wagh">
+	<changeSet id="ddl_014" author="Prashant Wagh">
 		<createTable tableName="FINANCIAL_TRANSACTION">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
@@ -727,7 +636,7 @@
 		</createTable>
 	</changeSet>
 
-	<changeSet id="ddl_016" author="Prashant Wagh">
+	<changeSet id="ddl_015" author="Prashant Wagh">
 		<createTable tableName="MASTER_INVOICE_TYPE">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
@@ -744,6 +653,97 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="TYPE_NAME_NATIVE" type="VARCHAR(100)" />
+
+		</createTable>
+	</changeSet>
+
+	<changeSet id="ddl_016" author="Prashant Wagh">
+		<createTable tableName="RECEIVE">
+			<column name="ID" autoIncrement="true" type="BIGINT">
+				<constraints primaryKey="true"
+					primaryKeyName="PK_RECEIVE"
+					nullable="false" />
+			</column>
+
+			<column name="RECEIVE_ID" type="UUID">
+				<constraints nullable="false" unique="true" />
+			</column>
+			<column name="RECEIVE_SELL" type="BOOLEAN"
+				defaultValueBoolean="true">
+				<constraints nullable="false" />
+			</column>
+			<column name="RECEIVE_NO" type="VARCHAR(100)" />
+			<column name="RECEIVE_DATE" type="DATETIME" />
+			<column name="RECEIVE_LOTS" type="DOUBLE" />
+			<column name="RECEIVE_QUANTITY" type="DOUBLE" />
+			<column name="RECEIVE_CURRENCY_ID" type="UUID" />
+			<column name="EXCHANGE_RATE" type="DOUBLE" />
+			<column name="RECEIVE_EXCHANGE_RATE" type="DOUBLE" />
+			<column name="TAX" type="DOUBLE" />
+			<column name="DISCOUNT" type="DOUBLE" />
+			<column name="RECEIVE_TOTAL" type="DOUBLE" />
+			<column name="LOCAL_TOTAL" type="DOUBLE" />
+			<column name="DOLLAR_TOTAL" type="DOUBLE" />
+			<column name="RECEIVE_FROM_ID" type="DOUBLE" />
+			<column name="RECEIVE_FROM_NAME" type="VARCHAR(100)" />
+			<column name="COMPANY_ID" type="UUID" />
+			<column name="RECEIVE_BY_NAME" type="VARCHAR(100)" />
+			<column name="RECEIVE_INTERNAL" type="BOOLEAN"
+				defaultValueBoolean="true">
+				<constraints nullable="false" />
+			</column>
+			<column name="PURCHASE" type="BOOLEAN" defaultValueBoolean="true">
+				<constraints nullable="false" />
+			</column>
+			<column name="DUE_DAYS" type="DOUBLE" />
+			<column name="DUE_DATE" type="DATETIME" />
+			<column name="CHALLAN_NO" type="VARCHAR(100)" />
+			<column name="CHALLAN_DATE" type="DATETIME" />
+			<column name="INVOICE_NO" type="VARCHAR(100)" />
+			<column name="INVOICE_DATE" type="DATETIME" />
+			<column name="REMARK" type="VARCHAR(100)" />
+			<column name="OPENING_STOCK" type="BOOLEAN"
+				defaultValueBoolean="true">
+				<constraints nullable="false" />
+			</column>
+			<column name="SALE_PERSON_ID" type="UUID" />
+			<column name="CONSIGNMENT_RECEIVED_ID" type="UUID" />
+			<column name="MODIFIED_BY" type="VARCHAR(100)">
+				<constraints nullable="false" />
+			</column>
+			<column name="MODIFIED_ON" type="DATETIME">
+				<constraints nullable="false" />
+			</column>
+			<column name="MODIFIED_MACHINE_NAME" type="VARCHAR(100)">
+				<constraints nullable="false" />
+			</column>
+			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
+				<constraints nullable="false" />
+			</column>
+			<column name="PRO_ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
+				<constraints nullable="false" />
+			</column>
+			<column name="R_RETURN" type="BOOLEAN" defaultValueBoolean="true">
+				<constraints nullable="false" />
+			</column>
+			<column name="STOCK_DATE" type="DATETIME" />
+			<column name="DIFFERENCE_AMOUNT" type="DOUBLE" />
+			<column name="DIFFERENCE_LOCAL_AMOUNT" type="DOUBLE" />
+			<column name="DIFFERENCE_DOLLAR_AMOUNT" type="DOUBLE" />
+			<column name="INV_TOTAL" type="DOUBLE" />
+			<column name="INV_LOCAL_TOTAL" type="DOUBLE" />
+			<column name="INV_DOLLAR_TOTAL" type="DOUBLE" />
+			<column name="RECEIVE_CATEGORY" type="DOUBLE" />
+			<column name="STOCK_TRANSFER_TYPE" type="DOUBLE" />
+			<column name="CGT_RETURN_CONFIRM" type="DOUBLE" />
+			<column name="YEAR_END_ID" type="DOUBLE" />
+			<column name="PURCHASE_GROUP_ID" type="UUID" />
+			<column name="CGT_REF_NO" type="VARCHAR(300)" />
+			<column name="CGT_REF_DESCRIPTION" type="VARCHAR(300)" />
+			<column name="WORK_ORDER_ID" type="UUID" />
+			<column name="REF_DESIGN_GROUP_ID" type="UUID" />
+			<column name="MFG_PURCHASE_RID" type="UUID" />
+			<column name="OVER_DAYS" type="VARCHAR(100)" />
 
 		</createTable>
 	</changeSet>
