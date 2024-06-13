@@ -121,4 +121,12 @@ public class ExchangeRate implements Serializable {
 		this.yearEndId = yearEndId;
 	}
 
+	public Double getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(Double exchangeRate) {
+		this.exchangeRate = exchangeRate;
+	}
+
 }

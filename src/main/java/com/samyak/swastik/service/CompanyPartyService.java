@@ -61,4 +61,11 @@ public class CompanyPartyService implements ICompanyParty {
 
 	}
 
+	@Override
+	public List<String> getCompanyPartyName(String companyPartyName) {
+		List<CompanyParty> companyParties = companyPartyRepository
+				.findTop500ByCompanyPartyNameStartingWithAndActive(companyPartyName, true);
+		return companyParties.stream().map(e -> e.getCompanyPartyName()).toList();
+	}
+
 }

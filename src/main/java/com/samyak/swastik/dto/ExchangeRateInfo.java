@@ -8,16 +8,7 @@ public class ExchangeRateInfo {
 	private UUID exchangeRateId;
 	private UUID currencyId;
 	private Timestamp exchangeDate;
-	private Double exhchangeRate;
-
-	public Double getExhchangeRate() {
-		return exhchangeRate;
-	}
-
-	public void setExhchangeRate(Double exhchangeRate) {
-		this.exhchangeRate = exhchangeRate;
-	}
-
+	private Double exchangeRate;
 	private String modifiedBy;
 	private String modifiedOn;
 	private String modifiedMachineName;
@@ -51,6 +42,14 @@ public class ExchangeRateInfo {
 
 	public Timestamp getExchangeDate() {
 		return exchangeDate;
+	}
+
+	public Double getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(Double exchangeRate) {
+		this.exchangeRate = exchangeRate;
 	}
 
 	public void setExchangeDate(Timestamp exchangeDate) {

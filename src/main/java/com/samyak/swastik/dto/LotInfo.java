@@ -8,6 +8,8 @@ public class LotInfo {
 	private UUID lotId;
 	private UUID companyId;
 	private String lotDescription;
+	private String lotNo;
+	private String lotName;
 	private String lotRefrence;
 	private UUID lotCategoryId;
 	private UUID lotSubCategoryId;
@@ -54,6 +56,22 @@ public class LotInfo {
 
 	public String getLotDescription() {
 		return lotDescription;
+	}
+
+	public String getLotNo() {
+		return lotNo;
+	}
+
+	public void setLotNo(String lotNo) {
+		this.lotNo = lotNo;
+	}
+
+	public String getLotName() {
+		return lotName;
+	}
+
+	public void setLotName(String lotName) {
+		this.lotName = lotName;
 	}
 
 	public void setLotDescription(String lotDescription) {

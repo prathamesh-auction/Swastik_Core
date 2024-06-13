@@ -12,6 +12,7 @@ import com.samyak.swastik.service.SaleWindowService;
 
 @RestController
 @RequestMapping("/api/v1")
+
 public class SaleWindowController {
 
 	@Autowired

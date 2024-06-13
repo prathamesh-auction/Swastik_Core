@@ -3,8 +3,6 @@ package com.samyak.swastik.dto;
 import java.sql.Timestamp;
 import java.util.UUID;
 
-import jakarta.persistence.Column;
-
 public class ReceiveInfo {
 
 	private UUID receiveId;

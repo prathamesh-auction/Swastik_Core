@@ -43,4 +43,11 @@ public class CompanyPartyController {
 		companyPartyService.save(companyPartyInfo);
 		return ResponseEntity.status(HttpStatus.CREATED).body("Company Party Master Created");
 	}
+
+	@GetMapping(value = "/company/{companyPartyName}", produces = { MediaType.APPLICATION_JSON_VALUE,
+			MediaType.APPLICATION_XML_VALUE })
+	public ResponseEntity<?> getCompanyPartyName(@PathVariable String companyPartyName) {
+		List<String> companyParty = companyPartyService.getCompanyPartyName(companyPartyName);
+		return ResponseEntity.ok(companyParty);
+	}
 }

@@ -14,4 +14,6 @@ public interface ICompanyParty {
 	public CompanyPartyInfo get(UUID companyPartyId);
 
 	public void update(UUID companyPartyId, CompanyPartyInfo companyPartyInfo);
+
+	public List<String> getCompanyPartyName(String companyPartyName);
 }

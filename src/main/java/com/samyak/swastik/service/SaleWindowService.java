@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.samyak.swastik.dto.CompanyPartyInfo;
 import com.samyak.swastik.dto.CurrencyInfo;
-import com.samyak.swastik.dto.ExchangeRateInfo;
 import com.samyak.swastik.dto.InvoiceTypeInfo;
 import com.samyak.swastik.dto.LocationInfo;
 import com.samyak.swastik.dto.LotCategoryInfo;
+import com.samyak.swastik.dto.LotInfo;
 import com.samyak.swastik.dto.PurchaseSaleGroupInfo;
 import com.samyak.swastik.dto.SalePersonInfo;
 import com.samyak.swastik.dto.SaleWindowInfo;
@@ -34,6 +34,8 @@ public class SaleWindowService implements ISaleWindow {
 	private PurchaseSaleGroupService purchaseSaleGroupService;
 	@Autowired
 	private ExchangeRateService exchangeRateService;
+	@Autowired
+	private LotService lotService;
 
 	@Override
 	public SaleWindowInfo get() {
@@ -59,18 +61,21 @@ public class SaleWindowService implements ISaleWindow {
 		List<PurchaseSaleGroupInfo> groupInfos = purchaseSaleGroupService.get();
 		List<String> saleGroup = groupInfos.stream().map(e -> e.getPurchaseSaleGroupName()).toList();
 
-		List<ExchangeRateInfo> exchangeRateInfos = exchangeRateService.get();
-		List<Double> exchangeRate = exchangeRateInfos.stream().map(e -> e.getExhchangeRate()).toList();
+		List<Double> exchangeRates = exchangeRateService.get();
+
+		List<LotInfo> lotInfos = lotService.get();
+		List<String> lotNos = lotInfos.stream().map(e -> e.getLotNo()).toList();
 
 		SaleWindowInfo saleWindow = new SaleWindowInfo();
 		saleWindow.setCategory(lotCategory);
 		saleWindow.setCompanyParty(companies);
 		saleWindow.setCurrency(currency);
-		saleWindow.setExchangeRate(exchangeRate);
+		saleWindow.setExchangeRate(exchangeRates);
 		saleWindow.setLocation(location);
 		saleWindow.setInvoiceType(invoiceType);
 		saleWindow.setPurhcaseSaleGroup(saleGroup);
 		saleWindow.setSalePerson(salePerson);
+		saleWindow.setLotNumber(lotNos);
 
 		return saleWindow;
 	}

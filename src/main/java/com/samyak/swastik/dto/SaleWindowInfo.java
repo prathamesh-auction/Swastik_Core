@@ -15,6 +15,7 @@ public class SaleWindowInfo implements Serializable {
 	private List<String> currency;
 	private List<Double> exchangeRate;
 	private List<String> companyParty;
+	private List<String> lotNumber;
 
 	public List<String> getSalePerson() {
 		return salePerson;
@@ -82,6 +83,14 @@ public class SaleWindowInfo implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public List<String> getLotNumber() {
+		return lotNumber;
+	}
+
+	public void setLotNumber(List<String> lotNumber) {
+		this.lotNumber = lotNumber;
 	}
 
 }
