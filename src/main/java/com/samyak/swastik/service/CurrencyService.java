@@ -1,6 +1,7 @@
 package com.samyak.swastik.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
@@ -31,6 +32,13 @@ public class CurrencyService implements ICurrency {
 		currency.setCurrencyId(UUID.randomUUID());
 		currencyRepository.save(currency);
 
+	}
+
+	@Override
+	public UUID getCurrencyId(String currencyName) {
+		Optional<Currency> currency = currencyRepository.getByCurrencyNameAndActive(currencyName, true);
+		UUID currencyId = currency.isPresent() ? currency.get().getCurrencyId() : null;
+		return currencyId;
 	}
 
 }

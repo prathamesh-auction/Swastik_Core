@@ -59,7 +59,7 @@ public class CompanyParty implements Serializable {
 	private Boolean company;
 
 	@Column(name = "COMPANY_ID")
-	private UUID companyId;
+	private Double companyId;
 
 	@Column(name = "INCOME_TAX_NO")
 	private String incomeTaxNo;
@@ -342,11 +342,11 @@ public class CompanyParty implements Serializable {
 		this.company = company;
 	}
 
-	public UUID getCompanyId() {
+	public Double getCompanyId() {
 		return companyId;
 	}
 
-	public void setCompanyId(UUID companyId) {
+	public void setCompanyId(Double companyId) {
 		this.companyId = companyId;
 	}
 

@@ -58,17 +58,20 @@ public class Receive implements Serializable {
 	@Column(name = "RECEIVE_TOTAL")
 	private Double receiveTool;
 
+	@Column(name = "LOCAL_TOTAL")
+	private Double localTotal;
+
 	@Column(name = "DOLLAR_TOTAL")
 	private Double dollarTool;
 
 	@Column(name = "RECEIVE_FROM_ID")
-	private Double receiveFromId;
+	private UUID receiveFromId;
 
 	@Column(name = "RECEIVE_FROM_NAME")
 	private String receiveFromName;
 
 	@Column(name = "COMPANY_ID")
-	private UUID companyId;
+	private Double companyId;
 
 	@Column(name = "RECEIVE_BY_NAME")
 	private String receiveByName;
@@ -107,19 +110,22 @@ public class Receive implements Serializable {
 	private UUID salePersonId;
 
 	@Column(name = "CONSIGNMENT_RECEIVED_ID")
-	private UUID consignmentReceivedId;
+	private String consignmentReceivedId;
 
 	@Column(name = "MODIFIED_BY")
 	private String modifiedBy;
 
 	@Column(name = "MODIFIED_ON")
-	private String modifiedOn;
+	private Timestamp modifiedOn;
 
 	@Column(name = "MODIFIED_MACHINE_NAME")
 	private String modifiedMachineName;
 
 	@Column(name = "ACTIVE")
 	private Boolean active;
+
+	@Column(name = "PRO_ACTIVE")
+	private Boolean proActive;
 
 	@Column(name = "R_RETURN")
 	private Boolean rReturn;
@@ -137,7 +143,7 @@ public class Receive implements Serializable {
 	private Double differenceDollarAmount;
 
 	@Column(name = "INV_TOTAL")
-	private Double invAmount;
+	private Double invTotal;
 
 	@Column(name = "INV_LOCAL_TOTAL")
 	private Double invLocalTotal;
@@ -146,7 +152,7 @@ public class Receive implements Serializable {
 	private Double invDollarTotal;
 
 	@Column(name = "RECEIVE_CATEGORY")
-	private Double receiveCategory;
+	private UUID receiveCategory;
 
 	@Column(name = "STOCK_TRANSFER_TYPE")
 	private Double stockTransferType;
@@ -177,6 +183,14 @@ public class Receive implements Serializable {
 
 	@Column(name = "OVER_DAYS")
 	private String overDays;
+
+	public Double getLocalTotal() {
+		return localTotal;
+	}
+
+	public void setLocalTotal(Double localTotal) {
+		this.localTotal = localTotal;
+	}
 
 	public Long getId() {
 		return id;
@@ -290,20 +304,24 @@ public class Receive implements Serializable {
 		this.dollarTool = dollarTool;
 	}
 
-	public Double getReceiveFromId() {
+	public UUID getReceiveFromId() {
 		return receiveFromId;
 	}
 
-	public void setReceiveFromId(Double receiveFromId) {
+	public void setReceiveFromId(UUID receiveFromId) {
 		this.receiveFromId = receiveFromId;
 	}
 
-	public UUID getCompanyId() {
+	public Double getCompanyId() {
 		return companyId;
 	}
 
-	public void setCompanyId(UUID companyId) {
+	public void setCompanyId(Double companyId) {
 		this.companyId = companyId;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	public String getReceiveByName() {
@@ -402,11 +420,11 @@ public class Receive implements Serializable {
 		this.salePersonId = salePersonId;
 	}
 
-	public UUID getConsignmentReceivedId() {
+	public String getConsignmentReceivedId() {
 		return consignmentReceivedId;
 	}
 
-	public void setConsignmentReceivedId(UUID consignmentReceivedId) {
+	public void setConsignmentReceivedId(String consignmentReceivedId) {
 		this.consignmentReceivedId = consignmentReceivedId;
 	}
 
@@ -418,11 +436,11 @@ public class Receive implements Serializable {
 		this.modifiedBy = modifiedBy;
 	}
 
-	public String getModifiedOn() {
+	public Timestamp getModifiedOn() {
 		return modifiedOn;
 	}
 
-	public void setModifiedOn(String modifiedOn) {
+	public void setModifiedOn(Timestamp modifiedOn) {
 		this.modifiedOn = modifiedOn;
 	}
 
@@ -474,12 +492,12 @@ public class Receive implements Serializable {
 		this.differenceDollarAmount = differenceDollarAmount;
 	}
 
-	public Double getInvAmount() {
-		return invAmount;
+	public Double getInvTotal() {
+		return invTotal;
 	}
 
-	public void setInvAmount(Double invAmount) {
-		this.invAmount = invAmount;
+	public void setInvTotal(Double invTotal) {
+		this.invTotal = invTotal;
 	}
 
 	public Double getInvLocalTotal() {
@@ -490,6 +508,14 @@ public class Receive implements Serializable {
 		this.invLocalTotal = invLocalTotal;
 	}
 
+	public Boolean getProActive() {
+		return proActive;
+	}
+
+	public void setProActive(Boolean proActive) {
+		this.proActive = proActive;
+	}
+
 	public Double getInvDollarTotal() {
 		return invDollarTotal;
 	}
@@ -498,11 +524,11 @@ public class Receive implements Serializable {
 		this.invDollarTotal = invDollarTotal;
 	}
 
-	public Double getReceiveCategory() {
+	public UUID getReceiveCategory() {
 		return receiveCategory;
 	}
 
-	public void setReceiveCategory(Double receiveCategory) {
+	public void setReceiveCategory(UUID receiveCategory) {
 		this.receiveCategory = receiveCategory;
 	}
 

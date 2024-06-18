@@ -16,11 +16,12 @@ public class ReceiveInfo {
 	private Double receiveExchangeRate;
 	private Double tax;
 	private Double discount;
-	private Double receiveTool;
-	private Double dollarTool;
-	private Double receiveFromId;
+	private Double receiveTotol;
+	private Double localTotal;
+	private Double dollarTotol;
+	private UUID receiveFromId;
 	private String receiveFromName;
-	private UUID companyId;
+	private Double companyId;
 	private String receiveByName;
 	private Boolean receiveInternal;
 	private Boolean purchase;
@@ -33,20 +34,21 @@ public class ReceiveInfo {
 	private String remark;
 	private Boolean openingStock;
 	private UUID salePersonId;
-	private UUID consignmentReceivedId;
+	private String consignmentReceivedId;
 	private String modifiedBy;
-	private String modifiedOn;
+	private Timestamp modifiedOn;
 	private String modifiedMachineName;
 	private Boolean active;
+	private Boolean proActive;
 	private Boolean rReturn;
 	private Timestamp stockDate;
 	private Double differenceAmount;
 	private Double differenceLocalAmount;
 	private Double differenceDollarAmount;
-	private Double invAmount;
+	private Double invTotal;
 	private Double invLocalTotal;
 	private Double invDollarTotal;
-	private Double receiveCategory;
+	private UUID receiveCategory;
 	private Double stockTransferType;
 	private Double cgtReturnConfirm;
 	private Double yearEndId;
@@ -57,6 +59,14 @@ public class ReceiveInfo {
 	private UUID refDesignGroupId;
 	private UUID mfgPurchaseRId;
 	private String overDays;
+
+	public Double getLocalTotal() {
+		return localTotal;
+	}
+
+	public void setLocalTotal(Double localTotal) {
+		this.localTotal = localTotal;
+	}
 
 	public UUID getReceiveId() {
 		return receiveId;
@@ -146,28 +156,20 @@ public class ReceiveInfo {
 		this.discount = discount;
 	}
 
-	public Double getReceiveTool() {
-		return receiveTool;
+	public Double getReceiveTotol() {
+		return receiveTotol;
 	}
 
-	public void setReceiveTool(Double receiveTool) {
-		this.receiveTool = receiveTool;
+	public void setReceiveTotol(Double receiveTotol) {
+		this.receiveTotol = receiveTotol;
 	}
 
-	public Double getDollarTool() {
-		return dollarTool;
+	public Double getDollarTotol() {
+		return dollarTotol;
 	}
 
-	public void setDollarTool(Double dollarTool) {
-		this.dollarTool = dollarTool;
-	}
-
-	public Double getReceiveFromId() {
-		return receiveFromId;
-	}
-
-	public void setReceiveFromId(Double receiveFromId) {
-		this.receiveFromId = receiveFromId;
+	public void setDollarTotol(Double dollarTotol) {
+		this.dollarTotol = dollarTotol;
 	}
 
 	public String getReceiveFromName() {
@@ -178,11 +180,19 @@ public class ReceiveInfo {
 		this.receiveFromName = receiveFromName;
 	}
 
-	public UUID getCompanyId() {
+	public UUID getReceiveFromId() {
+		return receiveFromId;
+	}
+
+	public void setReceiveFromId(UUID receiveFromId) {
+		this.receiveFromId = receiveFromId;
+	}
+
+	public Double getCompanyId() {
 		return companyId;
 	}
 
-	public void setCompanyId(UUID companyId) {
+	public void setCompanyId(Double companyId) {
 		this.companyId = companyId;
 	}
 
@@ -282,11 +292,11 @@ public class ReceiveInfo {
 		this.salePersonId = salePersonId;
 	}
 
-	public UUID getConsignmentReceivedId() {
+	public String getConsignmentReceivedId() {
 		return consignmentReceivedId;
 	}
 
-	public void setConsignmentReceivedId(UUID consignmentReceivedId) {
+	public void setConsignmentReceivedId(String consignmentReceivedId) {
 		this.consignmentReceivedId = consignmentReceivedId;
 	}
 
@@ -298,11 +308,11 @@ public class ReceiveInfo {
 		this.modifiedBy = modifiedBy;
 	}
 
-	public String getModifiedOn() {
+	public Timestamp getModifiedOn() {
 		return modifiedOn;
 	}
 
-	public void setModifiedOn(String modifiedOn) {
+	public void setModifiedOn(Timestamp modifiedOn) {
 		this.modifiedOn = modifiedOn;
 	}
 
@@ -320,6 +330,14 @@ public class ReceiveInfo {
 
 	public void setActive(Boolean active) {
 		this.active = active;
+	}
+
+	public Boolean getProActive() {
+		return proActive;
+	}
+
+	public void setProActive(Boolean proActive) {
+		this.proActive = proActive;
 	}
 
 	public Boolean getrReturn() {
@@ -362,12 +380,12 @@ public class ReceiveInfo {
 		this.differenceDollarAmount = differenceDollarAmount;
 	}
 
-	public Double getInvAmount() {
-		return invAmount;
+	public Double getInvTotal() {
+		return invTotal;
 	}
 
-	public void setInvAmount(Double invAmount) {
-		this.invAmount = invAmount;
+	public void setInvTotal(Double invTotal) {
+		this.invTotal = invTotal;
 	}
 
 	public Double getInvLocalTotal() {
@@ -386,11 +404,11 @@ public class ReceiveInfo {
 		this.invDollarTotal = invDollarTotal;
 	}
 
-	public Double getReceiveCategory() {
+	public UUID getReceiveCategory() {
 		return receiveCategory;
 	}
 
-	public void setReceiveCategory(Double receiveCategory) {
+	public void setReceiveCategory(UUID receiveCategory) {
 		this.receiveCategory = receiveCategory;
 	}
 

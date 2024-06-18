@@ -35,7 +35,7 @@ public class CompanyPartyService implements ICompanyParty {
 	@Override
 	public void save(CompanyPartyInfo companyPartyInfo) {
 		CompanyParty companyParty = modelMapper.map(companyPartyInfo, CompanyParty.class);
-		companyParty.setCompanyId(UUID.randomUUID());
+
 		companyPartyRepository.save(companyParty);
 	}
 
@@ -66,6 +66,13 @@ public class CompanyPartyService implements ICompanyParty {
 		List<CompanyParty> companyParties = companyPartyRepository
 				.findTop500ByCompanyPartyNameStartingWithAndActive(companyPartyName, true);
 		return companyParties.stream().map(e -> e.getCompanyPartyName()).toList();
+	}
+
+	@Override
+	public Optional<CompanyParty> getCompanyPartyId(String companyPartyName) {
+		Optional<CompanyParty> companyName = companyPartyRepository.getByActiveAndCompanyPartyName(true,
+				companyPartyName);
+		return companyName;
 	}
 
 }

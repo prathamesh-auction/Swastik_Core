@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface VoucherRepository extends JpaRepository<Voucher, Long> {
 
+	public  Voucher findTopByOrderByIdDesc();
 	
 }

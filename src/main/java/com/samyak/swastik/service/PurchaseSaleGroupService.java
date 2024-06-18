@@ -1,6 +1,7 @@
 package com.samyak.swastik.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,13 @@ public class PurchaseSaleGroupService implements IPurchaseSaleGroup {
 	public List<PurchaseSaleGroupInfo> get() {
 		List<PurchaseSaleGroup> purchaseSaleGroups = purchaseSaleGroupRepository.findAllByActive(true);
 		return purchaseSaleGroups.stream().map(e -> modelMapper.map(e, PurchaseSaleGroupInfo.class)).toList();
+	}
+
+	@Override
+	public Optional<PurchaseSaleGroup> getPurchaseSaleGroupId(String purchaseSaleGroupName) {
+		Optional<PurchaseSaleGroup> saleGroupName = purchaseSaleGroupRepository
+				.getByActiveAndPurchaseSaleGroupName(true, purchaseSaleGroupName);
+		return saleGroupName;
 	}
 
 }

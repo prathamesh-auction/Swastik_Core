@@ -1,8 +1,10 @@
 package com.samyak.swastik.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
+import com.samyak.swastik.domain.CompanyParty;
 import com.samyak.swastik.dto.CompanyPartyInfo;
 
 public interface ICompanyParty {
@@ -16,4 +18,6 @@ public interface ICompanyParty {
 	public void update(UUID companyPartyId, CompanyPartyInfo companyPartyInfo);
 
 	public List<String> getCompanyPartyName(String companyPartyName);
+
+	public Optional<CompanyParty> getCompanyPartyId(String companyPartyName);
 }

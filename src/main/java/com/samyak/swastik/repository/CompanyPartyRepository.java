@@ -16,4 +16,6 @@ public interface CompanyPartyRepository extends JpaRepository<CompanyParty, Long
 	public Optional<CompanyParty> getByActiveAndCompanyPartyId(Boolean active, UUID companyPartyId);
 	
 	public List<CompanyParty> findTop500ByCompanyPartyNameStartingWithAndActive(String companyPartyName, Boolean active);
+	
+	public Optional<CompanyParty> getByActiveAndCompanyPartyName(Boolean active, String companyPartyName);
 }

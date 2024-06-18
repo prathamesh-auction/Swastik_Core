@@ -20,7 +20,7 @@ public class CompanyPartyInfo implements Serializable {
 	private String country;
 	private Boolean superV;
 	private Boolean company;
-	private UUID companyId;
+	private Double companyId;
 	private String incomeTaxNo;
 	private String salesTaxNo;
 	private String PhoneOff;
@@ -177,11 +177,11 @@ public class CompanyPartyInfo implements Serializable {
 		this.company = company;
 	}
 
-	public UUID getCompanyId() {
+	public Double getCompanyId() {
 		return companyId;
 	}
 
-	public void setCompanyId(UUID companyId) {
+	public void setCompanyId(Double companyId) {
 		this.companyId = companyId;
 	}
 

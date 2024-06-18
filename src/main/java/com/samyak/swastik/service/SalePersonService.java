@@ -1,6 +1,7 @@
 package com.samyak.swastik.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,12 @@ public class SalePersonService implements ISalePerson {
 	public List<SalePersonInfo> get() {
 		List<SalePerson> salePerson = salePersonRepository.findAllByActive(true);
 		return salePerson.stream().map(e -> modelMapper.map(e, SalePersonInfo.class)).toList();
+	}
+
+	@Override
+	public Optional<SalePerson> getSalePersonId(String salesPersonName) {
+		Optional<SalePerson> salePersonName = salePersonRepository.getByActiveAndSalesPersonName(true, salesPersonName);
+		return salePersonName;
 	}
 
 }

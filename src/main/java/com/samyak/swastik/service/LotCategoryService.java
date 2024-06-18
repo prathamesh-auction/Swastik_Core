@@ -1,6 +1,7 @@
 package com.samyak.swastik.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,4 +26,11 @@ public class LotCategoryService implements ILotCategory {
 		return categories.stream().map(e -> modelMapper.map(e, LotCategoryInfo.class)).toList();
 	}
 
+	@Override
+	public Optional<LotCategory> getlotCategoryId(String lotCategoryName) {
+		Optional<LotCategory> categoryName = lotCategoryRepository.getByActiveAndLotCategoryName(true, lotCategoryName);
+		return categoryName;
+	}
+
+	
 }

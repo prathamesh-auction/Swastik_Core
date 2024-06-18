@@ -229,7 +229,7 @@
 			<column name="ACTIVE" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="CONSIGNEMENT_RECEIVED_ID" type="UUID" />
+			<column name="CONSIGNEMENT_RECEIVED_ID" type="VARCHAR(100)" />
 			<column name="MOV_WTD_AVG" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
@@ -272,7 +272,7 @@
 			<column name="COMPANY" type="BOOLEAN" defaultValueBoolean="true">
 				<constraints nullable="false" />
 			</column>
-			<column name="COMPANY_ID" type="UUID" />
+			<column name="COMPANY_ID" type="DOUBLE" />
 			<column name="INCOME_TAX_NO" type="VARCHAR(100)" />
 			<column name="SALES_TAX_no" type="VARCHAR(100)" />
 			<column name="PHONE_OFF" type="VARCHAR(300)" />
@@ -684,9 +684,9 @@
 			<column name="RECEIVE_TOTAL" type="DOUBLE" />
 			<column name="LOCAL_TOTAL" type="DOUBLE" />
 			<column name="DOLLAR_TOTAL" type="DOUBLE" />
-			<column name="RECEIVE_FROM_ID" type="DOUBLE" />
+			<column name="RECEIVE_FROM_ID" type="UUID" />
 			<column name="RECEIVE_FROM_NAME" type="VARCHAR(100)" />
-			<column name="COMPANY_ID" type="UUID" />
+			<column name="COMPANY_ID" type="DOUBLE" />
 			<column name="RECEIVE_BY_NAME" type="VARCHAR(100)" />
 			<column name="RECEIVE_INTERNAL" type="BOOLEAN"
 				defaultValueBoolean="true">
@@ -733,7 +733,7 @@
 			<column name="INV_TOTAL" type="DOUBLE" />
 			<column name="INV_LOCAL_TOTAL" type="DOUBLE" />
 			<column name="INV_DOLLAR_TOTAL" type="DOUBLE" />
-			<column name="RECEIVE_CATEGORY" type="DOUBLE" />
+			<column name="RECEIVE_CATEGORY" type="UUID" />
 			<column name="STOCK_TRANSFER_TYPE" type="DOUBLE" />
 			<column name="CGT_RETURN_CONFIRM" type="DOUBLE" />
 			<column name="YEAR_END_ID" type="DOUBLE" />
