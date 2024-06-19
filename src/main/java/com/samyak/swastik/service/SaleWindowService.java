@@ -128,7 +128,9 @@ public class SaleWindowService implements ISaleWindow {
 		receiveInfo.setReceiveLots(saleWindowSaveInfo.getNumLots());
 		receiveInfo.setReceiveQuantity(saleWindowSaveInfo.getTotalQuantity());
 
-		UUID currencyId = currencyService.getCurrencyId(saleWindowSaveInfo.getCurrency());
+		String currency = saleWindowSaveInfo.getCurrency();
+
+		UUID currencyId = currencyService.getCurrencyId(currency);
 		receiveInfo.setReceiveCurrencyId(currencyId);
 
 		receiveInfo.setExchangeRate(saleWindowSaveInfo.getExchangeRate());
@@ -136,10 +138,10 @@ public class SaleWindowService implements ISaleWindow {
 		receiveInfo.setTax(0.0);
 		receiveInfo.setDiscount(0.0);
 
-		Double total = saleWindowSaveInfo.getTotal();
-		Double subTotal = saleWindowSaveInfo.getSubTotal();
-		Double exchangeRate = saleWindowSaveInfo.getExchangeRate();
-		if (saleWindowSaveInfo.getCurrency().equalsIgnoreCase("US$")) {
+		Double total = saleWindowSaveInfo.getTotal() != null ? saleWindowSaveInfo.getTotal() : 0.0;
+		Double subTotal = saleWindowSaveInfo.getSubTotal() != null ? saleWindowSaveInfo.getSubTotal() : 0.0;
+		Double exchangeRate = saleWindowSaveInfo.getExchangeRate() != null ? saleWindowSaveInfo.getExchangeRate() : 0.0;
+		if (currency != null && currency.equalsIgnoreCase("US$")) {
 			receiveInfo.setReceiveTotol(total);
 			receiveInfo.setLocalTotal(total * exchangeRate);
 			receiveInfo.setDollarTotol(total);
@@ -169,9 +171,12 @@ public class SaleWindowService implements ISaleWindow {
 		receiveInfo.setDueDays(saleWindowSaveInfo.getDueDays());
 
 		try {
-
-			Date dueDate = dateFormat.parse(saleWindowSaveInfo.getDueDate());
-			receiveInfo.setDueDate(new Timestamp(dueDate.getTime()));
+			if (saleWindowSaveInfo.getDueDate() != null && !saleWindowSaveInfo.getDueDate().isEmpty()) {
+				Date dueDate = dateFormat.parse(saleWindowSaveInfo.getDueDate());
+				receiveInfo.setDueDate(new Timestamp(dueDate.getTime()));
+			} else {
+				receiveInfo.setDueDate(null);
+			}
 
 		} catch (ParseException e) {
 			e.printStackTrace();
@@ -197,9 +202,12 @@ public class SaleWindowService implements ISaleWindow {
 		receiveInfo.setrReturn(false);
 
 		try {
-
-			Date stockDate = dateFormat.parse(saleWindowSaveInfo.getStockDate());
-			receiveInfo.setStockDate(new Timestamp(stockDate.getTime()));
+			if (saleWindowSaveInfo.getStockDate() != null && !saleWindowSaveInfo.getStockDate().isEmpty()) {
+				Date stockDate = dateFormat.parse(saleWindowSaveInfo.getStockDate());
+				receiveInfo.setStockDate(new Timestamp(stockDate.getTime()));
+			} else {
+				receiveInfo.setStockDate(null);
+			}
 
 		} catch (ParseException e) {
 			e.printStackTrace();
@@ -248,7 +256,7 @@ public class SaleWindowService implements ISaleWindow {
 
 			Double amount = lotDetail.getAmount();
 			Double exchangeRate2 = saleWindowSaveInfo.getExchangeRate();
-			if (saleWindowSaveInfo.getCurrency().equals("US$")) {
+			if (currency != null && currency.equals("US$")) {
 				receiveTransactionInfo.setReceivePrice(amount);
 				receiveTransactionInfo.setLocalPrice(amount * exchangeRate2);
 				receiveTransactionInfo.setDollarPrice(amount);
@@ -296,7 +304,7 @@ public class SaleWindowService implements ISaleWindow {
 		voucherInfo.setVoucherCurrency(currencyId);
 		voucherInfo.setExchangeRate(exchangeRate);
 
-		if (saleWindowSaveInfo.getCurrency().equals("US$")) {
+		if (currency != null && currency.equals("US$")) {
 			voucherInfo.setVoucherTotal(total);
 			voucherInfo.setLocalTotal(total * exchangeRate);
 			voucherInfo.setDollarTotal(total);
@@ -359,7 +367,7 @@ public class SaleWindowService implements ISaleWindow {
 		financialTransactionInfo.setSrNo(1.0);
 		financialTransactionInfo.setDescription(null);
 		financialTransactionInfo.setTransactionType(false);
-		if (saleWindowSaveInfo.getCurrency().equals("US$")) {
+		if (currency != null && currency.equals("US$")) {
 			financialTransactionInfo.setAmount(saleWindowSaveInfo.getcTaxAmount());
 			financialTransactionInfo
 					.setLocalAmount(saleWindowSaveInfo.getcTaxAmount() * saleWindowSaveInfo.getExchangeRate());
@@ -414,7 +422,7 @@ public class SaleWindowService implements ISaleWindow {
 			financialTransactionInfo1.setSrNo((double) serialNumberCounter.getAndIncrement());
 			financialTransactionInfo1.setDescription(null);
 			financialTransactionInfo1.setTransactionType(true);
-			if (saleWindowSaveInfo.getCurrency().equals("US$")) {
+			if (currency != null && currency.equals("US$")) {
 				financialTransactionInfo1.setAmount(ledgerDetails.getLedgerAmount());
 				financialTransactionInfo1
 						.setLocalAmount(ledgerDetails.getLedgerAmount() * saleWindowSaveInfo.getExchangeRate());

@@ -1,7 +1,6 @@
 package com.samyak.swastik.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,15 +29,10 @@ public class SaleWindowController {
 		return ResponseEntity.ok(saleWindowInfo);
 	}
 
-	@PostMapping(value = "/sale-window", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "/sale-window")
 	public ResponseEntity<?> save(@RequestBody SaleWindowSaveInfo saleWindowSaveInfo) {
-		try {
-			saleWindowService.save(saleWindowSaveInfo);
-			return ResponseEntity.ok("Data saved successfully");
-		} catch (Exception e) {
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-					.body(("An error occurred while saving data: " + e.getMessage()));
-		}
+		saleWindowService.save(saleWindowSaveInfo);
+		return ResponseEntity.ok("Data saved successfully");
 	}
 
 }
