@@ -30,7 +30,7 @@ public class SaleWindowController {
 		return ResponseEntity.ok(saleWindowInfo);
 	}
 
-	@PostMapping(value = "/sale-window", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "/sale-window", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> save(@RequestBody SaleWindowSaveInfo saleWindowSaveInfo) {
 		try {
 			saleWindowService.save(saleWindowSaveInfo);

@@ -26,7 +26,7 @@ public class Voucher implements Serializable {
 	private UUID voucherId;
 
 	@Column(name = "COMPANY_ID")
-	private UUID companyId;
+	private Integer companyId;
 
 	@Column(name = "VOUCHER_TYPE")
 	private Double voucherType;
@@ -41,7 +41,7 @@ public class Voucher implements Serializable {
 	private Double toByNos;
 
 	@Column(name = "VOUCHER_CURRENCY")
-	private Double voucherCurrency;
+	private UUID voucherCurrency;
 
 	@Column(name = "EXCHANGE_RATE")
 	private Double exchangeRate;
@@ -68,16 +68,16 @@ public class Voucher implements Serializable {
 	private String modifiedMachineName;
 
 	@Column(name = "REFERENCE_VOUCHER_ID")
-	private UUID referenceVoucherId;
+	private Integer referenceVoucherId;
 
 	@Column(name = "ACTIVE")
 	private Boolean active;
 
 	@Column(name = "COST_HEADGROUP_ID")
-	private UUID costHeadGroupId;
+	private Integer costHeadGroupId;
 
 	@Column(name = "COST_HEADSUBGROUP_ID")
-	private UUID costHeadSubGroupID;
+	private Integer costHeadSubGroupID;
 
 	@Column(name = "RECONCILIATION_DATE")
 	private Timestamp reconcilationDate;
@@ -104,11 +104,11 @@ public class Voucher implements Serializable {
 		this.voucherId = voucherId;
 	}
 
-	public UUID getCompanyId() {
+	public Integer getCompanyId() {
 		return companyId;
 	}
 
-	public void setCompanyId(UUID companyId) {
+	public void setCompanyId(Integer companyId) {
 		this.companyId = companyId;
 	}
 
@@ -144,11 +144,11 @@ public class Voucher implements Serializable {
 		this.toByNos = toByNos;
 	}
 
-	public Double getVoucherCurrency() {
+	public UUID getVoucherCurrency() {
 		return voucherCurrency;
 	}
 
-	public void setVoucherCurrency(Double voucherCurrency) {
+	public void setVoucherCurrency(UUID voucherCurrency) {
 		this.voucherCurrency = voucherCurrency;
 	}
 
@@ -216,11 +216,11 @@ public class Voucher implements Serializable {
 		this.modifiedMachineName = modifiedMachineName;
 	}
 
-	public UUID getReferenceVoucherId() {
+	public Integer getReferenceVoucherId() {
 		return referenceVoucherId;
 	}
 
-	public void setReferenceVoucherId(UUID referenceVoucherId) {
+	public void setReferenceVoucherId(Integer referenceVoucherId) {
 		this.referenceVoucherId = referenceVoucherId;
 	}
 
@@ -232,19 +232,19 @@ public class Voucher implements Serializable {
 		this.active = active;
 	}
 
-	public UUID getCostHeadGroupId() {
+	public Integer getCostHeadGroupId() {
 		return costHeadGroupId;
 	}
 
-	public void setCostHeadGroupId(UUID costHeadGroupId) {
+	public void setCostHeadGroupId(Integer costHeadGroupId) {
 		this.costHeadGroupId = costHeadGroupId;
 	}
 
-	public UUID getCostHeadSubGroupID() {
+	public Integer getCostHeadSubGroupID() {
 		return costHeadSubGroupID;
 	}
 
-	public void setCostHeadSubGroupID(UUID costHeadSubGroupID) {
+	public void setCostHeadSubGroupID(Integer costHeadSubGroupID) {
 		this.costHeadSubGroupID = costHeadSubGroupID;
 	}
 

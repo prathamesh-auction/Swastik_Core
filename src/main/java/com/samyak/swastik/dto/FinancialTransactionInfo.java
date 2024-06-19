@@ -3,14 +3,14 @@ package com.samyak.swastik.dto;
 import java.sql.Timestamp;
 import java.util.UUID;
 
-public class FInancialTransactionInfo {
+public class FinancialTransactionInfo {
 
 	private UUID transactionId;
-	private UUID companyId;
+	private Integer companyId;
 	private UUID voucherId;
 	private Double srNo;
-	private Double forHead;
-	private UUID forHeadID;
+	private Integer forHead;
+	private Integer forHeadID;
 	private String description;
 	private Boolean transactionType;
 	private Double amount;
@@ -44,11 +44,11 @@ public class FInancialTransactionInfo {
 		this.transactionId = transactionId;
 	}
 
-	public UUID getCompanyId() {
+	public Integer getCompanyId() {
 		return companyId;
 	}
 
-	public void setCompanyId(UUID companyId) {
+	public void setCompanyId(Integer companyId) {
 		this.companyId = companyId;
 	}
 
@@ -68,19 +68,19 @@ public class FInancialTransactionInfo {
 		this.srNo = srNo;
 	}
 
-	public Double getForHead() {
+	public Integer getForHead() {
 		return forHead;
 	}
 
-	public void setForHead(Double forHead) {
+	public void setForHead(Integer forHead) {
 		this.forHead = forHead;
 	}
 
-	public UUID getForHeadID() {
+	public Integer getForHeadID() {
 		return forHeadID;
 	}
 
-	public void setForHeadID(UUID forHeadID) {
+	public void setForHeadID(Integer forHeadID) {
 		this.forHeadID = forHeadID;
 	}
 

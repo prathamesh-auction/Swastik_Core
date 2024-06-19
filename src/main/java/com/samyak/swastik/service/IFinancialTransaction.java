@@ -1,8 +1,10 @@
 package com.samyak.swastik.service;
 
-import com.samyak.swastik.dto.FInancialTransactionInfo;
+import com.samyak.swastik.dto.FinancialTransactionInfo;
 
 public interface IFinancialTransaction {
 
-	public void save(FInancialTransactionInfo fInancialTransactionInfo);
+	public void save(FinancialTransactionInfo fInancialTransactionInfo);
+	
+	public Integer getFinancialTransactionCount();
 }

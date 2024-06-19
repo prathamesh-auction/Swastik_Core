@@ -9,7 +9,7 @@
 	<property name="uuid_type" value="uniqueidentifier" dbms="mssql" />
 
 
-	<changeSet id="ddl_001" author="Prashant Wagh">
+	<!--<changeSet id="ddl_001" author="Prashant Wagh">
 		<createTable tableName="MASTER_LOCATION">
 			<column name="ID" autoIncrement="true" type="BIGINT">
 				<constraints primaryKey="true"
@@ -746,6 +746,6 @@
 			<column name="OVER_DAYS" type="VARCHAR(100)" />
 
 		</createTable>
-	</changeSet>
+	</changeSet>-->
 
 </databaseChangeLog>

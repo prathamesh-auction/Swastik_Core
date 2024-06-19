@@ -26,7 +26,7 @@ public class FinancialTransaction implements Serializable {
 	private UUID transactionId;
 
 	@Column(name = "COMPANY_ID")
-	private UUID companyId;
+	private Integer companyId;
 
 	@Column(name = "VOUCHER_ID")
 	private UUID voucherId;
@@ -35,10 +35,10 @@ public class FinancialTransaction implements Serializable {
 	private Double srNo;
 
 	@Column(name = "FOR_HEAD")
-	private Double forHead;
+	private Integer forHead;
 
 	@Column(name = "FOR_HEAD_ID")
-	private UUID forHeadID;
+	private Integer forHeadID;
 
 	@Column(name = "DESCRIPTION")
 	private String description;
@@ -128,11 +128,11 @@ public class FinancialTransaction implements Serializable {
 		this.transactionId = transactionId;
 	}
 
-	public UUID getCompanyId() {
+	public Integer getCompanyId() {
 		return companyId;
 	}
 
-	public void setCompanyId(UUID companyId) {
+	public void setCompanyId(Integer companyId) {
 		this.companyId = companyId;
 	}
 
@@ -152,19 +152,19 @@ public class FinancialTransaction implements Serializable {
 		this.srNo = srNo;
 	}
 
-	public Double getForHead() {
+	public Integer getForHead() {
 		return forHead;
 	}
 
-	public void setForHead(Double forHead) {
+	public void setForHead(Integer forHead) {
 		this.forHead = forHead;
 	}
 
-	public UUID getForHeadID() {
+	public Integer getForHeadID() {
 		return forHeadID;
 	}
 
-	public void setForHeadID(UUID forHeadID) {
+	public void setForHeadID(Integer forHeadID) {
 		this.forHeadID = forHeadID;
 	}
 

@@ -6,12 +6,12 @@ import java.util.UUID;
 public class VoucherInfo {
 
 	private UUID voucherId;
-	private UUID companyId;
+	private Integer companyId;
 	private Double voucherType;
-	private String voucherNo;
+	private Integer voucherNo;
 	private Timestamp voucherDate;
 	private Double toByNos;
-	private Double voucherCurrency;
+	private UUID voucherCurrency;
 	private Double exchangeRate;
 	private Double voucherTotal;
 	private Double localTotal;
@@ -20,11 +20,11 @@ public class VoucherInfo {
 	private String modifiedBy;
 	private Timestamp ModifiedOn;
 	private String modifiedMachineName;
-	private UUID referenceVoucherId;
+	private Integer referenceVoucherId;
 	private Boolean active;
-	private UUID costHeadGroupId;
-	private UUID costHeadSubGroupID;
-	private UUID reconcilationDate;
+	private Integer costHeadGroupId;
+	private Integer costHeadSubGroupID;
+	private Timestamp reconcilationDate;
 	private Double yearEndID;
 	private String refNo;
 
@@ -36,11 +36,11 @@ public class VoucherInfo {
 		this.voucherId = voucherId;
 	}
 
-	public UUID getCompanyId() {
+	public Integer getCompanyId() {
 		return companyId;
 	}
 
-	public void setCompanyId(UUID companyId) {
+	public void setCompanyId(Integer companyId) {
 		this.companyId = companyId;
 	}
 
@@ -52,11 +52,11 @@ public class VoucherInfo {
 		this.voucherType = voucherType;
 	}
 
-	public String getVoucherNo() {
+	public Integer getVoucherNo() {
 		return voucherNo;
 	}
 
-	public void setVoucherNo(String voucherNo) {
+	public void setVoucherNo(Integer voucherNo) {
 		this.voucherNo = voucherNo;
 	}
 
@@ -76,11 +76,11 @@ public class VoucherInfo {
 		this.toByNos = toByNos;
 	}
 
-	public Double getVoucherCurrency() {
+	public UUID getVoucherCurrency() {
 		return voucherCurrency;
 	}
 
-	public void setVoucherCurrency(Double voucherCurrency) {
+	public void setVoucherCurrency(UUID voucherCurrency) {
 		this.voucherCurrency = voucherCurrency;
 	}
 
@@ -148,11 +148,11 @@ public class VoucherInfo {
 		this.modifiedMachineName = modifiedMachineName;
 	}
 
-	public UUID getReferenceVoucherId() {
+	public Integer getReferenceVoucherId() {
 		return referenceVoucherId;
 	}
 
-	public void setReferenceVoucherId(UUID referenceVoucherId) {
+	public void setReferenceVoucherId(Integer referenceVoucherId) {
 		this.referenceVoucherId = referenceVoucherId;
 	}
 
@@ -164,27 +164,27 @@ public class VoucherInfo {
 		this.active = active;
 	}
 
-	public UUID getCostHeadGroupId() {
+	public Integer getCostHeadGroupId() {
 		return costHeadGroupId;
 	}
 
-	public void setCostHeadGroupId(UUID costHeadGroupId) {
+	public void setCostHeadGroupId(Integer costHeadGroupId) {
 		this.costHeadGroupId = costHeadGroupId;
 	}
 
-	public UUID getCostHeadSubGroupID() {
+	public Integer getCostHeadSubGroupID() {
 		return costHeadSubGroupID;
 	}
 
-	public void setCostHeadSubGroupID(UUID costHeadSubGroupID) {
+	public void setCostHeadSubGroupID(Integer costHeadSubGroupID) {
 		this.costHeadSubGroupID = costHeadSubGroupID;
 	}
 
-	public UUID getReconcilationDate() {
+	public Timestamp getReconcilationDate() {
 		return reconcilationDate;
 	}
 
-	public void setReconcilationDate(UUID reconcilationDate) {
+	public void setReconcilationDate(Timestamp reconcilationDate) {
 		this.reconcilationDate = reconcilationDate;
 	}
 

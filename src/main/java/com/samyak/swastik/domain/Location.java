@@ -26,7 +26,7 @@ public class Location implements Serializable {
 	private UUID locationId;
 
 	@Column(name = "COMPANY_ID")
-	private UUID companyId;
+	private Integer companyId;
 
 	@Column(name = "LOCATION_CODE")
 	private String locationCode;
@@ -74,11 +74,11 @@ public class Location implements Serializable {
 		this.locationId = locationId;
 	}
 
-	public UUID getCompanyId() {
+	public Integer getCompanyId() {
 		return companyId;
 	}
 
-	public void setCompanyId(UUID companyId) {
+	public void setCompanyId(Integer companyId) {
 		this.companyId = companyId;
 	}
 

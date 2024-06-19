@@ -1,5 +1,6 @@
 package com.samyak.swastik.service;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
@@ -33,11 +34,16 @@ public class VoucherService implements IVoucher {
 	}
 
 	@Override
-	public void save(VoucherInfo voucherInfo) {
+	public Voucher save(VoucherInfo voucherInfo) {
 		Voucher voucher = modelMapper.map(voucherInfo, Voucher.class);
 		voucher.setVoucherId(UUID.randomUUID());
-		voucherRepository.save(voucher);
+		return voucherRepository.save(voucher);
 
 	}
 
+	@Override
+	public Integer voucherNoCount() {
+		List<Voucher> vouchers = voucherRepository.getAllByActive(true);
+		return vouchers.size();
+	}
 }

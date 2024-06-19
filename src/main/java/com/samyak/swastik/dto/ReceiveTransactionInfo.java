@@ -36,6 +36,7 @@ public class ReceiveTransactionInfo {
 	private UUID mfgPurchaseRtId;
 	private UUID rateId;
 	private Double mfIdvalue;
+	
 
 	public UUID getReceiveTransactionId() {
 		return receiveTransactionId;
@@ -284,5 +285,7 @@ public class ReceiveTransactionInfo {
 	public void setMfIdvalue(Double mfIdvalue) {
 		this.mfIdvalue = mfIdvalue;
 	}
+
+	
 
 }

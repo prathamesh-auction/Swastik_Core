@@ -2,6 +2,7 @@ package com.samyak.swastik.dto;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.List;
 
 public class SaleWindowSaveInfo implements Serializable {
 
@@ -19,17 +20,44 @@ public class SaleWindowSaveInfo implements Serializable {
 	private Double exchangeRate;
 	private Double dueDays;
 	private String salePerson;
-	private String lotNo;
-	private Double quantity;
-	private Double rate;
-	private Double amount;
-	private String remark;
+	private String refNo;
 	private Double subTotal;
-	private Double cTax;
 	private Double total;
 	private String narration;
 	private Double numLots;
 	private Double totalQuantity;
+	private String cTax;
+	private Double cTaxAmount;
+	private List<LotListInfo> lotList;
+	private List<LedgerListInfo> ledgerList;
+
+	public String getcTax() {
+		return cTax;
+	}
+
+	public void setcTax(String cTax) {
+		this.cTax = cTax;
+	}
+
+	public Double getcTaxAmount() {
+		return cTaxAmount;
+	}
+
+	public void setcTaxAmount(Double cTaxAmount) {
+		this.cTaxAmount = cTaxAmount;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public List<LedgerListInfo> getLedgerList() {
+		return ledgerList;
+	}
+
+	public void setLedgerList(List<LedgerListInfo> ledgerList) {
+		this.ledgerList = ledgerList;
+	}
 
 	public String getInvoiceNo() {
 		return invoiceNo;
@@ -127,60 +155,12 @@ public class SaleWindowSaveInfo implements Serializable {
 		this.salePerson = salePerson;
 	}
 
-	public String getLotNo() {
-		return lotNo;
-	}
-
-	public void setLotNo(String lotNo) {
-		this.lotNo = lotNo;
-	}
-
-	public Double getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(Double quantity) {
-		this.quantity = quantity;
-	}
-
-	public Double getRate() {
-		return rate;
-	}
-
-	public void setRate(Double rate) {
-		this.rate = rate;
-	}
-
-	public Double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(Double amount) {
-		this.amount = amount;
-	}
-
-	public String getRemark() {
-		return remark;
-	}
-
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
-
 	public Double getSubTotal() {
 		return subTotal;
 	}
 
 	public void setSubTotal(Double subTotal) {
 		this.subTotal = subTotal;
-	}
-
-	public Double getcTax() {
-		return cTax;
-	}
-
-	public void setcTax(Double cTax) {
-		this.cTax = cTax;
 	}
 
 	public Double getTotal() {
@@ -213,6 +193,22 @@ public class SaleWindowSaveInfo implements Serializable {
 
 	public void setTotalQuantity(Double totalQuantity) {
 		this.totalQuantity = totalQuantity;
+	}
+
+	public List<LotListInfo> getLotList() {
+		return lotList;
+	}
+
+	public void setLotList(List<LotListInfo> lotList) {
+		this.lotList = lotList;
+	}
+
+	public String getRefNo() {
+		return refNo;
+	}
+
+	public void setRefNo(String refNo) {
+		this.refNo = refNo;
 	}
 
 }
