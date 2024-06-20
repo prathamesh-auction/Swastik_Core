@@ -37,7 +37,7 @@ public class Color implements Serializable {
 	private String modifiedMachineName;
 	@Column(name = "ACTIVE")
 	private Boolean active;
-	@Column(name = "YEAR_END")
+	@Column(name = "YEAR_END_ID")
 	private Double yearEndId;
 	@Column(name = "COLOR_NAME_NATIVE")
 	private String colorNameNative;

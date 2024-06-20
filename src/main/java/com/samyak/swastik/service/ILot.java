@@ -13,4 +13,6 @@ public interface ILot {
 	public List<String> getLotNumber(String lotNo);
 
 	public Optional<Lot> getLotId(String lotName);
+
+	public List<String> getLotNames();
 }

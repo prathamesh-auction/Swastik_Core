@@ -37,7 +37,7 @@ public class CutEX implements Serializable {
 	private String modifiedMachineName;
 	@Column(name = "ACTIVE")
 	private Boolean active;
-	@Column(name = "YEAR_END")
+	@Column(name = "YEAR_END_ID")
 	private Double yearEndId;
 	@Column(name = "CUTEX_NAME_NATIVE")
 	private String cutEXNameNative;

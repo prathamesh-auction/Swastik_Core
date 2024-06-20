@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,13 @@ public class LotService implements ILot {
 	public Optional<Lot> getLotId(String lotName) {
 		Optional<Lot> lotName2 = lotRepository.findByActiveAndLotName(true, lotName);
 		return lotName2;
+	}
+
+	@Override
+	public List<String> getLotNames() {
+		List<Lot> lots = lotRepository.findAllByActive(true);
+		List<String> lotNos = lots.stream().map(e -> e.getLotName()).collect(Collectors.toList());
+		return lotNos;
 	}
 
 }

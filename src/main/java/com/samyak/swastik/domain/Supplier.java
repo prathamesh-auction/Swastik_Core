@@ -39,7 +39,7 @@ public class Supplier implements Serializable {
 	private String modifiedMachineName;
 	@Column(name = "ACTIVE")
 	private Boolean active;
-	@Column(name = "YEAR_END")
+	@Column(name = "YEAR_END_ID")
 	private Double yearEndId;
 	@Column(name = "SUPPLIER_NAME_NATIVE")
 	private String supplierNameNative;

@@ -37,7 +37,7 @@ public class Country implements Serializable {
 	private String modifiedMachineName;
 	@Column(name = "ACTIVE")
 	private Boolean active;
-	@Column(name = "YEAR_END")
+	@Column(name = "YEAR_END_ID")
 	private Double yearEndId;
 	@Column(name = "COUNTRYNAME_NATIVE")
 	private String countryNameNative;
