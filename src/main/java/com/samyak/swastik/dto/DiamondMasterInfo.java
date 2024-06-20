@@ -27,6 +27,24 @@ public class DiamondMasterInfo implements Serializable {
 	private List<OriginColorInfo> originColorInfos;
 	private List<CutEXInfo> cutEXInfos;
 	private List<String> lotNos;
+	private List<SizeInfo> sizeInfos;
+	private List<UnitInfo> unitInfos;
+
+	public List<SizeInfo> getSizeInfos() {
+		return sizeInfos;
+	}
+
+	public void setSizeInfos(List<SizeInfo> sizeInfos) {
+		this.sizeInfos = sizeInfos;
+	}
+
+	public List<UnitInfo> getUnitInfos() {
+		return unitInfos;
+	}
+
+	public void setUnitInfos(List<UnitInfo> unitInfos) {
+		this.unitInfos = unitInfos;
+	}
 
 	public List<String> getLotNos() {
 		return lotNos;

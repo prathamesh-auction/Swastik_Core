@@ -29,9 +29,11 @@ import com.samyak.swastik.dto.PolishInfo;
 import com.samyak.swastik.dto.PurityInfo;
 import com.samyak.swastik.dto.ShadeInfo;
 import com.samyak.swastik.dto.ShapeInfo;
+import com.samyak.swastik.dto.SizeInfo;
 import com.samyak.swastik.dto.SupplierInfo;
 import com.samyak.swastik.dto.SymmetryInfo;
 import com.samyak.swastik.dto.TableIncusionInfo;
+import com.samyak.swastik.dto.UnitInfo;
 
 @Service("masterService")
 public class MasterService implements IMaster {
@@ -76,6 +78,10 @@ public class MasterService implements IMaster {
 	private CutEXService cutEXService;
 	@Autowired
 	private LotService lotService;
+	@Autowired
+	private SizeService sizeService;
+	@Autowired
+	private UnitService unitService;
 
 	@Override
 	public DiamondMasterInfo getAllDiamondMasters() {
@@ -101,6 +107,8 @@ public class MasterService implements IMaster {
 		List<OriginColorInfo> originColorInfos = originColorService.get();
 		List<CutEXInfo> cutEXInfos = cutEXService.get();
 		List<String> lotNames = lotService.getLotNames();
+		List<SizeInfo> sizeInfos = sizeService.get();
+		List<UnitInfo> unitInfos = unitService.get();
 
 		diamondMasterInfo.setCutInfos(cutInfos);
 		diamondMasterInfo.setColorInfos(colorInfos);
@@ -122,6 +130,8 @@ public class MasterService implements IMaster {
 		diamondMasterInfo.setOriginColorInfos(originColorInfos);
 		diamondMasterInfo.setCutEXInfos(cutEXInfos);
 		diamondMasterInfo.setLotNos(lotNames);
+		diamondMasterInfo.setSizeInfos(sizeInfos);
+		diamondMasterInfo.setUnitInfos(unitInfos);
 
 		return diamondMasterInfo;
 	}
