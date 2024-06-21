@@ -7,4 +7,6 @@ import com.samyak.swastik.dto.CutEXInfo;
 public interface ICutEX {
 
 	public List<CutEXInfo> get();
+
+	public void save(CutEXInfo cutEXInfo);
 }

@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.CutEX;
 import com.samyak.swastik.dto.CutEXInfo;
 import com.samyak.swastik.repository.CutEXRepository;
 
-@Service
+@Service("cutEXService")
 public class CutEXService implements ICutEX {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class CutEXService implements ICutEX {
 			cutEXInfos.add(cutEXInfo);
 		});
 		return cutEXInfos;
+	}
+
+	@Override
+	public void save(CutEXInfo cutEXInfo) {
+		CutEX cutEX = modelMapper.map(cutEXInfo, CutEX.class);
+		cutEX.setCutEXId(UUID.randomUUID());
+		cutEXRepository.save(cutEX);
+
 	}
 
 }

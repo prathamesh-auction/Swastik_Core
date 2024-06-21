@@ -7,4 +7,6 @@ import com.samyak.swastik.dto.OriginColorInfo;
 public interface IOriginColor {
 
 	public List<OriginColorInfo> get();
+
+	public void save(OriginColorInfo originColorInfo);
 }

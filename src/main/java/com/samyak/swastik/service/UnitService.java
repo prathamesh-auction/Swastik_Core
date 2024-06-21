@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Unit;
 import com.samyak.swastik.dto.UnitInfo;
 import com.samyak.swastik.repository.UnitRepository;
 
-@Service
+@Service("unitService")
 public class UnitService implements IUnit {
 
 	@Autowired
@@ -28,6 +29,13 @@ public class UnitService implements IUnit {
 			unitInfos.add(unitInfo);
 		});
 		return unitInfos;
+	}
+
+	@Override
+	public void save(UnitInfo unitInfo) {
+		Unit unit = modelMapper.map(unitInfo, Unit.class);
+		unit.setUnitId(UUID.randomUUID());
+		unitRepository.save(unit);
 	}
 
 }

@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Supplier;
 import com.samyak.swastik.dto.SupplierInfo;
 import com.samyak.swastik.repository.SupplierRepository;
 
-@Service
+@Service("supplierService")
 public class SupplierService implements ISupplier {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class SupplierService implements ISupplier {
 			supplierInfos.add(supplierInfo);
 		});
 		return supplierInfos;
+	}
+
+	@Override
+	public void save(SupplierInfo supplierInfo) {
+		Supplier supplier = modelMapper.map(supplierInfo, Supplier.class);
+		supplier.setSupplierId(UUID.randomUUID());
+		supplierRepository.save(supplier);
+
 	}
 
 }

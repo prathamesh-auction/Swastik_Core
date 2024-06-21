@@ -7,4 +7,6 @@ import com.samyak.swastik.dto.CutHSInfo;
 public interface ICutHS {
 
 	public List<CutHSInfo> get();
+
+	public void save(CutHSInfo cutHSInfo);
 }
