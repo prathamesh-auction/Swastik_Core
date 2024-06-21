@@ -24,7 +24,7 @@ public class SaleWindowSaveInfo implements Serializable {
 	private Double subTotal;
 	private Double total;
 	private String narration;
-	private Double numLots;
+	private Integer numLots;
 	private Double totalQuantity;
 	private String cTax;
 	private Double cTaxAmount;
@@ -179,11 +179,11 @@ public class SaleWindowSaveInfo implements Serializable {
 		this.narration = narration;
 	}
 
-	public Double getNumLots() {
+	public Integer getNumLots() {
 		return numLots;
 	}
 
-	public void setNumLots(Double numLots) {
+	public void setNumLots(Integer numLots) {
 		this.numLots = numLots;
 	}
 

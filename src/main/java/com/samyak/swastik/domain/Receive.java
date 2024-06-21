@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.UUID;
 
+import io.swagger.v3.oas.models.security.SecurityScheme.In;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,10 +23,9 @@ public class Receive implements Serializable {
 	@Column(name = "ID")
 	private Long id;
 
-	@Column(name = "RECEIVE_ID")
 	private UUID receiveId;
 
-	@Column(name = "RECEIVE_SELL")
+	@Column(name = "RECEIVE_ID")
 	private Boolean receiveSell;
 
 	@Column(name = "RECEIVE_NO")
@@ -35,7 +35,7 @@ public class Receive implements Serializable {
 	private Timestamp receiveDate;
 
 	@Column(name = "RECEIVE_LOTS")
-	private Double receiveLots;
+	private Integer receiveLots;
 
 	@Column(name = "RECEIVE_QUANTITY")
 	private Double receiveQuantity;
@@ -56,13 +56,13 @@ public class Receive implements Serializable {
 	private Double discount;
 
 	@Column(name = "RECEIVE_TOTAL")
-	private Double receiveTool;
+	private Double receiveTotal;
 
 	@Column(name = "LOCAL_TOTAL")
 	private Double localTotal;
 
 	@Column(name = "DOLLAR_TOTAL")
-	private Double dollarTool;
+	private Double dollarTotal;
 
 	@Column(name = "RECEIVE_FROM_ID")
 	private UUID receiveFromId;
@@ -71,7 +71,7 @@ public class Receive implements Serializable {
 	private String receiveFromName;
 
 	@Column(name = "COMPANY_ID")
-	private Double companyId;
+	private Integer companyId;
 
 	@Column(name = "RECEIVE_BY_NAME")
 	private String receiveByName;
@@ -82,26 +82,26 @@ public class Receive implements Serializable {
 	@Column(name = "PURCHASE")
 	private Boolean purchase;
 
-	@Column(name = "DUE_DAYS")
-	private Double dueDays;
+	@Column(name = "DUEDAYS")
+	private Integer dueDays;
 
-	@Column(name = "DUE_DATE")
+	@Column(name = "DUEDATE")
 	private Timestamp dueDate;
 
 	@Column(name = "CHALLAN_NO")
 	private String challanNo;
 
-	@Column(name = "CHALLAN_DATE")
+	@Column(name = "CJALLAN_DATE")
 	private Timestamp challanDate;
 
-	@Column(name = "INVOICE_NO")
+	@Column(name = "IBOICE_NO")
 	private String invoiceNo;
 
 	@Column(name = "INVOICE_DATE")
 	private Timestamp invoiceDate;
 
-	@Column(name = "REMARK")
-	private String remark;
+	@Column(name = "REMARKS")
+	private String remarks;
 
 	@Column(name = "OPENING_STOCK")
 	private Boolean openingStock;
@@ -109,14 +109,14 @@ public class Receive implements Serializable {
 	@Column(name = "SALE_PERSON_ID")
 	private UUID salePersonId;
 
-	@Column(name = "CONSIGNMENT_RECEIVED_ID")
-	private String consignmentReceivedId;
+	@Column(name = "CONSIGNMENT_RECEIVE_ID")
+	private Integer consignmentReceiveId;
 
-	@Column(name = "MODIFIED_BY")
-	private String modifiedBy;
-
-	@Column(name = "MODIFIED_ON")
+	@Column(name = "MODIFIEDON")
 	private Timestamp modifiedOn;
+
+	@Column(name = "MODIFIEDBY")
+	private Integer ModifiedBy;
 
 	@Column(name = "MODIFIED_MACHINE_NAME")
 	private String modifiedMachineName;
@@ -124,7 +124,7 @@ public class Receive implements Serializable {
 	@Column(name = "ACTIVE")
 	private Boolean active;
 
-	@Column(name = "PRO_ACTIVE")
+	@Column(name = "PROACTIVE")
 	private Boolean proActive;
 
 	@Column(name = "R_RETURN")
@@ -155,42 +155,34 @@ public class Receive implements Serializable {
 	private UUID receiveCategory;
 
 	@Column(name = "STOCK_TRANSFER_TYPE")
-	private Double stockTransferType;
+	private Integer stockTransferType;
 
 	@Column(name = "CGT_RETURN_CONFIRM")
-	private Double cgtReturnConfirm;
+	private Integer cgtReturnConfirm;
 
 	@Column(name = "YEAR_END_ID")
-	private Double yearEndId;
+	private Integer yearEndId;
 
-	@Column(name = "PURCHASE_GROUP_ID")
-	private UUID purchaseGroupId;
+	@Column(name = "PURCHASE_SALE_GROUP_ID")
+	private UUID purchaseSaleGroupId;
 
 	@Column(name = "CGT_REF_NO")
 	private String cgtRefNo;
 
-	@Column(name = "CGT_REF_DESCRIPTION")
-	private String cgtRefDescription;
+	@Column(name = "CGT_DESCRIPTION")
+	private String cgtDescription;
 
 	@Column(name = "WORK_ORDER_ID")
-	private UUID workOrderId;
+	private Double workOrderId;
 
 	@Column(name = "REF_DESIGN_GROUP_ID")
-	private UUID refDesignGroupId;
+	private Double refDesignGroupId;
 
 	@Column(name = "MFG_PURCHASE_RID")
-	private UUID mfgPurchaseRId;
+	private Integer mfgPurchaseRId;
 
-	@Column(name = "OVER_DAYS")
+	@Column(name = "OVERDAYS")
 	private String overDays;
-
-	public Double getLocalTotal() {
-		return localTotal;
-	}
-
-	public void setLocalTotal(Double localTotal) {
-		this.localTotal = localTotal;
-	}
 
 	public Long getId() {
 		return id;
@@ -232,11 +224,11 @@ public class Receive implements Serializable {
 		this.receiveDate = receiveDate;
 	}
 
-	public Double getReceiveLots() {
+	public Integer getReceiveLots() {
 		return receiveLots;
 	}
 
-	public void setReceiveLots(Double receiveLots) {
+	public void setReceiveLots(Integer receiveLots) {
 		this.receiveLots = receiveLots;
 	}
 
@@ -288,20 +280,28 @@ public class Receive implements Serializable {
 		this.discount = discount;
 	}
 
-	public Double getReceiveTool() {
-		return receiveTool;
+	public Double getReceiveTotal() {
+		return receiveTotal;
 	}
 
-	public void setReceiveTool(Double receiveTool) {
-		this.receiveTool = receiveTool;
+	public void setReceiveTotal(Double receiveTotal) {
+		this.receiveTotal = receiveTotal;
 	}
 
-	public Double getDollarTool() {
-		return dollarTool;
+	public Double getLocalTotal() {
+		return localTotal;
 	}
 
-	public void setDollarTool(Double dollarTool) {
-		this.dollarTool = dollarTool;
+	public void setLocalTotal(Double localTotal) {
+		this.localTotal = localTotal;
+	}
+
+	public Double getDollarTotal() {
+		return dollarTotal;
+	}
+
+	public void setDollarTotal(Double dollarTotal) {
+		this.dollarTotal = dollarTotal;
 	}
 
 	public UUID getReceiveFromId() {
@@ -312,16 +312,20 @@ public class Receive implements Serializable {
 		this.receiveFromId = receiveFromId;
 	}
 
-	public Double getCompanyId() {
+	public String getReceiveFromName() {
+		return receiveFromName;
+	}
+
+	public void setReceiveFromName(String receiveFromName) {
+		this.receiveFromName = receiveFromName;
+	}
+
+	public Integer getCompanyId() {
 		return companyId;
 	}
 
-	public void setCompanyId(Double companyId) {
+	public void setCompanyId(Integer companyId) {
 		this.companyId = companyId;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 
 	public String getReceiveByName() {
@@ -348,11 +352,11 @@ public class Receive implements Serializable {
 		this.purchase = purchase;
 	}
 
-	public Double getDueDays() {
+	public Integer getDueDays() {
 		return dueDays;
 	}
 
-	public void setDueDays(Double dueDays) {
+	public void setDueDays(Integer dueDays) {
 		this.dueDays = dueDays;
 	}
 
@@ -396,12 +400,12 @@ public class Receive implements Serializable {
 		this.invoiceDate = invoiceDate;
 	}
 
-	public String getRemark() {
-		return remark;
+	public String getRemarks() {
+		return remarks;
 	}
 
-	public void setRemark(String remark) {
-		this.remark = remark;
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
 	}
 
 	public Boolean getOpeningStock() {
@@ -420,20 +424,12 @@ public class Receive implements Serializable {
 		this.salePersonId = salePersonId;
 	}
 
-	public String getConsignmentReceivedId() {
-		return consignmentReceivedId;
+	public Integer getConsignmentReceiveId() {
+		return consignmentReceiveId;
 	}
 
-	public void setConsignmentReceivedId(String consignmentReceivedId) {
-		this.consignmentReceivedId = consignmentReceivedId;
-	}
-
-	public String getModifiedBy() {
-		return modifiedBy;
-	}
-
-	public void setModifiedBy(String modifiedBy) {
-		this.modifiedBy = modifiedBy;
+	public void setConsignmentReceiveId(Integer consignmentReceiveId) {
+		this.consignmentReceiveId = consignmentReceiveId;
 	}
 
 	public Timestamp getModifiedOn() {
@@ -442,6 +438,14 @@ public class Receive implements Serializable {
 
 	public void setModifiedOn(Timestamp modifiedOn) {
 		this.modifiedOn = modifiedOn;
+	}
+
+	public Integer getModifiedBy() {
+		return ModifiedBy;
+	}
+
+	public void setModifiedBy(Integer modifiedBy) {
+		ModifiedBy = modifiedBy;
 	}
 
 	public String getModifiedMachineName() {
@@ -458,6 +462,22 @@ public class Receive implements Serializable {
 
 	public void setActive(Boolean active) {
 		this.active = active;
+	}
+
+	public Boolean getProActive() {
+		return proActive;
+	}
+
+	public void setProActive(Boolean proActive) {
+		this.proActive = proActive;
+	}
+
+	public Boolean getrReturn() {
+		return rReturn;
+	}
+
+	public void setrReturn(Boolean rReturn) {
+		this.rReturn = rReturn;
 	}
 
 	public Timestamp getStockDate() {
@@ -508,14 +528,6 @@ public class Receive implements Serializable {
 		this.invLocalTotal = invLocalTotal;
 	}
 
-	public Boolean getProActive() {
-		return proActive;
-	}
-
-	public void setProActive(Boolean proActive) {
-		this.proActive = proActive;
-	}
-
 	public Double getInvDollarTotal() {
 		return invDollarTotal;
 	}
@@ -532,36 +544,36 @@ public class Receive implements Serializable {
 		this.receiveCategory = receiveCategory;
 	}
 
-	public Double getStockTransferType() {
+	public Integer getStockTransferType() {
 		return stockTransferType;
 	}
 
-	public void setStockTransferType(Double stockTransferType) {
+	public void setStockTransferType(Integer stockTransferType) {
 		this.stockTransferType = stockTransferType;
 	}
 
-	public Double getCgtReturnConfirm() {
+	public Integer getCgtReturnConfirm() {
 		return cgtReturnConfirm;
 	}
 
-	public void setCgtReturnConfirm(Double cgtReturnConfirm) {
+	public void setCgtReturnConfirm(Integer cgtReturnConfirm) {
 		this.cgtReturnConfirm = cgtReturnConfirm;
 	}
 
-	public Double getYearEndId() {
+	public Integer getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Double yearEndId) {
+	public void setYearEndId(Integer yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 
-	public UUID getPurchaseGroupId() {
-		return purchaseGroupId;
+	public UUID getPurchaseSaleGroupId() {
+		return purchaseSaleGroupId;
 	}
 
-	public void setPurchaseGroupId(UUID purchaseGroupId) {
-		this.purchaseGroupId = purchaseGroupId;
+	public void setPurchaseSaleGroupId(UUID purchaseSaleGroupId) {
+		this.purchaseSaleGroupId = purchaseSaleGroupId;
 	}
 
 	public String getCgtRefNo() {
@@ -572,52 +584,36 @@ public class Receive implements Serializable {
 		this.cgtRefNo = cgtRefNo;
 	}
 
-	public String getCgtRefDescription() {
-		return cgtRefDescription;
+	public String getCgtDescription() {
+		return cgtDescription;
 	}
 
-	public void setCgtRefDescription(String cgtRefDescription) {
-		this.cgtRefDescription = cgtRefDescription;
+	public void setCgtDescription(String cgtDescription) {
+		this.cgtDescription = cgtDescription;
 	}
 
-	public UUID getWorkOrderId() {
+	public Double getWorkOrderId() {
 		return workOrderId;
 	}
 
-	public void setWorkOrderId(UUID workOrderId) {
+	public void setWorkOrderId(Double workOrderId) {
 		this.workOrderId = workOrderId;
 	}
 
-	public UUID getRefDesignGroupId() {
+	public Double getRefDesignGroupId() {
 		return refDesignGroupId;
 	}
 
-	public void setRefDesignGroupId(UUID refDesignGroupId) {
+	public void setRefDesignGroupId(Double refDesignGroupId) {
 		this.refDesignGroupId = refDesignGroupId;
 	}
 
-	public UUID getMfgPurchaseRId() {
+	public Integer getMfgPurchaseRId() {
 		return mfgPurchaseRId;
 	}
 
-	public void setMfgPurchaseRId(UUID mfgPurchaseRId) {
+	public void setMfgPurchaseRId(Integer mfgPurchaseRId) {
 		this.mfgPurchaseRId = mfgPurchaseRId;
-	}
-
-	public String getReceiveFromName() {
-		return receiveFromName;
-	}
-
-	public void setReceiveFromName(String receiveFromName) {
-		this.receiveFromName = receiveFromName;
-	}
-
-	public Boolean getrReturn() {
-		return rReturn;
-	}
-
-	public void setrReturn(Boolean rReturn) {
-		this.rReturn = rReturn;
 	}
 
 	public String getOverDays() {
@@ -626,6 +622,10 @@ public class Receive implements Serializable {
 
 	public void setOverDays(String overDays) {
 		this.overDays = overDays;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 }
