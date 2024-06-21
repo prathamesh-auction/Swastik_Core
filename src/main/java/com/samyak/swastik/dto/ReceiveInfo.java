@@ -9,34 +9,34 @@ public class ReceiveInfo {
 	private Boolean receiveSell;
 	private String receiveNo;
 	private Timestamp receiveDate;
-	private Double receiveLots;
+	private Integer receiveLots;
 	private Double receiveQuantity;
 	private UUID receiveCurrencyId;
 	private Double exchangeRate;
 	private Double receiveExchangeRate;
 	private Double tax;
 	private Double discount;
-	private Double receiveTotol;
+	private Double receiveTotal;
 	private Double localTotal;
-	private Double dollarTotol;
+	private Double dollarTotal;
 	private UUID receiveFromId;
 	private String receiveFromName;
-	private Double companyId;
+	private Integer companyId;
 	private String receiveByName;
 	private Boolean receiveInternal;
 	private Boolean purchase;
-	private Double dueDays;
+	private Integer dueDays;
 	private Timestamp dueDate;
 	private String challanNo;
 	private Timestamp challanDate;
 	private String invoiceNo;
 	private Timestamp invoiceDate;
-	private String remark;
+	private String remarks;
 	private Boolean openingStock;
 	private UUID salePersonId;
-	private String consignmentReceivedId;
-	private String modifiedBy;
+	private Integer consignmentReceiveId;
 	private Timestamp modifiedOn;
+	private Integer ModifiedBy;
 	private String modifiedMachineName;
 	private Boolean active;
 	private Boolean proActive;
@@ -49,24 +49,16 @@ public class ReceiveInfo {
 	private Double invLocalTotal;
 	private Double invDollarTotal;
 	private UUID receiveCategory;
-	private Double stockTransferType;
-	private Double cgtReturnConfirm;
-	private Double yearEndId;
-	private UUID purchaseGroupId;
+	private Integer stockTransferType;
+	private Integer cgtReturnConfirm;
+	private Integer yearEndId;
+	private UUID purchaseSaleGroupId;
 	private String cgtRefNo;
-	private String cgtRefDescription;
-	private UUID workOrderId;
-	private UUID refDesignGroupId;
-	private UUID mfgPurchaseRId;
+	private String cgtDescription;
+	private Double workOrderId;
+	private Double refDesignGroupId;
+	private Integer mfgPurchaseRId;
 	private String overDays;
-
-	public Double getLocalTotal() {
-		return localTotal;
-	}
-
-	public void setLocalTotal(Double localTotal) {
-		this.localTotal = localTotal;
-	}
 
 	public UUID getReceiveId() {
 		return receiveId;
@@ -100,11 +92,11 @@ public class ReceiveInfo {
 		this.receiveDate = receiveDate;
 	}
 
-	public Double getReceiveLots() {
+	public Integer getReceiveLots() {
 		return receiveLots;
 	}
 
-	public void setReceiveLots(Double receiveLots) {
+	public void setReceiveLots(Integer receiveLots) {
 		this.receiveLots = receiveLots;
 	}
 
@@ -156,28 +148,28 @@ public class ReceiveInfo {
 		this.discount = discount;
 	}
 
-	public Double getReceiveTotol() {
-		return receiveTotol;
+	public Double getReceiveTotal() {
+		return receiveTotal;
 	}
 
-	public void setReceiveTotol(Double receiveTotol) {
-		this.receiveTotol = receiveTotol;
+	public void setReceiveTotal(Double receiveTotal) {
+		this.receiveTotal = receiveTotal;
 	}
 
-	public Double getDollarTotol() {
-		return dollarTotol;
+	public Double getLocalTotal() {
+		return localTotal;
 	}
 
-	public void setDollarTotol(Double dollarTotol) {
-		this.dollarTotol = dollarTotol;
+	public void setLocalTotal(Double localTotal) {
+		this.localTotal = localTotal;
 	}
 
-	public String getReceiveFromName() {
-		return receiveFromName;
+	public Double getDollarTotal() {
+		return dollarTotal;
 	}
 
-	public void setReceiveFromName(String receiveFromName) {
-		this.receiveFromName = receiveFromName;
+	public void setDollarTotal(Double dollarTotal) {
+		this.dollarTotal = dollarTotal;
 	}
 
 	public UUID getReceiveFromId() {
@@ -188,11 +180,19 @@ public class ReceiveInfo {
 		this.receiveFromId = receiveFromId;
 	}
 
-	public Double getCompanyId() {
+	public String getReceiveFromName() {
+		return receiveFromName;
+	}
+
+	public void setReceiveFromName(String receiveFromName) {
+		this.receiveFromName = receiveFromName;
+	}
+
+	public Integer getCompanyId() {
 		return companyId;
 	}
 
-	public void setCompanyId(Double companyId) {
+	public void setCompanyId(Integer companyId) {
 		this.companyId = companyId;
 	}
 
@@ -220,11 +220,11 @@ public class ReceiveInfo {
 		this.purchase = purchase;
 	}
 
-	public Double getDueDays() {
+	public Integer getDueDays() {
 		return dueDays;
 	}
 
-	public void setDueDays(Double dueDays) {
+	public void setDueDays(Integer dueDays) {
 		this.dueDays = dueDays;
 	}
 
@@ -268,12 +268,12 @@ public class ReceiveInfo {
 		this.invoiceDate = invoiceDate;
 	}
 
-	public String getRemark() {
-		return remark;
+	public String getRemarks() {
+		return remarks;
 	}
 
-	public void setRemark(String remark) {
-		this.remark = remark;
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
 	}
 
 	public Boolean getOpeningStock() {
@@ -292,20 +292,12 @@ public class ReceiveInfo {
 		this.salePersonId = salePersonId;
 	}
 
-	public String getConsignmentReceivedId() {
-		return consignmentReceivedId;
+	public Integer getConsignmentReceiveId() {
+		return consignmentReceiveId;
 	}
 
-	public void setConsignmentReceivedId(String consignmentReceivedId) {
-		this.consignmentReceivedId = consignmentReceivedId;
-	}
-
-	public String getModifiedBy() {
-		return modifiedBy;
-	}
-
-	public void setModifiedBy(String modifiedBy) {
-		this.modifiedBy = modifiedBy;
+	public void setConsignmentReceiveId(Integer consignmentReceiveId) {
+		this.consignmentReceiveId = consignmentReceiveId;
 	}
 
 	public Timestamp getModifiedOn() {
@@ -314,6 +306,14 @@ public class ReceiveInfo {
 
 	public void setModifiedOn(Timestamp modifiedOn) {
 		this.modifiedOn = modifiedOn;
+	}
+
+	public Integer getModifiedBy() {
+		return ModifiedBy;
+	}
+
+	public void setModifiedBy(Integer modifiedBy) {
+		ModifiedBy = modifiedBy;
 	}
 
 	public String getModifiedMachineName() {
@@ -412,36 +412,36 @@ public class ReceiveInfo {
 		this.receiveCategory = receiveCategory;
 	}
 
-	public Double getStockTransferType() {
+	public Integer getStockTransferType() {
 		return stockTransferType;
 	}
 
-	public void setStockTransferType(Double stockTransferType) {
+	public void setStockTransferType(Integer stockTransferType) {
 		this.stockTransferType = stockTransferType;
 	}
 
-	public Double getCgtReturnConfirm() {
+	public Integer getCgtReturnConfirm() {
 		return cgtReturnConfirm;
 	}
 
-	public void setCgtReturnConfirm(Double cgtReturnConfirm) {
+	public void setCgtReturnConfirm(Integer cgtReturnConfirm) {
 		this.cgtReturnConfirm = cgtReturnConfirm;
 	}
 
-	public Double getYearEndId() {
+	public Integer getYearEndId() {
 		return yearEndId;
 	}
 
-	public void setYearEndId(Double yearEndId) {
+	public void setYearEndId(Integer yearEndId) {
 		this.yearEndId = yearEndId;
 	}
 
-	public UUID getPurchaseGroupId() {
-		return purchaseGroupId;
+	public UUID getPurchaseSaleGroupId() {
+		return purchaseSaleGroupId;
 	}
 
-	public void setPurchaseGroupId(UUID purchaseGroupId) {
-		this.purchaseGroupId = purchaseGroupId;
+	public void setPurchaseSaleGroupId(UUID purchaseSaleGroupId) {
+		this.purchaseSaleGroupId = purchaseSaleGroupId;
 	}
 
 	public String getCgtRefNo() {
@@ -452,35 +452,35 @@ public class ReceiveInfo {
 		this.cgtRefNo = cgtRefNo;
 	}
 
-	public String getCgtRefDescription() {
-		return cgtRefDescription;
+	public String getCgtDescription() {
+		return cgtDescription;
 	}
 
-	public void setCgtRefDescription(String cgtRefDescription) {
-		this.cgtRefDescription = cgtRefDescription;
+	public void setCgtDescription(String cgtDescription) {
+		this.cgtDescription = cgtDescription;
 	}
 
-	public UUID getWorkOrderId() {
+	public Double getWorkOrderId() {
 		return workOrderId;
 	}
 
-	public void setWorkOrderId(UUID workOrderId) {
+	public void setWorkOrderId(Double workOrderId) {
 		this.workOrderId = workOrderId;
 	}
 
-	public UUID getRefDesignGroupId() {
+	public Double getRefDesignGroupId() {
 		return refDesignGroupId;
 	}
 
-	public void setRefDesignGroupId(UUID refDesignGroupId) {
+	public void setRefDesignGroupId(Double refDesignGroupId) {
 		this.refDesignGroupId = refDesignGroupId;
 	}
 
-	public UUID getMfgPurchaseRId() {
+	public Integer getMfgPurchaseRId() {
 		return mfgPurchaseRId;
 	}
 
-	public void setMfgPurchaseRId(UUID mfgPurchaseRId) {
+	public void setMfgPurchaseRId(Integer mfgPurchaseRId) {
 		this.mfgPurchaseRId = mfgPurchaseRId;
 	}
 

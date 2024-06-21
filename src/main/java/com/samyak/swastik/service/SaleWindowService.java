@@ -37,6 +37,7 @@ import com.samyak.swastik.dto.SalePersonInfo;
 import com.samyak.swastik.dto.SaleWindowInfo;
 import com.samyak.swastik.dto.SaleWindowSaveInfo;
 import com.samyak.swastik.dto.VoucherInfo;
+import com.samyak.swastik.repository.ReceiveRepository;
 
 @Service("")
 public class SaleWindowService implements ISaleWindow {
@@ -69,6 +70,8 @@ public class SaleWindowService implements ISaleWindow {
 	private FinancialTransactionService financialTransactionService;
 	@Autowired
 	private LedgerService ledgerService;
+	@Autowired
+	private ReceiveRepository receiveRepository;
 
 	@Override
 	public SaleWindowInfo get() {
@@ -121,7 +124,7 @@ public class SaleWindowService implements ISaleWindow {
 		Long currTimestampMills = System.currentTimeMillis();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-		ReceiveInfo receiveInfo = new ReceiveInfo();
+		Receive receiveInfo = new Receive();
 		receiveInfo.setReceiveSell(false);
 		receiveInfo.setReceiveNo("S2324-01");
 		receiveInfo.setReceiveDate(new Timestamp(currTimestampMills));
@@ -142,16 +145,16 @@ public class SaleWindowService implements ISaleWindow {
 		Double subTotal = saleWindowSaveInfo.getSubTotal() != null ? saleWindowSaveInfo.getSubTotal() : 0.0;
 		Double exchangeRate = saleWindowSaveInfo.getExchangeRate() != null ? saleWindowSaveInfo.getExchangeRate() : 0.0;
 		if (currency != null && currency.equalsIgnoreCase("US$")) {
-			receiveInfo.setReceiveTotol(total);
+			receiveInfo.setReceiveTotal(total);
 			receiveInfo.setLocalTotal(total * exchangeRate);
-			receiveInfo.setDollarTotol(total);
+			receiveInfo.setDollarTotal(total);
 			receiveInfo.setInvTotal(subTotal);
 			receiveInfo.setInvLocalTotal(subTotal * exchangeRate);
 			receiveInfo.setInvDollarTotal(subTotal);
 		} else {
-			receiveInfo.setReceiveTotol(total);
+			receiveInfo.setReceiveTotal(total);
 			receiveInfo.setLocalTotal(total);
-			receiveInfo.setDollarTotol(total / exchangeRate);
+			receiveInfo.setDollarTotal(total / exchangeRate);
 			receiveInfo.setInvTotal(subTotal);
 			receiveInfo.setInvLocalTotal(subTotal);
 			receiveInfo.setInvDollarTotal(subTotal / exchangeRate);
@@ -164,11 +167,15 @@ public class SaleWindowService implements ISaleWindow {
 			receiveInfo.setReceiveFromId(companyParty.getCompanyPartyId());
 		}
 		receiveInfo.setReceiveFromName(saleWindowSaveInfo.getCompanyParty());
-		receiveInfo.setCompanyId(1.0);
+		receiveInfo.setCompanyId(1);
 		receiveInfo.setReceiveByName("Samyak");
 		receiveInfo.setReceiveInternal(false);
 		receiveInfo.setPurchase(true);
-		receiveInfo.setDueDays(saleWindowSaveInfo.getDueDays());
+		if (saleWindowSaveInfo.getDueDays() != null) {
+		    receiveInfo.setDueDays(saleWindowSaveInfo.getDueDays().intValue());
+		} else {
+		    receiveInfo.setDueDays(0); 
+		}
 
 		try {
 			if (saleWindowSaveInfo.getDueDate() != null && !saleWindowSaveInfo.getDueDate().isEmpty()) {
@@ -186,15 +193,15 @@ public class SaleWindowService implements ISaleWindow {
 		receiveInfo.setChallanDate(null);
 		receiveInfo.setInvoiceNo(null);
 		receiveInfo.setInvoiceDate(null);
-		receiveInfo.setRemark("-");
+		receiveInfo.setRemarks("-");
 		receiveInfo.setOpeningStock(false);
 		Optional<SalePerson> salePersonId = salePersonService.getSalePersonId(saleWindowSaveInfo.getSalePerson());
 		if (salePersonId.isPresent()) {
 			SalePerson salePersonId1 = salePersonId.get();
 			receiveInfo.setSalePersonId(salePersonId1.getSalePersonId());
 		}
-		receiveInfo.setConsignmentReceivedId("0");
-		receiveInfo.setModifiedBy("2");
+		receiveInfo.setConsignmentReceiveId(0);
+		receiveInfo.setModifiedBy(2);
 		receiveInfo.setModifiedOn(new Timestamp(currTimestampMills));
 		receiveInfo.setModifiedMachineName("System");
 		receiveInfo.setActive(true);
@@ -221,24 +228,27 @@ public class SaleWindowService implements ISaleWindow {
 		receiveInfo.setDifferenceAmount(0.0);
 		receiveInfo.setDifferenceLocalAmount(0.0);
 		receiveInfo.setDifferenceDollarAmount(0.0);
-		receiveInfo.setStockTransferType(0.0);
-		receiveInfo.setCgtReturnConfirm(0.0);
-		receiveInfo.setYearEndId(1.0);
+		receiveInfo.setStockTransferType(0);
+		receiveInfo.setCgtReturnConfirm(0);
+		receiveInfo.setYearEndId(1);
 		Optional<PurchaseSaleGroup> purchaseSaleGroupId = purchaseSaleGroupService
 				.getPurchaseSaleGroupId(saleWindowSaveInfo.getSaleGroup());
 		if (purchaseSaleGroupId.isPresent()) {
 			PurchaseSaleGroup purchaseSaleGroup = purchaseSaleGroupId.get();
-			receiveInfo.setPurchaseGroupId(purchaseSaleGroup.getPurchaseSaleGroupId());
+//			receiveInfo.setPurchaseGroupId(purchaseSaleGroup.getPurchaseSaleGroupId());
+			receiveInfo.setPurchaseSaleGroupId(purchaseSaleGroup.getPurchaseSaleGroupId());
 		}
 
 		receiveInfo.setCgtRefNo("");
-		receiveInfo.setCgtRefDescription(saleWindowSaveInfo.getNarration());
+		receiveInfo.setCgtDescription(saleWindowSaveInfo.getNarration());
 		receiveInfo.setWorkOrderId(null);
 		receiveInfo.setRefDesignGroupId(null);
 		receiveInfo.setMfgPurchaseRId(null);
 		receiveInfo.setOverDays(null);
 
-		Receive receive = receiveService.save(receiveInfo);
+//		Receive receive = receiveService.save(receiveInfo);
+		receiveInfo.setReceiveId(UUID.randomUUID());
+		Receive receive = receiveRepository.save(receiveInfo);
 
 		List<LotListInfo> lotList = saleWindowSaveInfo.getLotList();
 		lotList.forEach(lotDetail -> {
