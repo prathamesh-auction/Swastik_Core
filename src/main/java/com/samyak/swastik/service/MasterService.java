@@ -77,7 +77,7 @@ public class MasterService implements IMaster {
 	@Autowired
 	private CutEXService cutEXService;
 	@Autowired
-	private LotService lotService;
+	private ILot lotService;
 	@Autowired
 	private SizeService sizeService;
 	@Autowired

@@ -12,7 +12,7 @@ import com.samyak.swastik.domain.Lot;
 import com.samyak.swastik.dto.LotInfo;
 import com.samyak.swastik.repository.LotRepository;
 
-@Service("")
+@Service("lotService")
 public class LotService implements ILot {
 
 	@Autowired
@@ -43,6 +43,12 @@ public class LotService implements ILot {
 		List<Lot> lots = lotRepository.findAllByActive(true);
 		List<String> lotNos = lots.stream().map(e -> e.getLotName()).collect(Collectors.toList());
 		return lotNos;
+	}
+
+	@Override
+	public Lot save(LotInfo lotInfo) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

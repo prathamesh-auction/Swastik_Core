@@ -15,4 +15,6 @@ public interface ILot {
 	public Optional<Lot> getLotId(String lotName);
 
 	public List<String> getLotNames();
+
+	public Lot save(LotInfo lotInfo);
 }
