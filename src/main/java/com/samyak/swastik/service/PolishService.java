@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Polish;
 import com.samyak.swastik.dto.PolishInfo;
 import com.samyak.swastik.repository.PolishRepository;
 
-@Service
+@Service("polishService")
 public class PolishService implements IPolish {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class PolishService implements IPolish {
 			polishInfos.add(polishInfo);
 		});
 		return polishInfos;
+	}
+
+	@Override
+	public void save(PolishInfo polishInfo) {
+		Polish polish = modelMapper.map(polishInfo, Polish.class);
+		polish.setPolishId(UUID.randomUUID());
+		polishRepository.save(polish);
+
 	}
 
 }

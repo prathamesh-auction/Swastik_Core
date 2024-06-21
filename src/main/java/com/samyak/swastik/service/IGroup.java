@@ -7,4 +7,6 @@ import com.samyak.swastik.dto.GroupInfo;
 public interface IGroup {
 
 	public List<GroupInfo> get();
+
+	public void save(GroupInfo groupInfo);
 }

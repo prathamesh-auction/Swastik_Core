@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.OpenInclusion;
 import com.samyak.swastik.dto.OpenInclusionInfo;
 import com.samyak.swastik.repository.OpenInclusionRepository;
 
-@Service
+@Service("openInclusionService")
 public class OpenInclusionService implements IOpenInclusion {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class OpenInclusionService implements IOpenInclusion {
 			openInclusionInfos.add(openInclusionInfo);
 		});
 		return openInclusionInfos;
+	}
+
+	@Override
+	public void save(OpenInclusionInfo openInclusionInfo) {
+		OpenInclusion openInclusion = modelMapper.map(openInclusionInfo, OpenInclusion.class);
+		openInclusion.setOpenInclusionId(UUID.randomUUID());
+		openInclusionRepository.save(openInclusion);
+
 	}
 
 }

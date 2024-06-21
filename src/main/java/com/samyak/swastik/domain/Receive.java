@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.UUID;
 
-import io.swagger.v3.oas.models.security.SecurityScheme.In;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,9 +22,10 @@ public class Receive implements Serializable {
 	@Column(name = "ID")
 	private Long id;
 
+	@Column(name = "RECEIVE_ID")
 	private UUID receiveId;
 
-	@Column(name = "RECEIVE_ID")
+	@Column(name = "RECEIVE_SELL")
 	private Boolean receiveSell;
 
 	@Column(name = "RECEIVE_NO")
@@ -94,7 +94,7 @@ public class Receive implements Serializable {
 	@Column(name = "CJALLAN_DATE")
 	private Timestamp challanDate;
 
-	@Column(name = "IBOICE_NO")
+	@Column(name = "IVOICE_NO")
 	private String invoiceNo;
 
 	@Column(name = "INVOICE_DATE")

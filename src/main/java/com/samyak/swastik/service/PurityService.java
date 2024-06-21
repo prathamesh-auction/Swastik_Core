@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Purity;
 import com.samyak.swastik.dto.PurityInfo;
 import com.samyak.swastik.repository.PurityRepository;
 
-@Service
+@Service("purityService")
 public class PurityService implements IPurity {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class PurityService implements IPurity {
 			purityInfos.add(purityInfo);
 		});
 		return purityInfos;
+	}
+
+	@Override
+	public void save(PurityInfo purityInfo) {
+		Purity purity = modelMapper.map(purityInfo, Purity.class);
+		purity.setPurityId(UUID.randomUUID());
+		purityRepository.save(purity);
+
 	}
 
 }

@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.BlackInclusion;
 import com.samyak.swastik.dto.BlackInclusionInfo;
 import com.samyak.swastik.repository.BlackInclusionRepository;
 
-@Service
+@Service("blackInclusionService")
 public class BlackInclusionService implements IBlackInclusion {
 
 	@Autowired
@@ -29,6 +30,14 @@ public class BlackInclusionService implements IBlackInclusion {
 		});
 
 		return blackInclusionInfos;
+	}
+
+	@Override
+	public void save(BlackInclusionInfo blackInclusionInfo) {
+		BlackInclusion blackInclusion = modelMapper.map(blackInclusionInfo, BlackInclusion.class);
+		blackInclusion.setBlackInclusionId(UUID.randomUUID());
+		blackInclusionRepository.save(blackInclusion);
+
 	}
 
 }

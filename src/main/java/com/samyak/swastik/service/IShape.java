@@ -7,4 +7,6 @@ import com.samyak.swastik.dto.ShapeInfo;
 public interface IShape {
 
 	public List<ShapeInfo> get();
+
+	public void save(ShapeInfo shapeInfo);
 }

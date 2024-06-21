@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +30,15 @@ public class CutService implements ICut {
 		});
 		return cutInfos;
 	}
+
+	@Override
+	public void save(CutInfo cutInfo) {
+		Cut cut = modelMapper.map(cutInfo, Cut.class);
+		cut.setCutId(UUID.randomUUID());
+		cutRepository.save(cut);
+		
+	}
+	
+	
 
 }

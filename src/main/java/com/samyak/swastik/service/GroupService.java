@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Group;
 import com.samyak.swastik.dto.GroupInfo;
 import com.samyak.swastik.repository.GroupRepository;
 
-@Service
+@Service("groupService")
 public class GroupService implements IGroup {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class GroupService implements IGroup {
 			groupInfos.add(groupInfo);
 		});
 		return groupInfos;
+	}
+
+	@Override
+	public void save(GroupInfo groupInfo) {
+		Group group = modelMapper.map(groupInfo, Group.class);
+		group.setGroupId(UUID.randomUUID());
+		groupRepository.save(group);
+
 	}
 
 }

@@ -7,4 +7,6 @@ import com.samyak.swastik.dto.ColorInfo;
 public interface IColor {
 
 	public List<ColorInfo> get();
+	
+	public void save(ColorInfo colorInfo);
 }

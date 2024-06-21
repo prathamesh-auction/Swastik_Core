@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Color;
 import com.samyak.swastik.dto.ColorInfo;
 import com.samyak.swastik.repository.ColorRepository;
 
-@Service
+@Service("colorService")
 public class ColorService implements IColor {
 
 	@Autowired
@@ -29,6 +30,14 @@ public class ColorService implements IColor {
 			colorInfos.add(colorInfo);
 		});
 		return colorInfos;
+	}
+
+	@Override
+	public void save(ColorInfo colorInfo) {
+		Color color = modelMapper.map(colorInfo, Color.class);
+		color.setColorId(UUID.randomUUID());
+		colorRepository.save(color);
+
 	}
 
 }

@@ -7,4 +7,6 @@ import com.samyak.swastik.dto.ShadeInfo;
 public interface IShade {
 
 	public List<ShadeInfo> get();
+
+	public void save(ShadeInfo shadeInfo);
 }

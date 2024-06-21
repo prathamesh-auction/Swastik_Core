@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Luster;
 import com.samyak.swastik.dto.LusterInfo;
 import com.samyak.swastik.repository.LusterRepository;
 
-@Service
+@Service("lusterService")
 public class LusterService implements ILuster {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class LusterService implements ILuster {
 			lusterInfos.add(lusterInfo);
 		});
 		return lusterInfos;
+	}
+
+	@Override
+	public void save(LusterInfo lusterInfo) {
+		Luster luster = modelMapper.map(lusterInfo, Luster.class);
+		luster.setLusterId(UUID.randomUUID());
+		lusterRepository.save(luster);
+
 	}
 
 }

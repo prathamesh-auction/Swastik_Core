@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Fluorescence;
 import com.samyak.swastik.dto.FluorescenceInfo;
 import com.samyak.swastik.repository.FluorescenceRepository;
 
-@Service
+@Service("fluorescenceService")
 public class FluorescenceService implements IFluorescence {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class FluorescenceService implements IFluorescence {
 			fluorescenceInfos.add(fluorescenceInfo);
 		});
 		return fluorescenceInfos;
+	}
+
+	@Override
+	public void save(FluorescenceInfo fluorescenceInfo) {
+		Fluorescence fluorescence = modelMapper.map(fluorescenceInfo, Fluorescence.class);
+		fluorescence.setFluorescenceId(UUID.randomUUID());
+		fluorescenceRepository.save(fluorescence);
+
 	}
 
 }

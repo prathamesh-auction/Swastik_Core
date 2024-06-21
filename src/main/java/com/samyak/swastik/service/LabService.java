@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Lab;
 import com.samyak.swastik.dto.LabInfo;
 import com.samyak.swastik.repository.LabRepository;
 
-@Service
+@Service("labService")
 public class LabService implements ILab {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class LabService implements ILab {
 			labInfos.add(labInfo);
 		});
 		return labInfos;
+	}
+
+	@Override
+	public void save(LabInfo labInfo) {
+		Lab lab = modelMapper.map(labInfo, Lab.class);
+		lab.setLabId(UUID.randomUUID());
+		labRepository.save(lab);
+
 	}
 
 }

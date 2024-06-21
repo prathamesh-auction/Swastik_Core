@@ -7,4 +7,6 @@ import com.samyak.swastik.dto.LusterInfo;
 public interface ILuster {
 
 	public List<LusterInfo> get();
+
+	public void save(LusterInfo lusterInfo);
 }

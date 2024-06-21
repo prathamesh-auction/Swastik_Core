@@ -7,4 +7,6 @@ import com.samyak.swastik.dto.FluorescenceInfo;
 public interface IFluorescence {
 
 	public List<FluorescenceInfo> get();
+
+	public void save(FluorescenceInfo fluorescenceInfo);
 }

@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Shape;
 import com.samyak.swastik.dto.ShapeInfo;
 import com.samyak.swastik.repository.ShapeRepository;
 
-@Service
+@Service("shapeService")
 public class ShapeService implements IShape {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class ShapeService implements IShape {
 			shapeInfos.add(shapeInfo);
 		});
 		return shapeInfos;
+	}
+
+	@Override
+	public void save(ShapeInfo shapeInfo) {
+		Shape shape = modelMapper.map(shapeInfo, Shape.class);
+		shape.setShapeId(UUID.randomUUID());
+		shapeRepository.save(shape);
+
 	}
 
 }

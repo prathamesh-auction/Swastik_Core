@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Shade;
 import com.samyak.swastik.dto.ShadeInfo;
 import com.samyak.swastik.repository.ShadeRepository;
 
-@Service
+@Service("")
 public class ShadeService implements IShade {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class ShadeService implements IShade {
 			shadeInfos.add(shadeInfo);
 		});
 		return shadeInfos;
+	}
+
+	@Override
+	public void save(ShadeInfo shadeInfo) {
+		Shade shade = modelMapper.map(shadeInfo, Shade.class);
+		shade.setShadeId(UUID.randomUUID());
+		shadeRepository.save(shade);
+
 	}
 
 }

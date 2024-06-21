@@ -2,6 +2,7 @@ package com.samyak.swastik.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.samyak.swastik.domain.Country;
 import com.samyak.swastik.dto.CountryInfo;
 import com.samyak.swastik.repository.CountryRepository;
 
-@Service
+@Service("countryService")
 public class CountryService implements ICountry {
 
 	@Autowired
@@ -28,6 +29,14 @@ public class CountryService implements ICountry {
 			countryInfos.add(countryInfo);
 		});
 		return countryInfos;
+	}
+
+	@Override
+	public void save(CountryInfo countryInfo) {
+		Country country = modelMapper.map(countryInfo, Country.class);
+		country.setCountryId(UUID.randomUUID());
+		countryRepository.save(country);
+
 	}
 
 }
