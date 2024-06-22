@@ -76,8 +76,8 @@ public class MasterService implements IMaster {
 	private OriginColorService originColorService;
 	@Autowired
 	private CutEXService cutEXService;
-	@Autowired
-	private ILot lotService;
+//	@Autowired
+//	private ILot lotService;
 	@Autowired
 	private SizeService sizeService;
 	@Autowired
@@ -106,7 +106,7 @@ public class MasterService implements IMaster {
 		List<CutHSInfo> cutHSInfos = cutHSService.get();
 		List<OriginColorInfo> originColorInfos = originColorService.get();
 		List<CutEXInfo> cutEXInfos = cutEXService.get();
-		List<String> lotNames = lotService.getLotNames();
+//		List<String> lotNames = lotService.getLotNames();
 		List<SizeInfo> sizeInfos = sizeService.get();
 		List<UnitInfo> unitInfos = unitService.get();
 
@@ -129,7 +129,7 @@ public class MasterService implements IMaster {
 		diamondMasterInfo.setCutHSInfos(cutHSInfos);
 		diamondMasterInfo.setOriginColorInfos(originColorInfos);
 		diamondMasterInfo.setCutEXInfos(cutEXInfos);
-		diamondMasterInfo.setLotNos(lotNames);
+//		diamondMasterInfo.setLotNos(lotNames);
 		diamondMasterInfo.setSizeInfos(sizeInfos);
 		diamondMasterInfo.setUnitInfos(unitInfos);
 
