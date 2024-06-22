@@ -17,7 +17,7 @@ public class TableIncusionController {
 	@Autowired
 	private ITableIncusion tableIncusionService;
 
-	@PostMapping(value = "/tableIncusion", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "/table-incusion", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> save(@RequestBody TableIncusionInfo tableIncusionInfo) {
 		try {
 			tableIncusionService.save(tableIncusionInfo);
