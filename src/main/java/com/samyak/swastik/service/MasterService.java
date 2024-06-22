@@ -135,5 +135,6 @@ public class MasterService implements IMaster {
 
 		return diamondMasterInfo;
 	}
+	
 
 }

@@ -32,4 +32,5 @@ public class TableIncusionController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred: " + ex.getMessage());
 		}
 	}
+	
 }
